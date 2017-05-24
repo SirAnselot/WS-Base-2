@@ -1,6 +1,6 @@
 /*!
  * ws-base v2.0.0
- * Compiled 2017-05-11 by Ansgar Hiller <ansgar@weigelstein.de> (www.weigelstein.de)
+ * Compiled 2017-05-24 by Ansgar Hiller <ansgar@weigelstein.de> (www.weigelstein.de)
  * 
  * Included vendors:
  * --------------------------------------------------

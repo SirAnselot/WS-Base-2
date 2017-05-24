@@ -121,7 +121,7 @@ module.exports = function(grunt) {
 			},
 			vendor: {
 				src:  _bridge.paths.vendor,
-				dest: '<%= files.js.vendor.dest %>/vendor.js'
+				dest: '<%= pkg.config.files.js.vendor.dest %>/vendor.js'
 			}
 		},
 
