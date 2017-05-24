@@ -1,0 +1,102 @@
+/**
+ * TYPO
+ * Text-fonts, -colors, -styles, -sizes, etc. (to be made available in html-editor)
+**/
+/**
+ * COLORS
+**/
+
+.text-primary        { color: $brand-primary; }
+.text-secondary      { color: $brand-secondary; }
+
+// grays
+.text-gray-base      { color: #000 !important; }
+.text-gray-darkest   { color: $gray-darkest !important; }
+.text-gray-darker    { color: $gray-darker !important; }
+.text-gray-dark      { color: $gray-dark !important; }
+.text-gray           { color: $gray !important; }
+.text-gray-light     { color: $gray-light !important; }
+.text-gray-lighter   { color: $gray-lighter !important; }
+.text-gray-lightest  { color: $gray-lightest !important; }
+.text-white          { color: $white !important; }
+
+// context
+.text-info           { color: $brand-info !important; }
+.text-success        { color: $brand-success !important; }
+.text-warning        { color: $brand-warning !important; }
+.text-danger         { color: $brand-danger !important; }
+
+// FONTS
+.serif      { font-family: $font-family-serif !important; }
+.sans       { font-family: $font-family-sans-serif !important; }
+.mono       { font-family: $font-family-monospace !important; }
+
+// FONT-SIZE
+.text-lg    { font-size: $font-size-lg !important; }
+.text-sm    { font-size: $font-size-sm !important; }
+.text-xs    { font-size: $font-size-xs !important; }
+
+// HEADLINE DISPLAY
+.display-1  { font-size: $display1-size !important; }
+.display-2  { font-size: $display2-size !important; }
+.display-3  { font-size: $display3-size !important; }
+.display-4  { font-size: $display4-size !important; }
+
+p {
+   margin-bottom: map-get(map-get($spacers,3),'y');  // 1rem;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin-bottom: map-get(map-get($spacers,4),'y');  // 1.5rem;
+   + h1,
+   + h2,
+   + h3,
+   + h4,
+   + h5,
+   + h6 {
+      margin-bottom: map-get(map-get($spacers,1),'y');  // .25rem;
+   }
+}
+
+h1 {
+   margin-bottom: map-get(map-get($spacers,4),'y');  // 1.5rem;
+}
+
+// BIG HEADLINE
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+   margin-bottom:    map-get(map-get($spacers,3),'y'); // 1rem;
+   + .display-1,
+   + .display-2,
+   + .display-3,
+   + .display-4 {
+      margin-bottom: map-get(map-get($spacers,1),'y'); // .25rem;
+   }
+   + .lead {
+      margin-bottom: map-get(map-get($spacers,3),'y'); // 1rem;
+   }
+}
+small,
+.small {
+   font-size: 90%;
+}
+// LEAD
+.lead {
+   margin-bottom: map-get(map-get($spacers,3),'y');  // 1rem;
+}
+
+/* FIGURE */
+.figure {
+   padding: map-get(map-get($spacers,3),'y') 0;
+}
+.figure-caption {
+   font-family: $font-family-serif;
+   font-size: $font-size-xs;
+   font-style: italic;
+   color: $gray-light;
+}

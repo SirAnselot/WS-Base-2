@@ -1,0 +1,116 @@
+/*!
+ * Customize on basis of Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+ // Core variables and mixins
+@import "bootstrap/variables";
+@import "variables";
+
+// variables and mixins "ws-framework"
+@import "ws/ws";
+
+/* ENTYPO+ ICONS
+ *	--------------
+ * @see: 	/fonts/entypo/
+ *
+ *	@html:   <span class="icon-[name]"></span>
+ * @mixin:  @include entypo($code, $color);
+/*	-----	*/
+@import "icons/entypo";
+@import "icons/entypo.codes";
+
+/* SOCIALIST
+ *	--------------
+ * @see: 	/public/fonts/socialist/
+ *
+ *	@html:   <span class="social-[name]"></span>
+ * @mixin:  @include social($code, $color);
+/*	-----	*/
+@import "icons/socialist";
+@import "icons/socialist.codes";
+
+.icon::before { margin-right: 0; }
+
+/* SVG-ICONS
+ *	--------------
+ * @see     /public/img/svg/src/
+ *
+ * @html    <span class="svg-[name]"></span>
+ * @mixin:  @include icon($name, $width, $height);
+/*	-----	*/
+@import "ws/svgicons";
+
+
+@import "ws/typo";
+@import "ws/reset.chosen";
+
+html {
+  font-size: 12px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+
+}
+
+
+.page {
+   min-height: 100%;
+   width: 100%;
+   @include media-breakpoint-down(lg) {
+
+   }
+   @include media-breakpoint-down(sm) {
+
+   }
+   .header {
+      .navbar {
+         @include bg-color($white, 1);
+         .navbar-brand {
+            // @include text-hide;
+         }
+      }
+   }
+
+   .main {
+      > .container {
+
+      }
+   }
+
+   .footer {
+      > .container {
+
+      }
+   }
+}
+
+// MEDIA QUERIES (samples)
+@include media-breakpoint-up(xs)   { }
+@include media-breakpoint-up(sm)   { }
+@include media-breakpoint-up(md)   { }
+@include media-breakpoint-up(lg)   { }
+
+@include media-breakpoint-down(sm) { }
+@include media-breakpoint-down(md) { }
+@include media-breakpoint-down(lg) { }
+@include media-breakpoint-down(xl) { }

@@ -1,0 +1,43 @@
+$icons: (
+	{{#shapes}}
+	"{{name}}": (
+		x: {{position.relative.x}}%,
+		y: {{position.relative.y}}%,
+		width: {{width.outer}},
+		height: {{height.outer}}
+	){{^last}},{{/last}}
+	{{/shapes}}
+);
+
+@mixin svg($name, $width: auto, $height: auto){
+	$icon: map-get($icons, $name);
+	$sizeFactor: 1;
+	@if $width != auto {
+		$sizeFactor: (1 / map-get($icon, width) * $width);
+	}
+	@else if $height != auto {
+		$sizeFactor: (1 / map-get($icon, height) * $height);
+	}
+	@if $width == auto {
+		$width: (map-get($icon, width) * $sizeFactor);
+	}
+	@if $height == auto {
+		$height: (map-get($icon, height) * $sizeFactor);
+	}
+	$targetWidth: {{spriteWidth}} * $sizeFactor;
+	$targetHeight: {{spriteHeight}} * $sizeFactor;
+
+	display: inline-block;
+	background-image: url(../{{{sprite}}});
+   background-repeat: no-repeat;
+	background-position: map-get($icon, x) map-get($icon, y);
+	background-size: #{$targetWidth}px #{$targetHeight}px;
+	width: #{$width}px;
+	height: #{$height}px;
+}
+
+{{#shapes}}
+.svg-{{name}} {
+	@include svg("{{name}}");
+}
+{{/shapes}}

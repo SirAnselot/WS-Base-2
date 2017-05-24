@@ -1,0 +1,111 @@
+$icons: (
+	"fast-food": (
+		x: 100%,
+		y: 0%,
+		width: 48,
+		height: 48
+	),
+	"fb": (
+		x: 0%,
+		y: 0%,
+		width: 80,
+		height: 80
+	),
+	"fb-ball": (
+		x: 62.5%,
+		y: 0%,
+		width: 80,
+		height: 80
+	),
+	"google": (
+		x: 0%,
+		y: 66.66666666666667%,
+		width: 80,
+		height: 80
+	),
+	"google-ball": (
+		x: 62.5%,
+		y: 66.66666666666667%,
+		width: 80,
+		height: 80
+	),
+	"hamburger-black": (
+		x: 95.23809523809524%,
+		y: 60%,
+		width: 40,
+		height: 40
+	),
+	"hamburger-gray": (
+		x: 100%,
+		y: 31.57894736842105%,
+		width: 48,
+		height: 48
+	),
+	"hamburger-white": (
+		x: 0%,
+		y: 100%,
+		width: 40,
+		height: 40
+	),
+	"houzz": (
+		x: 85.1063829787234%,
+		y: 75.55555555555556%,
+		width: 20,
+		height: 20
+	)
+);
+
+@mixin svg($name, $width: auto, $height: auto){
+	$icon: map-get($icons, $name);
+	$sizeFactor: 1;
+	@if $width != auto {
+		$sizeFactor: (1 / map-get($icon, width) * $width);
+	}
+	@else if $height != auto {
+		$sizeFactor: (1 / map-get($icon, height) * $height);
+	}
+	@if $width == auto {
+		$width: (map-get($icon, width) * $sizeFactor);
+	}
+	@if $height == auto {
+		$height: (map-get($icon, height) * $sizeFactor);
+	}
+	$targetWidth: 208 * $sizeFactor;
+	$targetHeight: 200 * $sizeFactor;
+
+	display: inline-block;
+	background-image: url(../../public/img/svg/build/icons.svg);
+   background-repeat: no-repeat;
+	background-position: map-get($icon, x) map-get($icon, y);
+	background-size: #{$targetWidth}px #{$targetHeight}px;
+	width: #{$width}px;
+	height: #{$height}px;
+}
+
+.svg-fast-food {
+	@include svg("fast-food");
+}
+.svg-fb {
+	@include svg("fb");
+}
+.svg-fb-ball {
+	@include svg("fb-ball");
+}
+.svg-google {
+	@include svg("google");
+}
+.svg-google-ball {
+	@include svg("google-ball");
+}
+.svg-hamburger-black {
+	@include svg("hamburger-black");
+}
+.svg-hamburger-gray {
+	@include svg("hamburger-gray");
+}
+.svg-hamburger-white {
+	@include svg("hamburger-white");
+}
+.svg-houzz {
+	@include svg("houzz");
+}

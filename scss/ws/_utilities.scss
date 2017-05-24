@@ -1,0 +1,29 @@
+
+// BACKGROUNDS
+.bg-black {
+   background-color: #000;
+}
+.bg-gray-darkest {
+   @include stripes-black-01($gray-darkest, 5px);
+}
+.bg-gray-darker {
+   @include stripes-black-01($gray-darker, 5px);
+}
+.bg-gray-dark {
+   @include stripes-black-01($gray-dark, 5px);
+}
+.bg-gray {
+   @include stripes-black-01($gray, 5px);
+}
+.bg-gray-light {
+   @include stripes-black-005($gray-light, 5px);
+}
+.bg-gray-lighter {
+   @include stripes-black-005($gray-lighter, 5px);
+}
+.bg-gray-lightest {
+   @include stripes-black-005($gray-lightest, 5px);
+}
+.bg-white {
+   background-color: #FFF;
+}

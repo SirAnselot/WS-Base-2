@@ -1,0 +1,82 @@
+{
+  "name": "ws-base",
+  "description": "Basic frontend development setup",
+  "version": "2.0.0",
+  "private": true,
+  "homepage": "http://www.weigelstein.de",
+  "author": "Ansgar Hiller <ansgar@weigelstein.de>",
+  "main": "public",
+  "sass": "scss/ws.scss",
+  "dist": "dist",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist",
+    "grunt",
+    "public/css/*.css",
+    "public/js/app/**/*.js",
+    "scss/**/*.scss",
+    "Gruntfile.js"
+  ],
+  "config": {
+    "namespace": "ws",
+    "localhost": {
+      "port": "8080",
+      "path": "./"
+    },
+    "files": {
+      "js": {
+        "app": {
+          "src": [
+            "public/js/app/app.js",
+            "public/js/app/ws/*.js"
+          ],
+          "dest": "dist/js"
+        },
+        "vendor": {
+          "src": "../vendor",
+          "dest": "public/js/vendor"
+        }
+      },
+      "scss": "scss",
+      "svg": {
+         "src": "public/img/svg/src",
+         "clean": "public/img/svg/cleaned",
+         "build": "public/img/svg/build"
+      }
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "each-async": "^1.1.1",
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-connect": "^0.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-line-remover": "0.0.2",
+    "grunt-grunticon": "^2.3.1",
+    "grunt-import": "^1.0.3",
+    "grunt-newer": "^1.2.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.2.0",
+    "grunt-stamp": "^0.3.0",
+    "grunt-svg-sprite": "^1.3.6",
+    "grunt-svgmin": "^4.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.1.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "shelljs": "^0.7.5",
+    "shx": "^0.2.1",
+    "time-grunt": "^1.4.0",
+    "uglify-js": "^2.7.5"
+  }
+}
