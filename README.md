@@ -1,2 +1,3 @@
-# WS-Base-2
-Basic startingpoint for frontend-design-production
+# WS-Base II
+### in accordance w/ the prophecy ...
+Basic startingpoint for frontend-design-production.
