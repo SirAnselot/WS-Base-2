@@ -33,6 +33,36 @@
 
 .icon::before { margin-right: 0; }
 
+.the-icons {
+   text-align: center;
+   background-color: rgba($white,.5);
+   margin: .2rem .1rem;
+   padding-bottom: .5rem;
+   .demo-icon {
+      text-align: center;
+      padding: 0 1rem 1rem 1rem;
+      margin: .5rem;
+      vertical-align: super;
+      width: auto;
+      border: none;
+      color: $black;
+      font-size: $font-size-lg;
+      border-bottom: 1px solid $state-info-border;
+      &:before {
+         content:'';
+      }
+   }
+   .i-name {
+      font-size: $font-size-xs;
+      display: none;
+   }
+   .i-code {
+      font-size: $font-size-xs;
+      color: $brand-primary;
+      // display: none;
+   }
+}
+
 /* SVG-ICONS
  *	--------------
  * @see     /public/img/svg/src/
@@ -124,6 +154,49 @@ html {
 
 body {
 
+}
+
+// Generic toggle-Button
+.toggle-btn {
+   &,
+   &:hover,
+   &:focus {
+      text-decoration: none;
+      color: $link-hover-color;
+   }
+
+   &.icon-toggle {
+      .label-show {
+         display: none;
+      }
+      .label-hide {
+         display: inline;
+         font-weight: 700;
+      }
+      &:before {
+         margin-right: 0.1rem;
+         @include entypo('\e83b', inherit);
+         text-decoration: none;
+      }
+      &.collapsed {
+         color: $body-color;
+         .label-show {
+            display: inline;
+            font-weight: 700;
+         }
+         .label-hide {
+            display: none;
+         }
+         &:hover,
+         &:focus {
+            color: $link-hover-color;
+         }
+         &:before {
+            @include entypo('\e83d', inherit);
+            text-decoration: none;
+         }
+      }
+   }
 }
 
 

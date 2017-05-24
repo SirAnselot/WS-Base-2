@@ -66,7 +66,7 @@ $brand-inverse:             $brand-secondary;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-rounded:            true;
-$enable-shadows:            true;
+$enable-shadows:            false;
 $enable-gradients:          true;
 $enable-transitions:        true;
 $enable-hover-media-query:  true;
@@ -323,7 +323,7 @@ $btn-primary-border:             $btn-primary-bg;
 
 $btn-secondary-color:            $gray-dark;
 $btn-secondary-bg:               $white;
-$btn-secondary-border:           #ccc;
+$btn-secondary-border:           $white;
 
 $btn-info-color:                 $white;
 $btn-info-bg:                    $brand-info;
@@ -658,24 +658,24 @@ $input-transition:               border-color ease-in-out .15s, box-shadow ease-
 //
 // Cards
 //
-// $card-spacer-x:            1.25rem;
-// $card-spacer-y:            .75rem;
-// $card-border-width:        1px;
-// $card-border-radius:       $border-radius;
-// $card-border-color:        rgba($black,.125);
-// $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width});
-// $card-cap-bg:              $gray-lightest;
-// $card-bg:                  $white;
-//
-// $card-link-hover-color:    $white;
-//
-// $card-img-overlay-padding: 1.25rem;
-//
-// $card-deck-margin:          ($grid-gutter-width-base / 2);
-//
-// $card-columns-count:        3;
-// $card-columns-gap:          1.25rem;
-// $card-columns-margin:       $card-spacer-y;
+$card-spacer-x:            1.25rem;
+$card-spacer-y:            .75rem;
+$card-border-width:        1px;
+$card-border-radius:       $border-radius;
+$card-border-color:        rgba($black,.125);
+$card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width});
+$card-cap-bg:              $gray-lightest;
+$card-bg:                  rgba($white,.25);
+
+$card-link-hover-color:    $white;
+
+$card-img-overlay-padding: 1.25rem;
+
+$card-deck-margin:          ($grid-gutter-width-base / 2);
+
+$card-columns-count:        3;
+$card-columns-gap:          1.25rem;
+$card-columns-margin:       $card-spacer-y;
 //
 //
 // Tooltips
