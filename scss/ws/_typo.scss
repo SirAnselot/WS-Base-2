@@ -42,6 +42,37 @@
 .display-3  { font-size: $display3-size !important; }
 .display-4  { font-size: $display4-size !important; }
 
+// ICONS & LINKS
+a,
+p {
+   &[class^="icon-"]:before, [class*=" icon-"]:before,
+    [class^="icon-"]:before, [class*=" icon-"]:before,
+   &[class^="social-"]:before, [class*=" social-"]:before,
+    [class^="social-"]:before, [class*=" social-"]:before {
+      font-size: 110%;
+      margin-right: 0.75rem;
+   }
+}
+
+a {
+   &,
+   &:visited {
+      color: $link-color;
+   }
+   &:focus,
+   &:hover {
+      color: $link-hover-color;
+      text-decoration: underline;
+     &[class^="icon-"]:before, [class*=" icon-"]:before,
+      [class^="icon-"]:before, [class*=" icon-"]:before,
+     &[class^="social-"]:before, [class*=" social-"]:before,
+      [class^="social-"]:before, [class*=" social-"]:before {
+         text-decoration: none;
+      }
+   }
+}
+
+// DEFAULT MARGINS
 p {
    margin-bottom: map-get(map-get($spacers,3),'y');  // 1rem;
 }

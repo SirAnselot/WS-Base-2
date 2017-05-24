@@ -66,10 +66,10 @@ $brand-inverse:             $brand-secondary;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-rounded:            true;
-$enable-shadows:            false;
-$enable-gradients:          false;
+$enable-shadows:            true;
+$enable-gradients:          true;
 $enable-transitions:        true;
-$enable-hover-media-query:  false;
+$enable-hover-media-query:  true;
 $enable-grid-classes:       true;
 $enable-print-styles:       true;
 
@@ -276,7 +276,7 @@ $border-radius-sm:       0;
 $component-active-color: $white;
 $component-active-bg:    $brand-primary;
 
-$caret-width:            .3em;
+$caret-width:            .35rem;
 
 $transition-base:        all .2s ease-in-out;
 $transition-fade:        opacity .15s linear;
@@ -366,11 +366,11 @@ $input-padding-x:                .75rem;
 $input-padding-y:                .5rem;
 $input-line-height:              1.25;
 
-$input-bg:                       $white;
+$input-bg:                       rgba($gray-lightest, 0);
 $input-bg-disabled:              $gray-lighter;
 
 $input-color:                    $gray;
-$input-border-color:             rgba($black,.15);
+$input-border-color:             $gray-light;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075);
 
@@ -378,12 +378,12 @@ $input-border-radius:            $border-radius;
 $input-border-radius-lg:         $border-radius-lg;
 $input-border-radius-sm:         $border-radius-sm;
 
-$input-bg-focus:                 $input-bg;
-$input-border-focus:             lighten($brand-primary, 25%);
+$input-bg-focus:                 $white;
+$input-border-focus:             $brand-primary;
 $input-box-shadow-focus:         $input-box-shadow, rgba($input-border-focus, .6);
 $input-color-focus:              $input-color;
 
-$input-color-placeholder:        $gray-lighter;
+$input-color-placeholder:        rgba($gray-light, .75);
 
 $input-padding-x-sm:             .5rem;
 $input-padding-y-sm:             .25rem;

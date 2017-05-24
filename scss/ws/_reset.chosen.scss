@@ -1,21 +1,51 @@
 /*
- * CHOSEN.RESET
- * reset default chosen.css to make custom skinning less annoying and timeconsuming
+ * RESET.CHOSEN
+ * reset default chosen.css with custom variables to make custom skinning less annoying and timeconsuming
  */
+$chosen-font-family:       $font-family-condensed !default;
+$chosen-font-size:         $font-size-base !default;
+
+$chosen-height:            $input-height  !default;
+$chosen-padding-x:         $input-padding-x !default;
+$chosen-padding-y:         $input-padding-y !default;
+$chosen-line-height:       $input-line-height !default;
+
+$chosen-color:             $input-color !default;
+$chosen-border-color:      $input-border-color !default;
+$chosen-bg:                $input-bg !default;
+
+$chosen-box-shadow:        $input-box-shadow !default;
+$chosen-box-shadow-focus:  $input-box-shadow-focus !default;
+
+$chosen-border-focus:      $input-border-focus !default;
+$chosen-color-focus:       $input-color-focus !default;
+$chosen-bg-focus:          $input-bg-focus !default;
+
+$chosen-border-width:      $input-btn-border-width !default;
+$chosen-border-radius:     $input-border-radius !default;
+
 .chosenize {
    box-shadow:    none !important;
-   font-family:   $font-family-condensed;
-   font-weight:   $font-weight-base;
-   font-size:     $font-size-base;
-   line-height:   $input-line-height;
-   max-height:    $input-height;
+   font-family:   inherit;
+   font-size:     inherit;
+   line-height:   $chosen-line-height;
+   max-height:    $chosen-height;
    border:        none !important;
+   &.form-control {
+      padding: 0 !important;
+      margin: 0 !important;
+      border-image: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      background-color: transparent !important;
+   }
    &.chosen-container {
       & {
          .chosen-drop {
             border-image: none !important;
             box-shadow: none !important;
-            border: $input-btn-border-width solid transparent;
+            border: $chosen-border-width solid transparent;
             @include border-bottom-radius($input-border-radius);
             font-size: $font-size-base;
             text-align: left;
@@ -23,13 +53,13 @@
          }
          .chosen-results {
             margin: 0 0 $input-padding-y 0;
-            padding: $input-padding-y $input-padding-y 0 $input-padding-y;
-            border-top: $input-btn-border-width solid transparent;
-            border-color: $input-border-focus;
+            padding: $chosen-padding-y $chosen-padding-y 0 $chosen-padding-y;
+            border-top: $chosen-border-width solid transparent;
+            border-color: $chosen-border-focus;
          }
          .chosen-results > li {
-            padding: $input-padding-y;
-            @include bg-color($white);
+            padding: $chosen-padding-y;
+            @include bg-color($chosen-bg-focus);
             &.highlighted, &.result-selected {
                background-image: none !important;
                &.active-result {
@@ -37,35 +67,36 @@
                }
             }
             &.highlighted {
-               @include bg-color($gray-light, .5);
+               @include bg-color($chosen-border-focus, .25);
             }
             &.selected-result {
-               @include bg-color($brand-primary, 1);
+               color: $white;
+               @include bg-color($chosen-border-focus, 1);
             }
             &.highlighted, &.selected-result {
                &.active-result {
-                  @include bg-color($brand-primary, 1);
+                  color: $white;
+                  @include bg-color($chosen-border-focus, 1);
                }
             }
          }
       }
-
       &.chosen-container-single {
          .chosen-drop {
-            border: $input-btn-border-width solid transparent;
+            border: $chosen-border-width solid transparent;
             border-top: none;
-            background-color: $input-bg;
-            border-color: $input-border-color;
+            background-color: $chosen-bg;
+            border-color: $chosen-border-color;
             .chosen-results > .active-result {
                transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear;
                &.result-selected, &.highlighted {
-                  color: $white;
+                  color: $chosen-color;
                }
                &.highlighted {
-                  @include bg-color($gray, .75);
+                  @include bg-color($chosen-border-focus, .25);
                }
                &.result-selected {
-                  @include bg-color($brand-primary, 1);
+                  @include bg-color($chosen-border-focus, 1);
                }
             }
          }
@@ -73,17 +104,15 @@
             > .chosen-single {
                box-shadow: none !important;
                background-image: none !important;
-               border-radius: $input-border-radius;
+               border-radius: $chosen-border-radius;
                margin: 0;
                height: auto;
-               text-transform: uppercase;
-               line-height: $input-line-height;
-               padding: $input-padding-y $input-padding-x;
-               font-weight: normal;
+               line-height: $chosen-line-height;
+               padding: $chosen-padding-y $chosen-padding-x;
                color: $input-color;
-               border: $input-btn-border-width solid transparent;
-               background-color: $input-bg;
-               border-color: $input-border-color;
+               border: $chosen-border-width solid transparent;
+               background-color: $chosen-bg;
+               border-color: $chosen-border-color;
                transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
                > div b {
                   background-image: none !important;
@@ -94,11 +123,10 @@
 
                      // @include icon("arrow-down");
                      border: none;
-                     @include caret-down($caret-width, $gray-darker);
+                     @include caret-down($caret-width, $chosen-color);
 
-                     margin-top: -4px;
                      top:   50%;
-                     right: ($input-padding-x * 1.5);
+                     right: ($chosen-padding-x * 1.5);
                   }
                }
                @media
@@ -110,17 +138,19 @@
                      background: none !important;
                   }
                }
-               &:hover, &:focus, &.active {
-                  color: $gray-darker;
-                  background-color: $input-bg;
-                  border-color: $input-border-focus;
+               &:hover,
+               &:focus,
+               &.active {
+                  color: $chosen-color-focus;
+                  background-color: $chosen-bg-focus;
+                  border-color: $chosen-border-focus;
                   > div b {
                      background-image: none !important;
                      background: none !important;
                      &:before {
                         // @include icon("arrow-down");
                         border: none;
-                        @include caret-down($caret-width, $gray-darker);
+                        @include caret-down($caret-width, $chosen-color-focus);
                      }
                   }
                   @media
@@ -135,36 +165,52 @@
                }
             }
          }
+         // focus / tab-focus
+         &.chosen-container-active {
+            > .chosen-single {
+               &,
+               &:hover,
+               &:focus,
+               &.active {
+                  color: $chosen-color-focus;
+                  background-color: $chosen-bg-focus;
+                  border-color: $chosen-border-focus;
+               }
+            }
+         }
          &.chosen-with-drop {
             // stuff only visible when dropdown open
             .chosen-drop {
-               background-color: $input-bg;
-               border-color: $input-border-color;
+               background-color: $chosen-bg-focus;
+               border-color: $chosen-border-focus;
                .chosen-results > .active-result {
                   &.result-selected, &.highlighted {
-                     color: $white;
+                     color: $chosen-color-focus;
                   }
                   &.highlighted {
-                     @include bg-color($gray, .75);
+                     @include bg-color($chosen-border-focus, .25);
                   }
                   &.result-selected {
-                     @include bg-color($brand-primary, 1);
+                     color: $white;
+                     @include bg-color($chosen-border-focus, 1);
                   }
                   &, &.highlighted, &.result-selected {
                      &.active {
-                        @include bg-color($brand-primary, 1);
+                        color: $white;
+                        @include bg-color($chosen-border-focus, 1);
                      }
                   }
                }
             }
          }
+         // focus & open
          &.chosen-container-active {
             &.chosen-with-drop {
                z-index: $zindex-modal;
-               .chosen-single {
-                  color: $gray-darker;
-                  background-color: $input-bg;
-                  border-color: $input-border-focus;
+               > .chosen-single {
+                  color: $chosen-color-focus;
+                  background-color: $chosen-bg-focus;
+                  border-color: $chosen-border-focus;
                   @include border-bottom-radius(0);
                   > div b {
                      background-image: none !important;
@@ -172,7 +218,7 @@
                      &:before {
                         // @include icon("arrow-up");
                         border: none;
-                        @include caret-up($caret-width, $gray-darker);
+                        @include caret-up($caret-width, $chosen-color-focus);
                      }
                   }
                   @media
@@ -186,62 +232,166 @@
                   }
                }
                .chosen-drop {
-                  border-color: $input-border-focus;
+                  border-color: $chosen-border-focus;
                }
             }
 
             .chosen-search {
-               margin: $input-padding-y;
+               margin: $chosen-padding-y;
                padding: 0px;
-               @include bg-color($gray-lighter, .5);
-               border: $input-btn-border-width solid $input-border-color;
+               background-color: $chosen-bg;
+               border: $chosen-border-width solid $chosen-border-color;
                > input {
-                  color: $gray-darker;
-                  padding: ($input-padding-y * .5) $input-padding-y;
+                  color: $chosen-color;
+                  padding: ($chosen-padding-y * .5) $chosen-padding-y;
                   border: none;
-                  box-shadow: none;
-               }
-            }
-         }
-      }
-   }
-   &.chosenize-lg {
-      max-height:  $input-height-lg;
-      font-size:   $font-size-lg;
-      line-height: $line-height-lg;
-      &.chosen-container-single {
-         border: none !important;
-         & {
-            > .chosen-single {
-               max-height:  $input-height-lg;
-               padding: $input-padding-y-lg $input-padding-x-lg;
-               line-height: $line-height-lg;
-               > div b {
-                  &:before {
-                     right: $input-padding-x-lg;
+                  box-shadow: $chosen-box-shadow;
+                  &:focus {
+                     color: $chosen-color-focus;
+                     background-color: $chosen-bg-focus;
+                     box-shadow: $chosen-box-shadow-focus;
                   }
                }
             }
          }
       }
    }
-   &.chosenize-sm {
-      max-height:  $input-height-sm;
-      font-size:   $font-size-sm;
-      line-height: $line-height-sm;
-      .chosen-drop {
-         font-size: $font-size-sm;
+}
+
+/* COLOR-VARIANTE
+ * --------------------
+ * @params: $color, $focus, $bg, $bg-focus
+ *
+/*	-----	*/
+@mixin chosen-color-variante( $color: $chosen-color, $focus: $chosen-color-focus, $bg: $chosen-bg, $bg-focus: $chosen-bg-focus) {
+   &.chosen-container {
+      & {
+         .chosen-results {
+            border-color: $focus;
+         }
+         .chosen-results > li {
+            @include bg-color($bg-focus);
+
+            &.highlighted {
+               @include bg-color($focus, .25);
+            }
+            &.selected-result {
+               @include bg-color($focus, 1);
+            }
+            &.highlighted, &.selected-result {
+               &.active-result {
+                  @include bg-color($focus, 1);
+               }
+            }
+         }
       }
       &.chosen-container-single {
-         border: none !important;
+         .chosen-drop {
+            background-color: $bg;
+            border-color: $color;
+            .chosen-results > .active-result {
+               &.result-selected, &.highlighted {
+                  color: $color;
+               }
+               &.highlighted {
+                  @include bg-color($focus, .25);
+               }
+               &.result-selected {
+                  @include bg-color($focus, 1);
+               }
+            }
+         }
          & {
             > .chosen-single {
-               max-height:  $input-height-sm;
-               padding: $input-padding-y-sm $input-padding-x-sm;
-               line-height: $line-height-sm;
+               color: $color;
+               background-color: $bg;
+               border-color: $color;
                > div b {
                   &:before {
-                     right: $input-padding-x-sm;
+                     border: none;
+                     @include caret-down($caret-width, $color);
+                  }
+               }
+               &:hover,
+               &:focus,
+               &.active {
+                  color: $focus;
+                  background-color: $bg-focus;
+                  border-color: $focus;
+                  > div b {
+                     &:before {
+                        border: none;
+                        @include caret-down($caret-width, $focus);
+                     }
+                  }
+               }
+            }
+         }
+         // focus / tab-focus
+         &.chosen-container-active {
+            > .chosen-single {
+               &,
+               &:hover,
+               &:focus,
+               &.active {
+                  color: $focus;
+                  background-color: $bg-focus;
+                  border-color: $focus;
+               }
+            }
+         }
+         &.chosen-with-drop {
+            .chosen-drop {
+               background-color: $bg-focus;
+               border-color: $focus;
+               .chosen-results > .active-result {
+                  &.result-selected, &.highlighted {
+                     color: $focus;
+                  }
+                  &.highlighted {
+                     @include bg-color($focus, .25);
+                  }
+                  &.result-selected {
+                     color: $white;
+                     @include bg-color($focus, 1);
+                  }
+                  &, &.highlighted, &.result-selected {
+                     &.active {
+                        color: $white;
+                        @include bg-color($focus, 1);
+                     }
+                  }
+               }
+            }
+         }
+         // focus & open
+         &.chosen-container-active {
+            &.chosen-with-drop {
+               > .chosen-single {
+                  color: $focus;
+                  background-color: $bg-focus;
+                  border-color: $focus;
+                  @include border-bottom-radius(0);
+                  > div b {
+                     &:before {
+                        border: none;
+                        @include caret-up($caret-width, $focus);
+                     }
+                  }
+               }
+               .chosen-drop {
+                  border-color: $focus;
+               }
+            }
+
+            .chosen-search {
+               background-color: $bg;
+               border-color: $color;
+               > input {
+                  color: $color;
+                  &:focus {
+                     color: $focus;
+                     background-color: $bg-focus;
                   }
                }
             }

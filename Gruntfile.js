@@ -59,7 +59,6 @@ module.exports = function(grunt) {
 			include(shouldInclude)
 		})
 	}
-
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
       banner: 	'/*!\n' +

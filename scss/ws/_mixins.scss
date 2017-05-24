@@ -36,6 +36,7 @@
    width: 0;
    height: 0;
    margin-left: -($width * 1);
+   margin-top: -($width * .5);
    vertical-align: middle;
    border-top:   $width solid $color;
    border-right: $width solid transparent;
@@ -47,6 +48,7 @@
    width: 0;
    height: 0;
    margin-left: -($width * 1);
+   margin-top: -($width * .5);
    vertical-align: middle;
    border-bottom:  $width solid $color    !important;
    border-right: $width solid transparent !important;

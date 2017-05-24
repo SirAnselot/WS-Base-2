@@ -1,5 +1,5 @@
 /*!
- * Customize on basis of Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Customized on basis of Bootstrap v4.0.0-alpha.x (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -42,9 +42,58 @@
 /*	-----	*/
 @import "ws/svgicons";
 
-
 @import "ws/typo";
+
+/* RESET JQUERY.CHOSEN
+ *	--------------
+ * @descr:  Reset jquery.chosen default css with custom variables
+ * @params: s.u.
+ *
+ * Defaults to twbs form settings ($input-[...]-[...]) defined in @_variables.scss
+ *
+/*	-----	*/
+//
+// chosen:
+//
+// $chosen-font-family:       $font-family-condensed;
+// $chosen-font-size:         $font-size-base;
+//
+// $chosen-height:            $input-height;
+// $chosen-padding-x:         $input-padding-x;
+// $chosen-padding-y:         $input-padding-y;
+// $chosen-line-height:       $input-line-height;
+//
+// $chosen-color:             $input-color;
+// $chosen-border-color:      $input-border-color;
+// $chosen-bg:                $input-bg;
+//
+// $chosen-box-shadow:        $input-box-shadow;
+// $chosen-box-shadow-focus:  $input-box-shadow-focus;
+//
+// $chosen-border-focus:      $input-border-focus;
+// $chosen-color-focus:       $input-color-focus;
+// $chosen-bg-focus:          $input-bg-focus;
+//
+// $chosen-border-width:      $input-btn-border-width;
+// $chosen-border-radius:     $input-border-radius;
+
 @import "ws/reset.chosen";
+
+/* CHOSEN-COLOR-VARIANTE
+ * --------------------
+ * @params: $color, $focus, $bg, $bg-focus
+ *
+/*	-----	*/
+.has-success .form-control {
+   @include chosen-color-variante($state-success-text, $brand-success, $state-success-bg, $white);
+}
+.has-warning .form-control {
+   @include chosen-color-variante($state-warning-text, $brand-warning, $state-warning-bg, $white);
+}
+.has-danger .form-control,
+.has-error  .form-control {
+   @include chosen-color-variante($state-danger-text, $brand-danger, $state-danger-bg, $white);
+}
 
 html {
   font-size: 12px;
@@ -52,19 +101,24 @@ html {
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 18px;
+    font-size: 15px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 16px;
   }
 }
 

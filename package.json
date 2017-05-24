@@ -7,7 +7,7 @@
   "author": "Ansgar Hiller <ansgar@weigelstein.de>",
   "main": "public",
   "sass": "scss/ws.scss",
-  "dist": "dist",
+  "dist": "ws",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -47,7 +47,7 @@
       }
     }
   },
-  "license": "ISC",
+  "license": "GNU",
   "devDependencies": {
     "autoprefixer": "^6.5.1",
     "each-async": "^1.1.1",
