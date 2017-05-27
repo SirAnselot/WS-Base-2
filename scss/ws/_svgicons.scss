@@ -1,61 +1,79 @@
 $icons: (
 	"fast-food": (
-		x: 100%,
-		y: 0%,
+		x: 93.95973154362416%,
+		y: 14.627659574468085%,
 		width: 48,
 		height: 48
 	),
 	"fb": (
-		x: 0%,
-		y: 0%,
+		x: 89.65517241379311%,
+		y: 15.277777777777779%,
 		width: 80,
 		height: 80
 	),
 	"fb-ball": (
-		x: 62.5%,
-		y: 0%,
+		x: 68.96551724137932%,
+		y: 15.277777777777779%,
 		width: 80,
 		height: 80
 	),
 	"google": (
-		x: 0%,
-		y: 66.66666666666667%,
+		x: 75.86206896551724%,
+		y: 15.277777777777779%,
 		width: 80,
 		height: 80
 	),
 	"google-ball": (
-		x: 62.5%,
-		y: 66.66666666666667%,
+		x: 82.75862068965517%,
+		y: 15.277777777777779%,
 		width: 80,
 		height: 80
 	),
 	"hamburger-black": (
-		x: 95.23809523809524%,
-		y: 60%,
+		x: 70%,
+		y: 25%,
 		width: 40,
 		height: 40
 	),
 	"hamburger-gray": (
-		x: 100%,
-		y: 31.57894736842105%,
+		x: 97.98657718120805%,
+		y: 14.627659574468085%,
 		width: 48,
 		height: 48
 	),
 	"hamburger-white": (
-		x: 0%,
-		y: 100%,
+		x: 66.66666666666667%,
+		y: 25%,
 		width: 40,
 		height: 40
 	),
 	"houzz": (
-		x: 85.1063829787234%,
-		y: 75.55555555555556%,
+		x: 99.67213114754098%,
+		y: 14.102564102564102%,
 		width: 20,
 		height: 20
+	),
+	"instagram-ball": (
+		x: 99.60681112357425%,
+		y: 16.6495890977466%,
+		width: 19.19995,
+		height: 19.19995
+	),
+	"ws-icon": (
+		x: 0%,
+		y: 0%,
+		width: 800,
+		height: 800
+	),
+	"ws-logo-wortbild": (
+		x: 100%,
+		y: 0%,
+		width: 440,
+		height: 110
 	)
 );
 
-@mixin svg($name, $width: auto, $height: auto){
+@mixin svg($name, $width: 48, $height: auto){
 	$icon: map-get($icons, $name);
 	$sizeFactor: 1;
 	@if $width != auto {
@@ -70,8 +88,8 @@ $icons: (
 	@if $height == auto {
 		$height: (map-get($icon, height) * $sizeFactor);
 	}
-	$targetWidth: 208 * $sizeFactor;
-	$targetHeight: 200 * $sizeFactor;
+	$targetWidth: 1240 * $sizeFactor;
+	$targetHeight: 800 * $sizeFactor;
 
 	display: inline-block;
 	background-image: url(../../public/img/svg/build/icons.svg);
@@ -108,4 +126,13 @@ $icons: (
 }
 .svg-houzz {
 	@include svg("houzz");
+}
+.svg-instagram-ball {
+	@include svg("instagram-ball");
+}
+.svg-ws-icon {
+	@include svg("ws-icon");
+}
+.svg-ws-logo-wortbild {
+	@include svg("ws-logo-wortbild");
 }

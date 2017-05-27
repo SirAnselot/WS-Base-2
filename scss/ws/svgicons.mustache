@@ -9,7 +9,7 @@ $icons: (
 	{{/shapes}}
 );
 
-@mixin svg($name, $width: auto, $height: auto){
+@mixin svg($name, $width: 48, $height: auto){
 	$icon: map-get($icons, $name);
 	$sizeFactor: 1;
 	@if $width != auto {

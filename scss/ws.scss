@@ -31,14 +31,13 @@
 @import "icons/socialist";
 @import "icons/socialist.codes";
 
-.icon::before { margin-right: 0; }
-
 .the-icons {
    text-align: center;
    background-color: rgba($white,.5);
    margin: .2rem .1rem;
    padding-bottom: .5rem;
-   .demo-icon {
+   .demo-icon,
+   .demo-social {
       text-align: center;
       padding: 0 1rem 1rem 1rem;
       margin: .5rem;
@@ -47,6 +46,12 @@
       border: none;
       color: $black;
       font-size: $font-size-lg;
+      @include media-breakpoint-only(md) {
+         font-size: $font-size-base;
+      }
+      @include media-breakpoint-only(sm) {
+         padding: 0 2rem .5rem 2rem;
+      }
       border-bottom: 1px solid $state-info-border;
       &:before {
          content:'';
@@ -91,6 +96,7 @@
 // $chosen-height:            $input-height;
 // $chosen-padding-x:         $input-padding-x;
 // $chosen-padding-y:         $input-padding-y;
+//
 // $chosen-line-height:       $input-line-height;
 //
 // $chosen-color:             $input-color;
@@ -114,14 +120,13 @@
  * @params: $color, $focus, $bg, $bg-focus
  *
 /*	-----	*/
-.has-success .form-control {
+.has-success .chosenize.form-control {
    @include chosen-color-variante($state-success-text, $brand-success, $state-success-bg, $white);
 }
-.has-warning .form-control {
+.has-warning .chosenize.form-control {
    @include chosen-color-variante($state-warning-text, $brand-warning, $state-warning-bg, $white);
 }
-.has-danger .form-control,
-.has-error  .form-control {
+.has-danger .chosenize.form-control {
    @include chosen-color-variante($state-danger-text, $brand-danger, $state-danger-bg, $white);
 }
 
@@ -175,7 +180,7 @@ body {
       }
       &:before {
          margin-right: 0.1rem;
-         @include entypo('\e83b', inherit);
+         @include entypo('\e846', inherit);
          text-decoration: none;
       }
       &.collapsed {
@@ -199,7 +204,9 @@ body {
    }
 }
 
-
+.ws-logo {
+   @include svg('ws-logo-wortbild',auto, 56);
+}
 .page {
    min-height: 100%;
    width: 100%;
