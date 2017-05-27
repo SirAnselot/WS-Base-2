@@ -59,12 +59,13 @@
    }
    .i-name {
       font-size: $font-size-xs;
+      color: $brand-primary;
+      // @include text-truncate();
       display: none;
    }
    .i-code {
       font-size: $font-size-xs;
       color: $brand-primary;
-      // display: none;
    }
 }
 
@@ -207,6 +208,7 @@ body {
 .ws-logo {
    @include svg('ws-logo-wortbild',auto, 56);
 }
+
 .page {
    min-height: 100%;
    width: 100%;
