@@ -20,7 +20,7 @@
     "Gruntfile.js"
   ],
   "config": {
-    "namespace": "ws",
+    "namespace": "nopo",
     "localhost": {
       "port": "8080",
       "path": "./"

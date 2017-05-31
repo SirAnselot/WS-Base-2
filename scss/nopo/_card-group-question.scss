@@ -7,6 +7,7 @@
 // ---------------------------
 
 $question-btn-bg-color:     $gray-dark !default;
+$enable-flex: true;
 
 // ---------------------------
 // – 2 BASIC HTML STRUCTURE
@@ -230,12 +231,6 @@ $question-btn-bg-color:     $gray-dark !default;
    min-width: 2.25rem;
    padding-left: .35rem;
    padding-right: .35rem;
-   &.border-left {
-      border-left: 1px solid $gray-lighter;
-   }
-   &.border-right {
-      border-right: 1px solid $gray-lighter;
-   }
 }
 
 // THE 1 - 6 RADIO-GROUP

@@ -56,7 +56,7 @@ jQuery(document).ready(function ($) { 'use strict';
                   var _input = $(this).find('input');
                   if(_input.prop('checked') === false) {
                      $('#'+_groupid).trigger('ws.changed.radio',[_input.val()]);
-                     WS.QuestionsGroup.showNext( $('#'+_groupid) );
+                     NOPO.QuestionsGroup.showNext( $('#'+_groupid) );
                   }
                });
             });
@@ -113,7 +113,6 @@ jQuery(document).ready(function ($) { 'use strict';
                })
                .on('show.bs.collapse', function (e)
                {
-                  // console.log( 'PARENT_' + e.target.id );
                   var _target = $GROUP.find('.card-group.show'),
                       _parent = $('#PARENT_' + e.target.id);
                   _parent
@@ -125,7 +124,7 @@ jQuery(document).ready(function ($) { 'use strict';
                })
                .on('shown.bs.collapse', function (e)
                {
-                  var tipOffset = WS.QuestionsGroup.TIP_Y_OFFSET[viewportSize];
+                  var tipOffset = NOPO.QuestionsGroup.TIP_Y_OFFSET[viewportSize];
                   $('#PARENT_' + e.target.id)
                      .find('[rel="tooltip"]')
                      .tooltip({
@@ -134,7 +133,7 @@ jQuery(document).ready(function ($) { 'use strict';
                      });
                });
 
-            WS.QuestionsGroup.showNext();
+            NOPO.QuestionsGroup.showNext();
          }
       },
 
@@ -142,15 +141,15 @@ jQuery(document).ready(function ($) { 'use strict';
          if ($GROUP === undefined || typeof $GROUP !== 'object' ) { $GROUP = $(this.SELECTOR_DEFAULT); }
          if ($GROUP.length) {
             var _next = $GROUP.find('.radio-group:not(.ok)').first();
-            clearTimeout(WS.QuestionsGroup.NEXT_TIMER);
-	         WS.QuestionsGroup.NEXT_TIMER = setTimeout(function () {
+            clearTimeout(NOPO.QuestionsGroup.NEXT_TIMER);
+	         NOPO.QuestionsGroup.NEXT_TIMER = setTimeout(function () {
 		         if ($CURRENT !== undefined) { $CURRENT.collapse('hide'); }
                if (_next.length) {
                   _next.collapse('show');
                } else {
                   console.log('submit');
                }
-            }, WS.QuestionsGroup.NEXT_DELAY );
+            }, NOPO.QuestionsGroup.NEXT_DELAY );
          }
       }
    }
