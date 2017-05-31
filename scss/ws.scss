@@ -6,7 +6,7 @@
 
  // Core variables and mixins
 @import "bootstrap/variables";
-@import "variables";
+@import "ws/variables";
 
 // variables and mixins "ws-framework"
 @import "ws/ws";
@@ -91,7 +91,7 @@
 //
 // chosen:
 //
-// $chosen-font-family:       $font-family-condensed;
+$chosen-font-family:          $font-family-condensed;
 // $chosen-font-size:         $font-size-base;
 //
 // $chosen-height:            $input-height;
@@ -115,6 +115,21 @@
 // $chosen-border-radius:     $input-border-radius;
 
 @import "ws/reset.chosen";
+
+/* SIZE
+ * --------------------
+ * @params: $font-size, $height, $padding-x, $padding-y
+ *
+/*	-----	*/
+.chosenize.form-control {
+   @include chosen-size();
+   &.form-control-sm {
+      @include chosen-size($font-size-sm, $input-height-sm, $input-padding-x-sm, $input-padding-y-sm );
+   }
+   &.form-control-lg {
+      @include chosen-size($font-size-lg, $input-height-lg, $input-padding-y-lg, $input-padding-y-lg );
+   }
+}
 
 /* CHOSEN-COLOR-VARIANTE
  * --------------------
@@ -181,7 +196,8 @@ body {
       }
       &:before {
          margin-right: 0.1rem;
-         @include entypo('\e846', inherit);
+   //    @include entypo('\e83b', inherit); // chevron down
+         @include entypo('\e846', inherit); // chevron up
          text-decoration: none;
       }
       &.collapsed {
@@ -212,6 +228,10 @@ body {
 .page {
    min-height: 100%;
    width: 100%;
+
+   // when header .fixed-top
+   padding-top: 96px;
+
    @include media-breakpoint-down(lg) {
 
    }
@@ -219,10 +239,12 @@ body {
 
    }
    .header {
+      height: 96px;
       .navbar {
-         @include bg-color($white, 1);
+         height: inherit;
+         @include bg-color($brand-primary, 1);
          .navbar-brand {
-            // @include text-hide;
+            //
          }
       }
    }

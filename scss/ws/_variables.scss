@@ -269,9 +269,9 @@ $hr-border-width: $border-width;
 $line-height-lg:         (4 / 3);
 $line-height-sm:         1.5;
 
-$border-radius:          0;
-$border-radius-lg:       0;
-$border-radius-sm:       0;
+$border-radius:          0.5rem;
+$border-radius-lg:       1rem;
+$border-radius-sm:       0.25rem;
 
 $component-active-color: $white;
 $component-active-bg:    $brand-primary;
@@ -353,9 +353,9 @@ $btn-block-spacing-y:            .5rem;
 $btn-toolbar-margin:             .5rem;
 //
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:              $border-radius;
-$btn-border-radius-lg:           $border-radius-lg;
-$btn-border-radius-sm:           $border-radius-sm;
+$btn-border-radius:              0;
+$btn-border-radius-lg:           0;
+$btn-border-radius-sm:           0;
 
 $btn-transition:                 all .2s ease-in-out;
 //
@@ -374,9 +374,9 @@ $input-border-color:             $gray-light;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075);
 
-$input-border-radius:            $border-radius;
-$input-border-radius-lg:         $border-radius-lg;
-$input-border-radius-sm:         $border-radius-sm;
+$input-border-radius:            0;
+$input-border-radius-lg:         0;
+$input-border-radius-sm:         0;
 
 $input-bg-focus:                 $white;
 $input-border-focus:             $brand-primary;

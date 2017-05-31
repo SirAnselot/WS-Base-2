@@ -3,11 +3,13 @@
  * reset default chosen.css with custom variables to make custom skinning less annoying and timeconsuming
  */
 $chosen-font-family:       $font-family-condensed !default;
-$chosen-font-size:         $font-size-base !default;
 
-$chosen-height:            $input-height  !default;
-$chosen-padding-x:         $input-padding-x !default;
-$chosen-padding-y:         $input-padding-y !default;
+// $chosen-font-size:         $font-size-base !default;
+
+// $chosen-height:            $input-height  !default;
+// $chosen-padding-x:         $input-padding-x !default;
+// $chosen-padding-y:         $input-padding-y !default;
+
 $chosen-line-height:       $input-line-height !default;
 
 $chosen-color:             $input-color !default;
@@ -26,10 +28,6 @@ $chosen-border-radius:     $input-border-radius !default;
 
 .chosenize {
    box-shadow:    none !important;
-   font-family:   inherit;
-   font-size:     inherit;
-   line-height:   $chosen-line-height;
-   max-height:    $chosen-height;
    border:        none !important;
    &.form-control {
       padding: 0 !important;
@@ -40,14 +38,26 @@ $chosen-border-radius:     $input-border-radius !default;
       border-radius: 0 !important;
       background-color: transparent !important;
    }
+}
+
+/* SIZE
+ * --------------------
+ * @params: $font-size, $height, $padding-x, $padding-y
+ *
+/*	-----	*/
+@mixin chosen-size($chosen-font-size: $font-size-base, $chosen-height: $input-height, $chosen-padding-x: $input-padding-x, $chosen-padding-y: $input-padding-y  ) {
    &.chosen-container {
+      font-family:   $chosen-font-family;
+      font-size:     $chosen-font-size;
+      line-height:   $chosen-line-height;
+      max-height:    $chosen-height;
       & {
          .chosen-drop {
             border-image: none !important;
             box-shadow: none !important;
             border: $chosen-border-width solid transparent;
             @include border-bottom-radius($input-border-radius);
-            font-size: $font-size-base;
+            font-size: $chosen-font-size;
             text-align: left;
             padding: 0;
          }
@@ -123,7 +133,7 @@ $chosen-border-radius:     $input-border-radius !default;
 
                      // @include icon("arrow-down");
                      border: none;
-                     @include caret-down($caret-width, $chosen-color);
+                     @include caret-down(($chosen-font-size * .35), $chosen-color);
 
                      top:   50%;
                      right: ($chosen-padding-x * 1.5);
@@ -150,7 +160,7 @@ $chosen-border-radius:     $input-border-radius !default;
                      &:before {
                         // @include icon("arrow-down");
                         border: none;
-                        @include caret-down($caret-width, $chosen-color-focus);
+                        @include caret-down(($chosen-font-size * .35), $chosen-color-focus);
                      }
                   }
                   @media
@@ -218,7 +228,7 @@ $chosen-border-radius:     $input-border-radius !default;
                      &:before {
                         // @include icon("arrow-up");
                         border: none;
-                        @include caret-up($caret-width, $chosen-color-focus);
+                        @include caret-up(($chosen-font-size * .35), $chosen-color-focus);
                      }
                   }
                   @media
@@ -243,7 +253,7 @@ $chosen-border-radius:     $input-border-radius !default;
                border: $chosen-border-width solid $chosen-border-color;
                > input {
                   color: $chosen-color;
-                  padding: ($chosen-padding-y * .5) $chosen-padding-y;
+                  padding: ($chosen-padding-y * .25) $chosen-padding-y;
                   border: none;
                   box-shadow: $chosen-box-shadow;
                   &:focus {
@@ -308,8 +318,10 @@ $chosen-border-radius:     $input-border-radius !default;
                border-color: $color;
                > div b {
                   &:before {
-                     border: none;
-                     @include caret-down($caret-width, $color);
+                     border-color: transparent;
+                     border-top-color: $color;
+                     // border-top-color: transparent;
+                     // @include caret-down($caret-width, $color);
                   }
                }
                &:hover,
@@ -320,8 +332,9 @@ $chosen-border-radius:     $input-border-radius !default;
                   border-color: $focus;
                   > div b {
                      &:before {
-                        border: none;
-                        @include caret-down($caret-width, $focus);
+                        border-color: transparent;
+                        border-top-color: $focus;
+                        // @include caret-down($caret-width, $focus);
                      }
                   }
                }
@@ -374,8 +387,9 @@ $chosen-border-radius:     $input-border-radius !default;
                   @include border-bottom-radius(0);
                   > div b {
                      &:before {
-                        border: none;
-                        @include caret-up($caret-width, $focus);
+                        border-color: transparent;
+                        border-bottom-color: $focus !important;
+                        // @include caret-up($caret-width, $focus);
                      }
                   }
                }

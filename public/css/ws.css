@@ -649,7 +649,7 @@ code {
   font-size: 90%;
   color: #bd4147;
   background-color: #f7f7f9;
-  border-radius: 0; }
+  border-radius: 0.5rem; }
   a > code {
     padding: 0;
     color: inherit;
@@ -660,7 +660,7 @@ kbd {
   font-size: 90%;
   color: #fff;
   background-color: #292b2c;
-  border-radius: 0; }
+  border-radius: 0.25rem; }
   kbd kbd {
     padding: 0;
     font-size: 100%;
@@ -2393,7 +2393,7 @@ tbody.collapse.show {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0; }
+  border-radius: 0.5rem; }
 
 .dropdown-divider {
   height: 1px;
@@ -3336,7 +3336,7 @@ tbody.collapse.show {
           flex-direction: column;
   background-color: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0; }
+  border-radius: 0.5rem; }
 
 .card-block {
   -webkit-box-flex: 1;
@@ -3361,12 +3361,12 @@ tbody.collapse.show {
   margin-left: 1.25rem; }
 
 .card > .list-group:first-child .list-group-item:first-child {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem; }
 
 .card > .list-group:last-child .list-group-item:last-child {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; }
 
 .card-header {
   padding: 0.75rem 1.25rem;
@@ -3374,14 +3374,14 @@ tbody.collapse.show {
   background-color: #f2f2f2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
-    border-radius: calc(0 - 1px) calc(0 - 1px) 0 0; }
+    border-radius: calc(0.5rem - 1px) calc(0.5rem - 1px) 0 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f2f2f2;
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
-    border-radius: 0 0 calc(0 - 1px) calc(0 - 1px); }
+    border-radius: 0 0 calc(0.5rem - 1px) calc(0.5rem - 1px); }
 
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -3479,7 +3479,7 @@ tbody.collapse.show {
   border-left: 0; }
 
 .card-img {
-  border-radius: calc(0 - 1px); }
+  border-radius: calc(0.5rem - 1px); }
 
 .card-img-overlay {
   position: absolute;
@@ -3490,12 +3490,12 @@ tbody.collapse.show {
   padding: 1.25rem; }
 
 .card-img-top {
-  border-top-right-radius: calc(0 - 1px);
-  border-top-left-radius: calc(0 - 1px); }
+  border-top-right-radius: calc(0.5rem - 1px);
+  border-top-left-radius: calc(0.5rem - 1px); }
 
 .card-img-bottom {
-  border-bottom-right-radius: calc(0 - 1px);
-  border-bottom-left-radius: calc(0 - 1px); }
+  border-bottom-right-radius: calc(0.5rem - 1px);
+  border-bottom-left-radius: calc(0.5rem - 1px); }
 
 @media (min-width: 576px) {
   .card-deck {
@@ -3574,7 +3574,7 @@ tbody.collapse.show {
   margin-bottom: 1rem;
   list-style: none;
   background-color: #eceeef;
-  border-radius: 0; }
+  border-radius: 0.5rem; }
   .breadcrumb::after {
     display: block;
     content: "";
@@ -3601,16 +3601,16 @@ tbody.collapse.show {
   display: flex;
   padding-left: 0;
   list-style: none;
-  border-radius: 0; }
+  border-radius: 0.5rem; }
 
 .page-item:first-child .page-link {
   margin-left: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem; }
 
 .page-item:last-child .page-link {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem; }
 
 .page-item.active .page-link {
   z-index: 2;
@@ -3650,24 +3650,24 @@ tbody.collapse.show {
   font-size: 1.25rem; }
 
 .pagination-lg .page-item:first-child .page-link {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem; }
 
 .pagination-lg .page-item:last-child .page-link {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem; }
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem; }
 
 .pagination-sm .page-item:first-child .page-link {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem; }
 
 .pagination-sm .page-item:last-child .page-link {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem; }
 
 .badge {
   display: inline-block;
@@ -3679,7 +3679,7 @@ tbody.collapse.show {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 0; }
+  border-radius: 0.5rem; }
   .badge:empty {
     display: none; }
 
@@ -3748,7 +3748,7 @@ a.badge:hover {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #eceeef;
-  border-radius: 0; }
+  border-radius: 1rem; }
   @media (min-width: 576px) {
     .jumbotron {
       padding: 4rem 2rem; } }
@@ -4152,7 +4152,7 @@ button.close {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0;
+  border-radius: 1rem;
   outline: 0; }
 
 .modal-backdrop {
@@ -4297,7 +4297,7 @@ button.close {
   color: #fff;
   text-align: center;
   background-color: #000;
-  border-radius: 0; }
+  border-radius: 0.5rem; }
   .tooltip-inner::before {
     position: absolute;
     width: 0;
@@ -4332,7 +4332,7 @@ button.close {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0; }
+  border-radius: 1rem; }
   .popover.popover-top, .popover.bs-tether-element-attached-bottom {
     margin-top: -10px; }
     .popover.popover-top::before, .popover.popover-top::after, .popover.bs-tether-element-attached-bottom::before, .popover.bs-tether-element-attached-bottom::after {
@@ -4401,8 +4401,8 @@ button.close {
   font-size: 1rem;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-top-right-radius: calc(0 - 1px);
-  border-top-left-radius: calc(0 - 1px); }
+  border-top-right-radius: calc(1rem - 1px);
+  border-top-left-radius: calc(1rem - 1px); }
   .popover-title:empty {
     display: none; }
 
@@ -4697,23 +4697,23 @@ a.bg-inverse:hover {
   border-left: 0 !important; }
 
 .rounded {
-  border-radius: 0; }
+  border-radius: 0.5rem; }
 
 .rounded-top {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem; }
 
 .rounded-right {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem; }
 
 .rounded-bottom {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; }
 
 .rounded-left {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem; }
 
 .rounded-circle {
   border-radius: 50%; }
@@ -9073,10 +9073,6 @@ small,
  */
 .chosenize {
   box-shadow: none !important;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: 1.25;
-  max-height: 2.25rem;
   border: none !important; }
   .chosenize.form-control {
     padding: 0 !important;
@@ -9087,7 +9083,28 @@ small,
     border: none !important;
     border-radius: 0 !important;
     background-color: transparent !important; }
-  .chosenize.chosen-container .chosen-drop {
+
+/* SIZE
+ * --------------------
+ * @params: $font-size, $height, $padding-x, $padding-y
+ *
+/*	-----	*/
+/* COLOR-VARIANTE
+ * --------------------
+ * @params: $color, $focus, $bg, $bg-focus
+ *
+/*	-----	*/
+/* SIZE
+ * --------------------
+ * @params: $font-size, $height, $padding-x, $padding-y
+ *
+/*	-----	*/
+.chosenize.form-control.chosen-container {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  max-height: 2.25rem; }
+  .chosenize.form-control.chosen-container .chosen-drop {
     -o-border-image: none !important;
        border-image: none !important;
     box-shadow: none !important;
@@ -9097,40 +9114,40 @@ small,
     font-size: 1rem;
     text-align: left;
     padding: 0; }
-  .chosenize.chosen-container .chosen-results {
+  .chosenize.form-control.chosen-container .chosen-results {
     margin: 0 0 0.5rem 0;
     padding: 0.5rem 0.5rem 0 0.5rem;
     border-top: 1px solid transparent;
     border-color: #66b2e4; }
-  .chosenize.chosen-container .chosen-results > li {
+  .chosenize.form-control.chosen-container .chosen-results > li {
     padding: 0.5rem;
     background-color: white; }
-    .chosenize.chosen-container .chosen-results > li.highlighted, .chosenize.chosen-container .chosen-results > li.result-selected {
+    .chosenize.form-control.chosen-container .chosen-results > li.highlighted, .chosenize.form-control.chosen-container .chosen-results > li.result-selected {
       background-image: none !important; }
-      .chosenize.chosen-container .chosen-results > li.highlighted.active-result, .chosenize.chosen-container .chosen-results > li.result-selected.active-result {
+      .chosenize.form-control.chosen-container .chosen-results > li.highlighted.active-result, .chosenize.form-control.chosen-container .chosen-results > li.result-selected.active-result {
         background-image: none !important; }
-    .chosenize.chosen-container .chosen-results > li.highlighted {
+    .chosenize.form-control.chosen-container .chosen-results > li.highlighted {
       background-color: rgba(102, 178, 228, 0.25); }
-    .chosenize.chosen-container .chosen-results > li.selected-result {
+    .chosenize.form-control.chosen-container .chosen-results > li.selected-result {
       color: #FFF;
       background-color: #66b2e4; }
-    .chosenize.chosen-container .chosen-results > li.highlighted.active-result, .chosenize.chosen-container .chosen-results > li.selected-result.active-result {
+    .chosenize.form-control.chosen-container .chosen-results > li.highlighted.active-result, .chosenize.form-control.chosen-container .chosen-results > li.selected-result.active-result {
       color: #FFF;
       background-color: #66b2e4; }
-  .chosenize.chosen-container.chosen-container-single .chosen-drop {
+  .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop {
     border: 1px solid transparent;
     border-top: none;
     background-color: rgba(242, 242, 242, 0);
     border-color: #878787; }
-    .chosenize.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result {
+    .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result {
       transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear; }
-      .chosenize.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted {
+      .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted {
         color: #4A4A4A; }
-      .chosenize.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted {
+      .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted {
         background-color: rgba(102, 178, 228, 0.25); }
-      .chosenize.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected {
+      .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected {
         background-color: #66b2e4; }
-  .chosenize.chosen-container.chosen-container-single > .chosen-single {
+  .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single {
     box-shadow: none !important;
     background-image: none !important;
     border-radius: 0;
@@ -9143,10 +9160,10 @@ small,
     background-color: rgba(242, 242, 242, 0);
     border-color: #878787;
     transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear; }
-    .chosenize.chosen-container.chosen-container-single > .chosen-single > div b {
+    .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b {
       background-image: none !important;
       background: none !important; }
-      .chosenize.chosen-container.chosen-container-single > .chosen-single > div b:before {
+      .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b:before {
         content: '';
         position: absolute;
         border: none;
@@ -9162,17 +9179,17 @@ small,
         top: 50%;
         right: 1.125rem; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-      .chosenize.chosen-container.chosen-container-single > .chosen-single > div b {
+      .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b {
         background-image: none !important;
         background: none !important; } }
-    .chosenize.chosen-container.chosen-container-single > .chosen-single:hover, .chosenize.chosen-container.chosen-container-single > .chosen-single:focus, .chosenize.chosen-container.chosen-container-single > .chosen-single.active {
+    .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active {
       color: #4A4A4A;
       background-color: #FFF;
       border-color: #66b2e4; }
-      .chosenize.chosen-container.chosen-container-single > .chosen-single:hover > div b, .chosenize.chosen-container.chosen-container-single > .chosen-single:focus > div b, .chosenize.chosen-container.chosen-container-single > .chosen-single.active > div b {
+      .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b {
         background-image: none !important;
         background: none !important; }
-        .chosenize.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .chosenize.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .chosenize.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
+        .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
           border: none;
           display: inline-block;
           width: 0;
@@ -9184,38 +9201,38 @@ small,
           border-right: 0.35rem solid transparent;
           border-left: 0.35rem solid transparent; }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-        .chosenize.chosen-container.chosen-container-single > .chosen-single:hover > div b, .chosenize.chosen-container.chosen-container-single > .chosen-single:focus > div b, .chosenize.chosen-container.chosen-container-single > .chosen-single.active > div b {
+        .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b {
           background-image: none !important;
           background: none !important; } }
-  .chosenize.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .chosenize.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .chosenize.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .chosenize.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
+  .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
     color: #4A4A4A;
     background-color: #FFF;
     border-color: #66b2e4; }
-  .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop {
+  .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop {
     background-color: #FFF;
     border-color: #66b2e4; }
-    .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted {
       color: #4A4A4A; }
-    .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted {
       background-color: rgba(102, 178, 228, 0.25); }
-    .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected {
       color: #FFF;
       background-color: #66b2e4; }
-    .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.active, .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted.active, .chosenize.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected.active {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.active, .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted.active, .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected.active {
       color: #FFF;
       background-color: #66b2e4; }
-  .chosenize.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop {
+  .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop {
     z-index: 1050; }
-    .chosenize.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single {
       color: #4A4A4A;
       background-color: #FFF;
       border-color: #66b2e4;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0; }
-      .chosenize.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b {
+      .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b {
         background-image: none !important;
         background: none !important; }
-        .chosenize.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before {
+        .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before {
           border: none;
           display: inline-block;
           width: 0;
@@ -9227,31 +9244,466 @@ small,
           border-right: 0.35rem solid transparent !important;
           border-left: 0.35rem solid transparent !important; }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-        .chosenize.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b {
+        .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b {
           background-image: none !important;
           background: none !important; } }
-    .chosenize.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop {
       border-color: #66b2e4; }
-  .chosenize.chosen-container.chosen-container-single.chosen-container-active .chosen-search {
+  .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search {
     margin: 0.5rem;
     padding: 0px;
     background-color: rgba(242, 242, 242, 0);
     border: 1px solid #878787; }
-    .chosenize.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input {
+    .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input {
       color: #4A4A4A;
-      padding: 0.25rem 0.5rem;
+      padding: 0.125rem 0.5rem;
       border: none;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-      .chosenize.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input:focus {
+      .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input:focus {
         color: #4A4A4A;
         background-color: #FFF;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), rgba(102, 178, 228, 0.6); }
 
-/* COLOR-VARIANTE
- * --------------------
- * @params: $color, $focus, $bg, $bg-focus
- *
-/*	-----	*/
+.chosenize.form-control.form-control-sm.chosen-container, .input-group-sm > .chosenize.form-control.chosen-container,
+.input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  max-height: 1.8125rem; }
+  .chosenize.form-control.form-control-sm.chosen-container .chosen-drop, .input-group-sm > .chosenize.form-control.chosen-container .chosen-drop,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-drop {
+    -o-border-image: none !important;
+       border-image: none !important;
+    box-shadow: none !important;
+    border: 1px solid transparent;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 0; }
+  .chosenize.form-control.form-control-sm.chosen-container .chosen-results, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results {
+    margin: 0 0 0.5rem 0;
+    padding: 0.25rem 0.25rem 0 0.25rem;
+    border-top: 1px solid transparent;
+    border-color: #66b2e4; }
+  .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li {
+    padding: 0.25rem;
+    background-color: white; }
+    .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.highlighted, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.highlighted,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted, .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.result-selected, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.result-selected,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.result-selected {
+      background-image: none !important; }
+      .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.highlighted.active-result, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.highlighted.active-result,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted.active-result, .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.result-selected.active-result, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.result-selected.active-result,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.result-selected.active-result {
+        background-image: none !important; }
+    .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.highlighted, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.highlighted,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted {
+      background-color: rgba(102, 178, 228, 0.25); }
+    .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.selected-result, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.selected-result,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.selected-result {
+      color: #FFF;
+      background-color: #66b2e4; }
+    .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.highlighted.active-result, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.highlighted.active-result,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted.active-result, .chosenize.form-control.form-control-sm.chosen-container .chosen-results > li.selected-result.active-result, .input-group-sm > .chosenize.form-control.chosen-container .chosen-results > li.selected-result.active-result,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.selected-result.active-result {
+      color: #FFF;
+      background-color: #66b2e4; }
+  .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single .chosen-drop, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop {
+    border: 1px solid transparent;
+    border-top: none;
+    background-color: rgba(242, 242, 242, 0);
+    border-color: #878787; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result {
+      transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear; }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.highlighted {
+        color: #4A4A4A; }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.highlighted {
+        background-color: rgba(102, 178, 228, 0.25); }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.result-selected {
+        background-color: #66b2e4; }
+  .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single {
+    box-shadow: none !important;
+    background-image: none !important;
+    border-radius: 0;
+    margin: 0;
+    height: auto;
+    line-height: 1.25;
+    padding: 0.25rem 0.5rem;
+    color: #4A4A4A;
+    border: 1px solid transparent;
+    background-color: rgba(242, 242, 242, 0);
+    border-color: #878787;
+    transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single > div b {
+      background-image: none !important;
+      background: none !important; }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single > div b:before, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b:before,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single > div b:before {
+        content: '';
+        position: absolute;
+        border: none;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: -0.30625rem;
+        margin-top: -0.153125rem;
+        vertical-align: middle;
+        border-top: 0.30625rem solid #4A4A4A;
+        border-right: 0.30625rem solid transparent;
+        border-left: 0.30625rem solid transparent;
+        top: 50%;
+        right: 0.75rem; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single > div b {
+        background-image: none !important;
+        background: none !important; } }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:hover, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:focus, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single.active, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active {
+      color: #4A4A4A;
+      background-color: #FFF;
+      border-color: #66b2e4; }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:hover > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover > div b, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:focus > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus > div b, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single.active > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active > div b {
+        background-image: none !important;
+        background: none !important; }
+        .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover > div b:before, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus > div b:before, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single.active > div b:before, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active > div b:before {
+          border: none;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: -0.30625rem;
+          margin-top: -0.153125rem;
+          vertical-align: middle;
+          border-top: 0.30625rem solid #4A4A4A;
+          border-right: 0.30625rem solid transparent;
+          border-left: 0.30625rem solid transparent; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:hover > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover > div b, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single:focus > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus > div b, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single > .chosen-single.active > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active > div b {
+          background-image: none !important;
+          background: none !important; } }
+  .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single:hover, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single:focus, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single.active {
+    color: #4A4A4A;
+    background-color: #FFF;
+    border-color: #66b2e4; }
+  .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop {
+    background-color: #FFF;
+    border-color: #66b2e4; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.highlighted {
+      color: #4A4A4A; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.highlighted {
+      background-color: rgba(102, 178, 228, 0.25); }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.result-selected {
+      color: #FFF;
+      background-color: #66b2e4; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.active, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.active,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.active, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted.active, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted.active,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.highlighted.active, .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected.active, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected.active,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.result-selected.active {
+      color: #FFF;
+      background-color: #66b2e4; }
+  .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn {
+    z-index: 1050; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single {
+      color: #4A4A4A;
+      background-color: #FFF;
+      border-color: #66b2e4;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single > div b {
+        background-image: none !important;
+        background: none !important; }
+        .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single > div b:before {
+          border: none;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: -0.30625rem;
+          margin-top: -0.153125rem;
+          vertical-align: middle;
+          border-bottom: 0.30625rem solid #4A4A4A !important;
+          border-right: 0.30625rem solid transparent !important;
+          border-left: 0.30625rem solid transparent !important; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b,
+        .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single > div b {
+          background-image: none !important;
+          background: none !important; } }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn .chosen-drop {
+      border-color: #66b2e4; }
+  .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active .chosen-search, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search,
+  .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn .chosen-search {
+    margin: 0.25rem;
+    padding: 0px;
+    background-color: rgba(242, 242, 242, 0);
+    border: 1px solid #878787; }
+    .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input,
+    .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn .chosen-search > input {
+      color: #4A4A4A;
+      padding: 0.0625rem 0.25rem;
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+      .chosenize.form-control.form-control-sm.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input:focus, .input-group-sm > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input:focus,
+      .input-group-sm > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn .chosen-search > input:focus {
+        color: #4A4A4A;
+        background-color: #FFF;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), rgba(102, 178, 228, 0.6); }
+
+.chosenize.form-control.form-control-lg.chosen-container, .input-group-lg > .chosenize.form-control.chosen-container,
+.input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  max-height: 3.1666666667rem; }
+  .chosenize.form-control.form-control-lg.chosen-container .chosen-drop, .input-group-lg > .chosenize.form-control.chosen-container .chosen-drop,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-drop {
+    -o-border-image: none !important;
+       border-image: none !important;
+    box-shadow: none !important;
+    border: 1px solid transparent;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 0; }
+  .chosenize.form-control.form-control-lg.chosen-container .chosen-results, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results {
+    margin: 0 0 0.5rem 0;
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    border-top: 1px solid transparent;
+    border-color: #66b2e4; }
+  .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li {
+    padding: 0.75rem;
+    background-color: white; }
+    .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.highlighted, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.highlighted,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted, .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.result-selected, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.result-selected,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.result-selected {
+      background-image: none !important; }
+      .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.highlighted.active-result, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.highlighted.active-result,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted.active-result, .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.result-selected.active-result, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.result-selected.active-result,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.result-selected.active-result {
+        background-image: none !important; }
+    .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.highlighted, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.highlighted,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted {
+      background-color: rgba(102, 178, 228, 0.25); }
+    .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.selected-result, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.selected-result,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.selected-result {
+      color: #FFF;
+      background-color: #66b2e4; }
+    .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.highlighted.active-result, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.highlighted.active-result,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.highlighted.active-result, .chosenize.form-control.form-control-lg.chosen-container .chosen-results > li.selected-result.active-result, .input-group-lg > .chosenize.form-control.chosen-container .chosen-results > li.selected-result.active-result,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.btn .chosen-results > li.selected-result.active-result {
+      color: #FFF;
+      background-color: #66b2e4; }
+  .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single .chosen-drop, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop {
+    border: 1px solid transparent;
+    border-top: none;
+    background-color: rgba(242, 242, 242, 0);
+    border-color: #878787; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result {
+      transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear; }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.highlighted {
+        color: #4A4A4A; }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.highlighted,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.highlighted {
+        background-color: rgba(102, 178, 228, 0.25); }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop .chosen-results > .active-result.result-selected,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn .chosen-drop .chosen-results > .active-result.result-selected {
+        background-color: #66b2e4; }
+  .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single {
+    box-shadow: none !important;
+    background-image: none !important;
+    border-radius: 0;
+    margin: 0;
+    height: auto;
+    line-height: 1.25;
+    padding: 0.75rem 0.75rem;
+    color: #4A4A4A;
+    border: 1px solid transparent;
+    background-color: rgba(242, 242, 242, 0);
+    border-color: #878787;
+    transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single > div b {
+      background-image: none !important;
+      background: none !important; }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single > div b:before, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b:before,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single > div b:before {
+        content: '';
+        position: absolute;
+        border: none;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: -0.4375rem;
+        margin-top: -0.21875rem;
+        vertical-align: middle;
+        border-top: 0.4375rem solid #4A4A4A;
+        border-right: 0.4375rem solid transparent;
+        border-left: 0.4375rem solid transparent;
+        top: 50%;
+        right: 1.125rem; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single > div b {
+        background-image: none !important;
+        background: none !important; } }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:hover, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:focus, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single.active, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active {
+      color: #4A4A4A;
+      background-color: #FFF;
+      border-color: #66b2e4; }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:hover > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover > div b, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:focus > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus > div b, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single.active > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active > div b {
+        background-image: none !important;
+        background: none !important; }
+        .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover > div b:before, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus > div b:before, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single.active > div b:before, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active > div b:before {
+          border: none;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: -0.4375rem;
+          margin-top: -0.21875rem;
+          vertical-align: middle;
+          border-top: 0.4375rem solid #4A4A4A;
+          border-right: 0.4375rem solid transparent;
+          border-left: 0.4375rem solid transparent; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:hover > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:hover > div b, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single:focus > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single:focus > div b, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single > .chosen-single.active > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.btn > .chosen-single.active > div b {
+          background-image: none !important;
+          background: none !important; } }
+  .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single:hover, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single:focus, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn > .chosen-single.active {
+    color: #4A4A4A;
+    background-color: #FFF;
+    border-color: #66b2e4; }
+  .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop {
+    background-color: #FFF;
+    border-color: #66b2e4; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.result-selected, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.highlighted {
+      color: #4A4A4A; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.highlighted {
+      background-color: rgba(102, 178, 228, 0.25); }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.result-selected {
+      color: #FFF;
+      background-color: #66b2e4; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.active, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.active,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.active, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted.active, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.highlighted.active,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.highlighted.active, .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected.active, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop .chosen-drop .chosen-results > .active-result.result-selected.active,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-with-drop.btn .chosen-drop .chosen-results > .active-result.result-selected.active {
+      color: #FFF;
+      background-color: #66b2e4; }
+  .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn {
+    z-index: 1050; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single {
+      color: #4A4A4A;
+      background-color: #FFF;
+      border-color: #66b2e4;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single > div b {
+        background-image: none !important;
+        background: none !important; }
+        .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single > div b:before {
+          border: none;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: -0.4375rem;
+          margin-top: -0.21875rem;
+          vertical-align: middle;
+          border-bottom: 0.4375rem solid #4A4A4A !important;
+          border-right: 0.4375rem solid transparent !important;
+          border-left: 0.4375rem solid transparent !important; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b,
+        .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn > .chosen-single > div b {
+          background-image: none !important;
+          background: none !important; } }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop.btn .chosen-drop {
+      border-color: #66b2e4; }
+  .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active .chosen-search, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search,
+  .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn .chosen-search {
+    margin: 0.75rem;
+    padding: 0px;
+    background-color: rgba(242, 242, 242, 0);
+    border: 1px solid #878787; }
+    .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input,
+    .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn .chosen-search > input {
+      color: #4A4A4A;
+      padding: 0.1875rem 0.75rem;
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+      .chosenize.form-control.form-control-lg.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input:focus, .input-group-lg > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active .chosen-search > input:focus,
+      .input-group-lg > .input-group-btn > .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.btn .chosen-search > input:focus {
+        color: #4A4A4A;
+        background-color: #FFF;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), rgba(102, 178, 228, 0.6); }
+
 /* CHOSEN-COLOR-VARIANTE
  * --------------------
  * @params: $color, $focus, $bg, $bg-focus
@@ -9284,31 +9736,15 @@ small,
   background-color: #dff0d8;
   border-color: #3c763d; }
   .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b:before {
-    border: none;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: -0.35rem;
-    margin-top: -0.175rem;
-    vertical-align: middle;
-    border-top: 0.35rem solid #3c763d;
-    border-right: 0.35rem solid transparent;
-    border-left: 0.35rem solid transparent; }
+    border-color: transparent;
+    border-top-color: #3c763d; }
   .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover, .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus, .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active {
     color: #5cb85c;
     background-color: #FFF;
     border-color: #5cb85c; }
     .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .has-success .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
-      border: none;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: -0.35rem;
-      margin-top: -0.175rem;
-      vertical-align: middle;
-      border-top: 0.35rem solid #5cb85c;
-      border-right: 0.35rem solid transparent;
-      border-left: 0.35rem solid transparent; }
+      border-color: transparent;
+      border-top-color: #5cb85c; }
 
 .has-success .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .has-success .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .has-success .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .has-success .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
   color: #5cb85c;
@@ -9336,16 +9772,8 @@ small,
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
   .has-success .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before {
-    border: none;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: -0.35rem;
-    margin-top: -0.175rem;
-    vertical-align: middle;
-    border-bottom: 0.35rem solid #5cb85c !important;
-    border-right: 0.35rem solid transparent !important;
-    border-left: 0.35rem solid transparent !important; }
+    border-color: transparent;
+    border-bottom-color: #5cb85c !important; }
 
 .has-success .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop {
   border-color: #5cb85c; }
@@ -9386,31 +9814,15 @@ small,
   background-color: #fcf8e3;
   border-color: #8a6d3b; }
   .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b:before {
-    border: none;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: -0.35rem;
-    margin-top: -0.175rem;
-    vertical-align: middle;
-    border-top: 0.35rem solid #8a6d3b;
-    border-right: 0.35rem solid transparent;
-    border-left: 0.35rem solid transparent; }
+    border-color: transparent;
+    border-top-color: #8a6d3b; }
   .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover, .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus, .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active {
     color: #f0ad4e;
     background-color: #FFF;
     border-color: #f0ad4e; }
     .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .has-warning .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
-      border: none;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: -0.35rem;
-      margin-top: -0.175rem;
-      vertical-align: middle;
-      border-top: 0.35rem solid #f0ad4e;
-      border-right: 0.35rem solid transparent;
-      border-left: 0.35rem solid transparent; }
+      border-color: transparent;
+      border-top-color: #f0ad4e; }
 
 .has-warning .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .has-warning .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .has-warning .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .has-warning .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
   color: #f0ad4e;
@@ -9438,16 +9850,8 @@ small,
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
   .has-warning .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before {
-    border: none;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: -0.35rem;
-    margin-top: -0.175rem;
-    vertical-align: middle;
-    border-bottom: 0.35rem solid #f0ad4e !important;
-    border-right: 0.35rem solid transparent !important;
-    border-left: 0.35rem solid transparent !important; }
+    border-color: transparent;
+    border-bottom-color: #f0ad4e !important; }
 
 .has-warning .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop {
   border-color: #f0ad4e; }
@@ -9488,31 +9892,15 @@ small,
   background-color: #f2dede;
   border-color: #a94442; }
   .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single > div b:before {
-    border: none;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: -0.35rem;
-    margin-top: -0.175rem;
-    vertical-align: middle;
-    border-top: 0.35rem solid #a94442;
-    border-right: 0.35rem solid transparent;
-    border-left: 0.35rem solid transparent; }
+    border-color: transparent;
+    border-top-color: #a94442; }
   .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover, .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus, .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active {
     color: #d9534f;
     background-color: #FFF;
     border-color: #d9534f; }
     .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .has-danger .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
-      border: none;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: -0.35rem;
-      margin-top: -0.175rem;
-      vertical-align: middle;
-      border-top: 0.35rem solid #d9534f;
-      border-right: 0.35rem solid transparent;
-      border-left: 0.35rem solid transparent; }
+      border-color: transparent;
+      border-top-color: #d9534f; }
 
 .has-danger .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .has-danger .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .has-danger .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .has-danger .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
   color: #d9534f;
@@ -9540,16 +9928,8 @@ small,
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
   .has-danger .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop > .chosen-single > div b:before {
-    border: none;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: -0.35rem;
-    margin-top: -0.175rem;
-    vertical-align: middle;
-    border-bottom: 0.35rem solid #d9534f !important;
-    border-right: 0.35rem solid transparent !important;
-    border-left: 0.35rem solid transparent !important; }
+    border-color: transparent;
+    border-bottom-color: #d9534f !important; }
 
 .has-danger .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active.chosen-with-drop .chosen-drop {
   border-color: #d9534f; }
@@ -9652,7 +10032,11 @@ html {
 
 .page {
   min-height: 100%;
-  width: 100%; }
-  .page .header .navbar {
-    background-color: white; }
+  width: 100%;
+  padding-top: 96px; }
+  .page .header {
+    height: 96px; }
+    .page .header .navbar {
+      height: inherit;
+      background-color: #66b2e4; }
 /*# sourceMappingURL=ws.css.map */
