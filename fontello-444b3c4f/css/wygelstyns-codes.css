@@ -1,0 +1,4 @@
+
+.wyg-logo:before { content: '\e800'; } /* '' */
+.wyg-diamond-side:before { content: '\e801'; } /* '' */
+.wyg-diamond-top:before { content: '\e802'; } /* '' */

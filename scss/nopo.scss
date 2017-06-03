@@ -199,7 +199,7 @@ body {
       @include media-breakpoint-down(sm) {
          padding: ($spacer * .25) ($spacer * .5);
       }
-      background-color: $gray-darkest;
+      background-color: $gray-light;
       .single-radio-container {
          padding: ($spacer * .25) ($spacer * .25);
       }
@@ -220,7 +220,6 @@ body {
       }
    }
 }
-
 
 // border utilities
 .border-top {

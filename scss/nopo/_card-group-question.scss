@@ -21,7 +21,6 @@ $enable-flex: true;
       margin-right: - map-get($grid-gutter-widths,xs) * .5;
       box-shadow: none;
    }
-
    // QUESTIONS-GROUP-HEADER
    .questions-group-header {
       background-color: $white;
@@ -29,7 +28,6 @@ $enable-flex: true;
 
       }
    }
-
    // QUESTIONS
    .question-parent {
       // contains the question text (.question-header) and answer options (.radio-group) of a single question.
@@ -56,7 +54,6 @@ $enable-flex: true;
             }
          }
       }
-
       // CURRENTLY OPEN RADIO-GROUP
       &.open {
          > .row + .row {
@@ -66,7 +63,6 @@ $enable-flex: true;
             margin-right: 0;
             > div[class^="col-"],
             > div[class*=" col-"] {
-
                // contains the options (1 - 6) as radio-buttons
                .radio-group {
 
@@ -124,7 +120,7 @@ $enable-flex: true;
    .question-parent {
       border-top: 1px solid $gray-lighter;
       background-color: $white;
-      transition: background 0.35 linear;
+      transition: background-color 0.35 linear;
 
       // badge question-no.
       .badge {

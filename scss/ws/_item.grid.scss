@@ -1,0 +1,64 @@
+/*
+ * ITEM.GRID
+ *
+ * .fix-grid-gutter     => adjust outer margin of .container elements and top- bottom-margins of items to match $grid-gutter-widths between items
+ * .remove-grid-gutter  => remove all gutters and spaces between items
+ *
+ */
+.page,
+.header,
+.main,
+.footer,
+.section {
+   &.fix-grid-gutter {
+      .container,
+      .container-fluid {
+         padding: map-get($grid-gutter-widths, xs) (map-get($grid-gutter-widths, xs) * 1) 0;
+         @include media-breakpoint-up(sm) {
+            padding: map-get($grid-gutter-widths, sm) (map-get($grid-gutter-widths, sm) * 1) 0;
+         }
+         @include media-breakpoint-up(md) {
+            padding: map-get($grid-gutter-widths, md) (map-get($grid-gutter-widths, md) * 1) 0;
+         }
+         @include media-breakpoint-up(lg) {
+            padding: map-get($grid-gutter-widths, lg) (map-get($grid-gutter-widths, lg) * 1) 0;
+         }
+         @include media-breakpoint-up(xl) {
+            padding: map-get($grid-gutter-widths, xl) (map-get($grid-gutter-widths, xl) * 1) 0;
+         }
+         + .container,
+         + .container-fluid {
+            padding-top: 0;
+         }
+         .item {
+            margin-bottom: map-get($grid-gutter-widths, xs);
+            @include media-breakpoint-up(sm) {
+               margin-bottom: map-get($grid-gutter-widths, sm);
+            }
+            @include media-breakpoint-up(md) {
+               margin-bottom: map-get($grid-gutter-widths, md);
+            }
+            @include media-breakpoint-up(lg) {
+               margin-bottom: map-get($grid-gutter-widths, lg);
+            }
+            @include media-breakpoint-up(xl) {
+               margin-bottom: map-get($grid-gutter-widths, xl);
+            }
+         }
+      }
+   }
+   &.remove-grid-gutter {
+      .container,
+      .container-fluid {
+         padding: 0;
+         [class^="col-"],
+         [class*=" col-"] {
+            padding: 0;
+            .item {
+               margin: 0;
+               border: 0;
+            }
+         }
+      }
+   }
+}

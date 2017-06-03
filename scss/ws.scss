@@ -11,6 +11,35 @@
 // variables and mixins "ws-framework"
 @import "ws/ws";
 
+html {
+  font-size: 12px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 15px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@import "ws/item.grid";
+
 /* ENTYPO+ ICONS
  *	--------------
  * @see: 	/fonts/entypo/
@@ -18,8 +47,8 @@
  *	@html:   <span class="icon-[name]"></span>
  * @mixin:  @include entypo($code, $color);
 /*	-----	*/
-@import "icons/entypo";
-@import "icons/entypo.codes";
+// @import "icons/entypo";
+// @import "icons/entypo.codes";
 
 /* SOCIALIST
  *	--------------
@@ -28,8 +57,35 @@
  *	@html:   <span class="social-[name]"></span>
  * @mixin:  @include social($code, $color);
 /*	-----	*/
-@import "icons/socialist";
-@import "icons/socialist.codes";
+// @import "icons/socialist";
+// @import "icons/socialist.codes";
+
+/* WYGELSTYNS
+ *	--------------
+ * @see: 	/public/fonts/wygelstyns/
+ *
+ *	@html:   <span class="ws-[name]"></span>
+ * @mixin:  @include wygel($code, $color);
+/*	-----	*/
+
+@import "icons/wygelstyn";
+@import "icons/wygelstyn.codes";
+
+.wyg-xs {
+   @include wyg-size();
+}
+.wyg-sm {
+   @include wyg-size(1.5rem);
+}
+.wyg-md {
+   @include wyg-size(2rem);
+}
+.wyg-lg {
+   @include wyg-size(3rem);
+}
+.wyg-xl {
+   @include wyg-size(6rem);
+}
 
 .the-icons {
    text-align: center;
@@ -91,7 +147,7 @@
 //
 // chosen:
 //
-$chosen-font-family:          $font-family-condensed;
+// $chosen-font-family:       $font-family-condensed;
 // $chosen-font-size:         $font-size-base;
 //
 // $chosen-height:            $input-height;
@@ -121,6 +177,16 @@ $chosen-font-family:          $font-family-condensed;
  * @params: $font-size, $height, $padding-x, $padding-y
  *
 /*	-----	*/
+.form-group {
+   font-family: $font-family-condensed;
+   .form-control {
+      font-family: $font-family-condensed;
+   }
+   .form-control-feedback {
+      font-size: 90%;
+   }
+}
+
 .chosenize.form-control {
    @include chosen-size();
    &.form-control-sm {
@@ -137,40 +203,13 @@ $chosen-font-family:          $font-family-condensed;
  *
 /*	-----	*/
 .has-success .chosenize.form-control {
-   @include chosen-color-variante($state-success-text, $brand-success, $state-success-bg, $white);
+   @include chosen-color-variante($brand-success, $state-success-text, $white, $white);
 }
 .has-warning .chosenize.form-control {
-   @include chosen-color-variante($state-warning-text, $brand-warning, $state-warning-bg, $white);
+   @include chosen-color-variante($brand-warning, $state-warning-text, $white, $white);
 }
 .has-danger .chosenize.form-control {
-   @include chosen-color-variante($state-danger-text, $brand-danger, $state-danger-bg, $white);
-}
-
-html {
-  font-size: 12px;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 15px;
-  }
-}
-@include media-breakpoint-up(xl) {
-  html {
-    font-size: 16px;
-  }
+   @include chosen-color-variante($brand-danger, $state-danger-text, $white, $white);
 }
 
 body {
@@ -197,7 +236,7 @@ body {
       &:before {
          margin-right: 0.1rem;
    //    @include entypo('\e83b', inherit); // chevron down
-         @include entypo('\e846', inherit); // chevron up
+         @include wygel('\e803', inherit); // chevron up
          text-decoration: none;
       }
       &.collapsed {
@@ -214,7 +253,7 @@ body {
             color: $link-hover-color;
          }
          &:before {
-            @include entypo('\e83d', inherit);
+            @include wygel('\e83d', inherit);
             text-decoration: none;
          }
       }
@@ -228,16 +267,8 @@ body {
 .page {
    min-height: 100%;
    width: 100%;
-
-   // when header .fixed-top
    padding-top: 96px;
-
-   @include media-breakpoint-down(lg) {
-
-   }
-   @include media-breakpoint-down(sm) {
-
-   }
+   overflow: hidden;
    .header {
       height: 96px;
       .navbar {
@@ -248,13 +279,11 @@ body {
          }
       }
    }
-
    .main {
       > .container {
 
       }
    }
-
    .footer {
       > .container {
 

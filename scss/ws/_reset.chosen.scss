@@ -2,7 +2,7 @@
  * RESET.CHOSEN
  * reset default chosen.css with custom variables to make custom skinning less annoying and timeconsuming
  */
-$chosen-font-family:       $font-family-condensed !default;
+$chosen-font-family:       $font-family-sans-serif !default;
 
 // $chosen-font-size:         $font-size-base !default;
 
@@ -20,7 +20,7 @@ $chosen-box-shadow:        $input-box-shadow !default;
 $chosen-box-shadow-focus:  $input-box-shadow-focus !default;
 
 $chosen-border-focus:      $input-border-focus !default;
-$chosen-color-focus:       $input-color-focus !default;
+$chosen-color-focus:       $brand-primary !default;
 $chosen-bg-focus:          $input-bg-focus !default;
 
 $chosen-border-width:      $input-btn-border-width !default;
@@ -47,10 +47,10 @@ $chosen-border-radius:     $input-border-radius !default;
 /*	-----	*/
 @mixin chosen-size($chosen-font-size: $font-size-base, $chosen-height: $input-height, $chosen-padding-x: $input-padding-x, $chosen-padding-y: $input-padding-y  ) {
    &.chosen-container {
-      font-family:   $chosen-font-family;
+      // font-family:   $chosen-font-family;
+      font-family:   inherit;
       font-size:     $chosen-font-size;
       line-height:   $chosen-line-height;
-      max-height:    $chosen-height;
       & {
          .chosen-drop {
             border-image: none !important;

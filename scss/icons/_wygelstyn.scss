@@ -1,0 +1,102 @@
+$icon-font-path: "../fonts/wygelstyn/";
+//** File name for all font files.
+$icon-font-name: "wygelstyn";
+//** Element ID within SVG icon file.
+$icon-font-svg-id: "wygelstyn";
+
+// Import the fonts
+@font-face {
+   font-family: 'wygelstyn';
+   src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
+   src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
+        url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff2'), '#{$icon-font-path}#{$icon-font-name}.woff2')) format('woff2'),
+        url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
+        url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.ttf'), '#{$icon-font-path}#{$icon-font-name}.ttf')) format('truetype'),
+        url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'),'#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+}
+[class^="wyg-"]:before,
+[class*=" wyg-"]:before {
+     font-family: "wygelstyn";
+     font-style: normal;
+     font-weight: normal;
+     speak: none;
+
+     display: inline-block;
+     text-decoration: inherit;
+     width: 1em;
+     margin-right: .2em;
+     text-align: center;
+     /* opacity: .8; */
+
+     /* For safety - reset parent styles, that can break glyph codes*/
+     font-variant: normal;
+     text-transform: none;
+
+     /* fix buttons height, for twitter bootstrap */
+     line-height: 1;
+
+     /* Animation center compensation - margins should be symmetric */
+     /* remove if not needed */
+
+     /* you can be more comfortable with increased icons size */
+     font-size: 100%;
+
+     /* Font smoothing. That was taken from TWBS */
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+
+     /* Uncomment for 3D effect */
+     // text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+@mixin wygel ( $code: '\e800', $color: $brand-primary ) {
+   font-family: "wygelstyn";
+   font-style: normal;
+   font-weight: normal;
+   speak: none;
+   display: inline-block;
+   text-decoration: inherit;
+   width: 1em;
+   text-align: center;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   font-size: 150%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   content: $code;
+   color: $color;
+}
+
+@mixin wyg-size($size: 1rem) {
+   line-height: ($size * 1.2);
+   & [class^="wyg-"],
+   & [class*=" wyg-"],
+   &[class^="wyg-"],
+   &[class*=" wyg-"] {
+      display: inline-block;
+      margin-right: ($size * .3);
+      font-size: $size;
+      &:before {
+         width: $size;
+         height: $size;
+         margin-right: 0;
+      }
+   }
+}
+
+.spin-wyg {
+   &:before {
+      animation: spin 2s infinite linear;
+      display: inline-block;
+   }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
