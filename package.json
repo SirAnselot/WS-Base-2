@@ -1,52 +1,53 @@
 {
-   "name": "ws-base",
-   "description": "Basic frontend development setup",
+   "name": "ws-joomla",
+   "description": "Basic joomla setup",
    "version": "2.0.0",
    "private": true,
    "homepage": "http://www.weigelstein.de",
    "author": "Ansgar Hiller <ansgar@weigelstein.de>",
-   "main": "public",
-   "sass": "scss/ws.scss",
-   "dist": "ws",
+   "main": "../public/templates/weigelstein",
+   "sass": "scss/*.scss",
+   "dist": "../public/ws",
    "scripts": {
      "test": "echo \"Error: no test specified\" && exit 1"
    },
    "files": [
-      "dist",
       "grunt",
-      "public/css/*.css",
-      "public/js/app/**/*.js",
+      "../public/templates/weigelstein/css/*.css",
+      "../public/templates/weigelstein/js/app/**/*.js",
       "scss/**/*.scss",
       "Gruntfile.js"
    ],
-      "config": {
-         "namespace": "ws",
-         "localhost": {
-         "port": "8080",
-         "path": "./"
-      },
+   "config": {
+      "namespace": "weigelstein",
+      "localhost": {
+      "port": "8080",
+      "path": "./",
       "files": {
          "js": {
             "app": {
                "src": [
-                  "public/js/app/app.js",
-                  "public/js/app/ws/*.js"
+                  "../public/templates/weigelstein/js/app/app.js",
+                  "../public/templates/weigelstein/js/app/ws/*.js"
                ],
-               "dest": "dist/js"
+               "dest": "../public/ws/js/app"
             },
             "vendor": {
-               "src": "../vendor",
-               "dest": "public/js/vendor"
+               "src": "../../vendor",
+               "dest": "../public/ws/js/vendor"
             }
          },
-         "scss": "scss",
+         "scss": {
+            "src": "scss",
+            "dest": "../public/templates/weigelstein/css"
+         },
          "svg": {
-           "src": "public/img/svg/src",
-           "clean": "public/img/svg/cleaned",
-           "build": "public/img/svg/build"
+            "src":   "../public/templates/weigelstein/img/svg/src",
+            "clean": "../public/templates/weigelstein/img/svg/cleaned",
+            "build": "../public/templates/weigelstein/img/svg/build"
          },
          "fontello": {
-            "path": "public/fonts/wygelstyns/"
+            "path": "../public/templates/weigelstein/fonts/wygelstyns/"
          }
       }
    },
