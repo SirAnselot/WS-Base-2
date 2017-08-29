@@ -47,8 +47,8 @@ html {
  *	@html:   <span class="icon-[name]"></span>
  * @mixin:  @include entypo($code, $color);
 /*	-----	*/
-// @import "icons/entypo";
-// @import "icons/entypo.codes";
+@import "icons/entypo";
+@import "icons/entypo.codes";
 
 /* SOCIALIST
  *	--------------
@@ -57,8 +57,8 @@ html {
  *	@html:   <span class="social-[name]"></span>
  * @mixin:  @include social($code, $color);
 /*	-----	*/
-// @import "icons/socialist";
-// @import "icons/socialist.codes";
+@import "icons/socialist";
+@import "icons/socialist.codes";
 
 /* WYGELSTYNS
  *	--------------

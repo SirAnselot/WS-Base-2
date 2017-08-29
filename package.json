@@ -5,49 +5,50 @@
    "private": true,
    "homepage": "http://www.weigelstein.de",
    "author": "Ansgar Hiller <ansgar@weigelstein.de>",
-   "main": "../public/templates/weigelstein",
+   "main": "public",
    "sass": "scss/*.scss",
-   "dist": "../public/ws",
+   "dist": "public",
    "scripts": {
      "test": "echo \"Error: no test specified\" && exit 1"
    },
    "files": [
       "grunt",
-      "../public/templates/weigelstein/css/*.css",
-      "../public/templates/weigelstein/js/app/**/*.js",
+      "public/css/*.css",
+      "public/js/app/**/*.js",
       "scss/**/*.scss",
       "Gruntfile.js"
    ],
    "config": {
       "namespace": "weigelstein",
       "localhost": {
-      "port": "8080",
-      "path": "./",
+         "port": "8080",
+         "path": "./"
+      },
       "files": {
          "js": {
             "app": {
                "src": [
-                  "../public/templates/weigelstein/js/app/app.js",
-                  "../public/templates/weigelstein/js/app/ws/*.js"
+                  "public/js/app/app.js",
+                  "public/js/app/ws/*.js"
                ],
-               "dest": "../public/ws/js/app"
+               "dest": "public/js/app"
             },
             "vendor": {
                "src": "../../vendor",
-               "dest": "../public/ws/js/vendor"
+               "dest": "public/ws/js/vendor"
             }
          },
          "scss": {
             "src": "scss",
-            "dest": "../public/templates/weigelstein/css"
+            "dest": "public/css"
          },
          "svg": {
-            "src":   "../public/templates/weigelstein/img/svg/src",
-            "clean": "../public/templates/weigelstein/img/svg/cleaned",
-            "build": "../public/templates/weigelstein/img/svg/build"
+            "src":   "public/img/svg/src",
+            "clean": "public/img/svg/cleaned",
+            "build": "public/img/svg/build"
          },
          "fontello": {
-            "path": "../public/templates/weigelstein/fonts/wygelstyns/"
+            "path": "public/fonts/wygelstyns/"
          }
       }
    },

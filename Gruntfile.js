@@ -3,7 +3,7 @@
  * Grunt Basic Template
  * - - - - - - - - - - - - - - - - - - - - - - -
  * command: grunt all
-	 * grunt watch && grunt connect:localhost
+ *  * grunt watch && grunt connect:localhost
  * command: grunt watch
 	 * sass -> autoprefixer -> cssmin -> livereload
 	 * js -> concat files -> uglify -> livereload
