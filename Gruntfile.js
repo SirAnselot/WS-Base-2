@@ -279,7 +279,7 @@ module.exports = function(grunt) {
 				}
 			},
 			css: {
-				files: ['<%= pkg.config.files.scss %>/**/*.scss','<%= pkg.config.files.scss %>/*.scss'],
+				files: '<%= pkg.sass %>',
 				tasks: ['css'],
 				options: {
 					interrupt: true

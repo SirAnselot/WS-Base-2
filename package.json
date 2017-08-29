@@ -6,8 +6,8 @@
    "homepage": "http://www.weigelstein.de",
    "author": "Ansgar Hiller <ansgar@weigelstein.de>",
    "main": "public",
-   "sass": "scss/*.scss",
-   "dist": "public",
+   "sass": ["scss/*.scss", "scss/**/*.scss"],
+   "dist": "ws",
    "scripts": {
      "test": "echo \"Error: no test specified\" && exit 1"
    },
@@ -19,7 +19,7 @@
       "Gruntfile.js"
    ],
    "config": {
-      "namespace": "weigelstein",
+      "namespace": "ws",
       "localhost": {
          "port": "8080",
          "path": "./"
@@ -31,7 +31,7 @@
                   "public/js/app/app.js",
                   "public/js/app/ws/*.js"
                ],
-               "dest": "public/js/app"
+               "dest": "../public/js/app"
             },
             "vendor": {
                "src": "../../vendor",
