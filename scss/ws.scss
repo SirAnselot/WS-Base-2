@@ -5,14 +5,10 @@
  */
 
  // Core variables and mixins
-@import "bootstrap/variables";
-@import "ws/variables";
-
-// variables and mixins "ws-framework"
-@import "ws/ws";
+@import "twbs/bootstrap";
 
 html {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @include media-breakpoint-up(sm) {
@@ -40,6 +36,7 @@ html {
 
 
 @import "ws/item.grid";
+
 
 /* ENTYPO+ ICONS
  *	--------------
@@ -136,7 +133,6 @@ html {
  * @mixin:  @include icon($name, $width, $height);
 /*	-----	*/
 @import "ws/svgicons";
-
 @import "ws/typo";
 
 /* RESET JQUERY.CHOSEN
@@ -238,8 +234,8 @@ body {
       }
       &:before {
          margin-right: 0.1rem;
-   //    @include entypo('\e83b', inherit); // chevron down
-         @include wygel('\e803', inherit); // chevron up
+         @include entypo('\e841', inherit); // chevron down
+         // @include wygel('\e803', inherit); // chevron up
          text-decoration: none;
       }
       &.collapsed {
@@ -256,7 +252,7 @@ body {
             color: $link-hover-color;
          }
          &:before {
-            @include wygel('\e83d', inherit);
+            @include entypo('\e840', inherit);
             text-decoration: none;
          }
       }

@@ -137,15 +137,15 @@ module.exports = function(grunt) {
       sass: {
 			compile: {
 				files: {
-					'<%= pkg.main %>/css/<%= pkg.config.namespace %>.css': '<%= pkg.config.files.scss %>/<%= pkg.config.namespace %>.scss',
+					'<%= pkg.main %>/css/<%= pkg.config.namespace %>.css': '<%= pkg.config.files.scss.src %>/<%= pkg.config.namespace %>.scss',
 				}
 			},
 			sourceMap: {
 				options: {
-					sourceMap: '<%= pkg.config.files.scss %>/<%= pkg.config.namespace %>.map'
+					sourceMap: '<%= pkg.config.files.scss.src %>/<%= pkg.config.namespace %>.map'
 				},
 				files: {
-					'<%= pkg.main %>/css/<%= pkg.config.namespace %>.css': '<%= pkg.config.files.scss %>/<%= pkg.config.namespace %>.scss'
+					'<%= pkg.main %>/css/<%= pkg.config.namespace %>.css': '<%= pkg.config.files.scss.src %>/<%= pkg.config.namespace %>.scss'
 				}
 			},
 			precision: {
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
 					precision: 10
 				},
 				files: {
-					'<%= pkg.main %>/css/precision.css': '<%= pkg.config.files.scss %>/precision.scss'
+					'<%= pkg.main %>/css/precision.css': '<%= pkg.config.files.scss.src %>/precision.scss'
 				}
 			}
 		},
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
 		},
 		csscomb: {
 			options: {
-				config: '<%= pkg.config.files.scss %>/.csscomb.json'
+				config: '<%= pkg.config.files.scss.src %>/.csscomb.json'
 			},
 			core: {
 				expand: true,
@@ -236,13 +236,13 @@ module.exports = function(grunt) {
 					mode: {
 						css: {
 							bust: false,
-							dest: '<%= pkg.config.files.scss %>',
+							dest: '<%= pkg.config.files.scss.src %>',
 							sprite: '../<%= pkg.config.files.svg.build %>/icons.svg',
 							mixin: 'icons',
 							render: {
 								scss: {
 									dest: '<%= pkg.config.namespace %>/_svgicons.scss',
-									template: '<%= pkg.config.files.scss %>/ws/svgicons.mustache'
+									template: '<%= pkg.config.files.scss.src %>/ws/svgicons.mustache'
 								}
 							}
 						}

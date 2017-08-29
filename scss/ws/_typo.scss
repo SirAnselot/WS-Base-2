@@ -74,26 +74,26 @@ a {
 
 // DEFAULT MARGINS
 p {
-   margin-bottom: map-get(map-get($spacers,3),'y');  // 1rem;
+   margin-bottom: map-get($spacers,3);  // 1rem;
 }
 h2,
 h3,
 h4,
 h5,
 h6 {
-   margin-bottom: map-get(map-get($spacers,4),'y');  // 1.5rem;
+   margin-bottom: map-get($spacers,4);  // 1.5rem;
    + h1,
    + h2,
    + h3,
    + h4,
    + h5,
    + h6 {
-      margin-bottom: map-get(map-get($spacers,1),'y');  // .25rem;
+      margin-bottom: map-get($spacers,1);  // .25rem;
    }
 }
 
 h1 {
-   margin-bottom: map-get(map-get($spacers,4),'y');  // 1.5rem;
+   margin-bottom: map-get($spacers,4);  // 1.5rem;
 }
 
 // BIG HEADLINE
@@ -101,15 +101,15 @@ h1 {
 .display-2,
 .display-3,
 .display-4 {
-   margin-bottom:    map-get(map-get($spacers,3),'y'); // 1rem;
+   margin-bottom:    map-get($spacers,3); // 1rem;
    + .display-1,
    + .display-2,
    + .display-3,
    + .display-4 {
-      margin-bottom: map-get(map-get($spacers,1),'y'); // .25rem;
+      margin-bottom: map-get($spacers,1); // .25rem;
    }
    + .lead {
-      margin-bottom: map-get(map-get($spacers,3),'y'); // 1rem;
+      margin-bottom: map-get($spacers,3); // 1rem;
    }
 }
 small,
@@ -118,12 +118,12 @@ small,
 }
 // LEAD
 .lead {
-   margin-bottom: map-get(map-get($spacers,3),'y');  // 1rem;
+   margin-bottom: map-get($spacers,3);  // 1rem;
 }
 
 /* FIGURE */
 .figure {
-   padding: map-get(map-get($spacers,3),'y') 0;
+   padding: map-get($spacers,3) 0;
 }
 .figure-caption {
    font-family: $font-family-serif;

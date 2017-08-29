@@ -51,7 +51,7 @@
                         <div class="card-header">
                            Example Form
                         </div>
-                        <div class="card-block">
+                        <div class="card-body">
                            <form>
                               <div class="form-group row">
                                  <label for="inputEmail3" class="col-sm-3 text-right col-form-label">Email</label>
@@ -112,7 +112,7 @@
                         <div class="card-header">
                            Chosen Jquery Selectbox (w/ resetter)
                         </div>
-                        <div class="card-block">
+                        <div class="card-body">
                            <form>
                               <div class="row">
                                  <div class="col-12">
@@ -260,19 +260,19 @@
                         <div class="card-header">
                            Text Input Fields
                         </div>
-                        <div class="card-block">
-                           <form>
+                        <div class="card-body">
+                           <form id="needs-validation" novalidate>
                               <div class="row">
                                  <div class="col-sm-12">
                                     <div class="form-group">
                                        <label for="email" class="form-control-label text-sm sr-only">Email address</label>
-                                       <input type="email" class="form-control form-control-sm" id="email" placeholder="Ihre E-Mailadresse"/>
+                                       <input type="email" class="form-control form-control-sm" id="email" placeholder="Ihre E-Mailadresse" required/>
                                     </div>
                                  </div>
                                  <div class="col-sm-12">
                                     <div class="form-group">
                                        <label for="phone" class="form-control-label sr-only">Ihre Telefonnummer</label>
-                                       <input type="text" class="form-control" id="phone" placeholder="Ihre Telefonnummer"/>
+                                       <input type="text" class="form-control" id="phone" placeholder="Ihre Telefonnummer" required/>
                                     </div>
                                  </div>
                               </div>
@@ -280,34 +280,26 @@
                                  <div class="col-sm-12">
                                     <div class="form-group">
                                        <label for="firstname" class="form-control-label text-lg sr-only">Vorname</label>
-                                       <input type="text" class="form-control form-control-lg" id="firstname" placeholder="Vorname"/>
+                                       <input type="text" class="form-control form-control-lg" id="firstname" placeholder="Vorname" required/>
                                     </div>
                                  </div>
                                  <div class="col-sm-12">
                                     <div class="form-group">
                                        <label for="name" class="form-control-label sr-only">Validation</label>
-                                       <input type="text" class="form-control" id="name" placeholder="Validation"/>
+                                       <input type="text" class="form-control" id="name" placeholder="Validation" required/>
                                     </div>
                                  </div>
                                  <div class="col-sm-12">
-                                    <div class="form-group has-success">
+                                    <div class="form-group">
                                        <label for="name" class="form-control-label sr-only">Success</label>
-                                       <input type="text" class="form-control form-control-success" id="name" placeholder="Success"/>
-                                       <div class="form-control-feedback">Success! You've done it.</div>
+                                       <input type="text" class="form-control is-valid" id="name" placeholder="Success" required/>
                                     </div>
                                  </div>
                                  <div class="col-sm-12">
-                                    <div class="form-group has-warning">
-                                       <label for="name" class="form-control-label sr-only">Warning</label>
-                                       <input type="text" class="form-control form-control-warning" id="name" placeholder="Warning"/>
-                                       <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-12">
-                                    <div class="form-group has-danger">
+                                    <div class="form-group">
                                        <label for="name" class="form-control-label sr-only">Danger</label>
-                                       <input type="text" class="form-control form-control-danger" id="name" placeholder="Danger"/>
-                                       <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+                                       <input type="text" class="form-control is-invalid" id="name" placeholder="Danger" required/>
+                                       <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
                                     </div>
                                  </div>
                               </div>
@@ -327,6 +319,23 @@
    				</div><!-- /.row -->
             </div>
          </section>
+
+			<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function() {
+			  	"use strict";
+			  	window.addEventListener("load", function() {
+			   	var form = document.getElementById("needs-validation");
+			    	form.addEventListener("submit", function(event) {
+			      	if (form.checkValidity() == false) {
+			        		event.preventDefault();
+			        		event.stopPropagation();
+			      	}
+			      	form.classList.add("was-validated");
+			    	}, false);
+				}, false);
+			}());
+			</script>
 		</main>
 
       <!-- FOOTER -->
