@@ -143,72 +143,49 @@ html {
  * Defaults to twbs form settings ($input-[...]-[...]) defined in @_variables.scss
  *
 /*	-----	*/
-//
-// chosen:
-//
-// $chosen-font-family:       $font-family-condensed;
-// $chosen-font-size:         $font-size-base;
-//
-// $chosen-height:            $input-height;
-// $chosen-padding-x:         $input-padding-x;
-// $chosen-padding-y:         $input-padding-y;
-//
-// $chosen-line-height:       $input-line-height;
-//
-// $chosen-color:             $input-color;
-// $chosen-border-color:      $input-border-color;
-// $chosen-bg:                $input-bg;
-//
-// $chosen-box-shadow:        $input-box-shadow;
-// $chosen-box-shadow-focus:  $input-box-shadow-focus;
-//
-// $chosen-border-focus:      $input-border-focus;
-// $chosen-color-focus:       $input-color-focus;
-// $chosen-bg-focus:          $input-bg-focus;
-//
-// $chosen-border-width:      $input-btn-border-width;
-// $chosen-border-radius:     $input-border-radius;
+
+$chosen-font-family:  $font-family-condensed;
 
 @import "ws/reset.chosen";
 
-/* SIZE
+/* CHOSEN-SIZE
  * --------------------
- * @params: $font-size, $height, $padding-x, $padding-y
+ * @params: $font-size, $height, $padding-x, $padding-y, line-height, border-radius
  *
 /*	-----	*/
-.form-group {
-   font-family: $font-family-condensed;
-   .form-control {
-      font-family: $font-family-condensed;
-   }
-   .form-control-feedback {
-      font-size: 90%;
-   }
-}
-
-.chosenize.form-control {
-   @include chosen-size();
+.chosenize {
+   @include chosen-size($font-size-base, $input-height, $input-btn-padding-x, $input-btn-padding-y, $input-btn-line-height, $input-border-radius);
    &.form-control-sm {
-      @include chosen-size($font-size-sm, $input-height-sm, $input-padding-x-sm, $input-padding-y-sm );
+      @include chosen-size($font-size-sm, $input-height-sm, $input-btn-padding-x-sm, $input-btn-padding-y-sm, $input-btn-line-height-sm, $input-border-radius-sm );
    }
    &.form-control-lg {
-      @include chosen-size($font-size-lg, $input-height-lg, $input-padding-y-lg, $input-padding-y-lg );
+      @include chosen-size($font-size-lg, $input-height-lg, $input-btn-padding-x-lg, $input-btn-padding-y-lg, $input-btn-line-height-lg, $input-border-radius-lg );
    }
 }
 
 /* CHOSEN-COLOR-VARIANTE
  * --------------------
- * @params: $color, $focus, $bg, $bg-focus
+ * @params: $color, $focus, $bg, $bg-focus, $border, $border-focus
  *
 /*	-----	*/
-.has-success .chosenize.form-control {
-   @include chosen-color-variante($brand-success, $state-success-text, $white, $white);
+.chosenize.form-control {
+   @include chosen-color-variante();
+   &.is-valid {
+      @include chosen-color-variante(darken($brand-success,15%), darken($brand-success,10%), rgba(theme-color('success'),.15), $white, $brand-success, $state-success-text);
+   }
+   &.is-invalid {
+      @include chosen-color-variante(darken($brand-danger,15%), darken($brand-danger,10%), rgba(theme-color('danger'),.15), $white, $brand-danger, $state-danger-text);
+   }
 }
-.has-warning .chosenize.form-control {
-   @include chosen-color-variante($brand-warning, $state-warning-text, $white, $white);
-}
-.has-danger .chosenize.form-control {
-   @include chosen-color-variante($brand-danger, $state-danger-text, $white, $white);
+
+.form-group {
+   font-family: $font-family-condensed;
+   .form-control {
+      font-family: $font-family-condensed;
+   }
+   .invalid-feedback {
+      font-size: 90%;
+   }
 }
 
 body {

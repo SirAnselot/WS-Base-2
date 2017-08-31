@@ -164,7 +164,7 @@
                                  <div class="col-12">
                                     <div class="form-group">
                                        <label for="termine" class="sr-only">.chosenize.form-control-lg</label>
-                                       <select 	name="termine" class="chosenize form-control-lg form-control" data-placeholder="Please choose ..." >
+                                       <select multiple name="termine" class="chosenize form-control-lg form-control" data-placeholder="Please choose ..." >
                         	            	<option>Please choose ...</option>
                                           <option value="a" >Datenerhebung</option>
                         						<option value="b" >Herzliches</option>
@@ -188,7 +188,7 @@
                                  <div class="col-12">
                                     <div class="form-group">
                                        <label for="name" class="form-control-label sr-only">Validation</label>
-                                       <select 	name="termine" class="chosenize form-control" data-placeholder="Validation ..." >
+                                       <select multiple	name="termine" class="chosenize form-control" data-placeholder="Validation ..." >
                         	            	<option>Validation ...</option>
                                           <option value="a" >Datenerhebung</option>
                         						<option value="b" >Herzliches</option>
@@ -199,44 +199,29 @@
                                  </div>
 
                                  <div class="col-12">
-                                    <div class="form-group has-success">
+                                    <div class="form-group">
                                        <label for="name" class="form-control-label sr-only">Success</label>
-                                       <select 	name="termine" class="chosenize form-control form-control-success" data-placeholder="Validation ..." >
+                                       <select 	name="termine" class="chosenize form-control is-valid" data-placeholder="Validation ..." >
                         	            	<option>Success ...</option>
                                           <option value="a" >Datenerhebung</option>
                         						<option value="b" >Herzliches</option>
                                           <option value="c" >Evangelischen</option>
                         						<option value="d" >Sagen</option>
                         					</select>
-                                       <div class="form-control-feedback">Success! You've done it.</div>
                                     </div>
                                  </div>
 
                                  <div class="col-12">
-                                    <div class="form-group has-warning">
-                                       <label for="name" class="form-control-label sr-only">Warning</label>
-                                       <select 	name="termine" class="chosenize form-control form-control-warning" data-placeholder="Aktuelle Termine" >
-                        	            	<option>Warning ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                        					</select>
-                                       <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
-                                    </div>
-                                 </div>
-
-                                 <div class="col-12">
-                                    <div class="form-group has-danger">
+                                    <div class="form-group">
                                        <label for="name" class="form-control-label sr-only">Danger</label>
-                                       <select 	name="termine" class="chosenize form-control form-control-danger" data-placeholder="Aktuelle Termine" >
+                                       <select 	name="termine" class="chosenize form-control is-invalid" data-placeholder="Aktuelle Termine" >
                         	            	<option>Danger ...</option>
                                           <option value="a" >Datenerhebung</option>
                         						<option value="b" >Herzliches</option>
                                           <option value="c" >Evangelischen</option>
                         						<option value="d" >Sagen</option>
                         					</select>
-                                       <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+                                       <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
                                     </div>
                                  </div>
 

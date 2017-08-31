@@ -2,29 +2,7 @@
  * RESET.CHOSEN
  * reset default chosen.css with custom variables to make custom skinning less annoying and timeconsuming
  */
-$chosen-font-family:       $font-family-sans-serif !default;
-
-// $chosen-font-size:         $font-size-base !default;
-
-// $chosen-height:            $input-height  !default;
-// $chosen-padding-x:         $input-padding-x !default;
-// $chosen-padding-y:         $input-padding-y !default;
-
-$chosen-line-height:       $input-line-height !default;
-
-$chosen-color:             $input-color !default;
-$chosen-border-color:      $input-border-color !default;
-$chosen-bg:                $input-bg !default;
-
-$chosen-box-shadow:        $input-box-shadow !default;
-$chosen-box-shadow-focus:  $input-box-shadow-focus !default;
-
-$chosen-border-focus:      $input-border-focus !default;
-$chosen-color-focus:       $brand-primary !default;
-$chosen-bg-focus:          $input-bg-focus !default;
-
-$chosen-border-width:      $input-btn-border-width !default;
-$chosen-border-radius:     $input-border-radius !default;
+$chosen-font-family:       $font-family-base !default;
 
 .chosenize {
    box-shadow:    none !important;
@@ -42,101 +20,81 @@ $chosen-border-radius:     $input-border-radius !default;
 
 /* SIZE
  * --------------------
- * @params: $font-size, $height, $padding-x, $padding-y
+ * @params: $font-size, $height, $padding-x, $padding-y, line-height, border-radius
  *
 /*	-----	*/
-@mixin chosen-size($chosen-font-size: $font-size-base, $chosen-height: $input-height, $chosen-padding-x: $input-padding-x, $chosen-padding-y: $input-padding-y  ) {
+@mixin chosen-size($font-size: $font-size-base, $height: $input-height, $padding-x: $input-btn-padding-x, $padding-y: $input-btn-padding-y, $line-height: $input-btn-line-height, $border-radius: $input-border-radius   ) {
    &.chosen-container {
-      // font-family:   $chosen-font-family;
-      font-family:   inherit;
-      font-size:     $chosen-font-size;
-      line-height:   $chosen-line-height;
+      font-family:   $chosen-font-family;
+      font-size:     $font-size;
+      line-height:   $line-height;
       & {
          .chosen-drop {
             border-image: none !important;
             box-shadow: none !important;
-            border: $chosen-border-width solid transparent;
-            @include border-bottom-radius($input-border-radius);
-            font-size: $chosen-font-size;
+            border: $border-width solid transparent;
+            @include border-bottom-radius($border-radius);
+            font-size: ($font-size * .95);
             text-align: left;
             padding: 0;
          }
          .chosen-results {
-            margin: 0 0 $input-padding-y 0;
-            padding: $chosen-padding-y $chosen-padding-y 0 $chosen-padding-y;
-            border-top: $chosen-border-width solid transparent;
-            border-color: $chosen-border-focus;
+            margin: 0 0 $padding-y 0;
+            padding: $padding-y $padding-y 0 $padding-y;
+            border-top: $border-width solid $input-focus-border-color;
          }
          .chosen-results > li {
-            padding: $chosen-padding-y;
-            background-color: rgba($chosen-bg-focus, 1);
-            &.highlighted, &.result-selected {
+            padding: $padding-y $padding-x;
+            transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear;
+            &.highlighted,
+            &.result-selected {
                background-image: none !important;
                &.active-result {
                   background-image: none !important;
                }
             }
-            &.highlighted {
-               background-color: rgba($chosen-border-focus, .25);
+            &.active-result {
+
+               &.highlighted {
+
+               }
             }
-            &.selected-result {
-               color: $white;
-               background-color: rgba($chosen-border-focus, 1);
+            &.result-selected {
+
             }
-            &.highlighted, &.selected-result {
+            &.result-selected {
                &.active-result {
-                  color: $white;
-                  background-color: rgba($chosen-border-focus, 1);
+
                }
             }
          }
       }
       &.chosen-container-single {
          .chosen-drop {
-            border: $chosen-border-width solid transparent;
+            border: $border-width solid transparent;
             border-top: none;
-            background-color: $chosen-bg;
-            border-color: $chosen-border-color;
-            .chosen-results > .active-result {
-               transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear;
-               &.result-selected, &.highlighted {
-                  color: $chosen-color;
-               }
-               &.highlighted {
-                  background-color: rgba($chosen-border-focus, .25);
-               }
-               &.result-selected {
-                  background-color: rgba($chosen-border-focus, 1);
-               }
-            }
          }
          & {
             > .chosen-single {
                box-shadow: none !important;
                background-image: none !important;
-               border-radius: $chosen-border-radius;
+               border-radius: $border-radius;
                margin: 0;
                height: auto;
-               line-height: $chosen-line-height;
-               padding: $chosen-padding-y $chosen-padding-x;
-               color: $input-color;
-               border: $chosen-border-width solid transparent;
-               background-color: $chosen-bg;
-               border-color: $chosen-border-color;
-               transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
+               line-height: $line-height;
+               padding: $padding-y $padding-x;
+               border: $border-width solid transparent;
+               transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear;
                > div b {
                   background-image: none !important;
                   background: none !important;
                   &:before {
-                     content: '';
+                     transition: color 0.1s linear;
+                     @include entypo('\e83b', $input-color, $font-size);
                      position: absolute;
-
-                     // @include icon("arrow-down");
-                     border: none;
-                     @include caret-down(($chosen-font-size * .35), $chosen-color);
-
-                     top:   50%;
-                     right: ($chosen-padding-x * 1.5);
+                     margin-top: - ($font-size * .5);
+                     top: 50%;
+                     right: ($padding-x * 1.5);
                   }
                }
                @media
@@ -151,16 +109,11 @@ $chosen-border-radius:     $input-border-radius !default;
                &:hover,
                &:focus,
                &.active {
-                  color: $chosen-color-focus;
-                  background-color: $chosen-bg-focus;
-                  border-color: $chosen-border-focus;
                   > div b {
                      background-image: none !important;
                      background: none !important;
                      &:before {
-                        // @include icon("arrow-down");
-                        border: none;
-                        @include caret-down(($chosen-font-size * .35), $chosen-color-focus);
+                        @include entypo('\e83b', $input-focus-border-color, $font-size);
                      }
                   }
                   @media
@@ -182,35 +135,14 @@ $chosen-border-radius:     $input-border-radius !default;
                &:hover,
                &:focus,
                &.active {
-                  color: $chosen-color-focus;
-                  background-color: $chosen-bg-focus;
-                  border-color: $chosen-border-focus;
+
                }
             }
          }
          &.chosen-with-drop {
             // stuff only visible when dropdown open
             .chosen-drop {
-               background-color: $chosen-bg-focus;
-               border-color: $chosen-border-focus;
-               .chosen-results > .active-result {
-                  &.result-selected, &.highlighted {
-                     color: $chosen-color-focus;
-                  }
-                  &.highlighted {
-                     background-color: rgba($chosen-border-focus, .25);
-                  }
-                  &.result-selected {
-                     color: $white;
-                     background-color: rgba($chosen-border-focus, 1);
-                  }
-                  &, &.highlighted, &.result-selected {
-                     &.active {
-                        color: $white;
-                        background-color: rgba($chosen-border-focus, 1);
-                     }
-                  }
-               }
+
             }
          }
          // focus & open
@@ -218,17 +150,12 @@ $chosen-border-radius:     $input-border-radius !default;
             &.chosen-with-drop {
                z-index: $zindex-modal;
                > .chosen-single {
-                  color: $chosen-color-focus;
-                  background-color: $chosen-bg-focus;
-                  border-color: $chosen-border-focus;
                   @include border-bottom-radius(0);
                   > div b {
                      background-image: none !important;
                      background: none !important;
                      &:before {
-                        // @include icon("arrow-up");
-                        border: none;
-                        @include caret-up(($chosen-font-size * .35), $chosen-color-focus);
+                        @include entypo('\e846', $input-color, $font-size);
                      }
                   }
                   @media
@@ -242,24 +169,99 @@ $chosen-border-radius:     $input-border-radius !default;
                   }
                }
                .chosen-drop {
-                  border-color: $chosen-border-focus;
+
                }
             }
-
             .chosen-search {
-               margin: $chosen-padding-y;
-               padding: 0px;
-               background-color: $chosen-bg;
-               border: $chosen-border-width solid $chosen-border-color;
-               > input {
-                  color: $chosen-color;
-                  padding: ($chosen-padding-y * .25) $chosen-padding-y;
-                  border: none;
-                  box-shadow: $chosen-box-shadow;
+               margin: $padding-y;
+               padding: 2px 1px;
+               background-image: none !important;
+               box-shadow: none !important;
+               > input[type="text"] {
+                  font-family: $chosen-font-family;
+                  padding: ($padding-y * .5) $padding-y;
+                  border-image: none !important;
+                  background-image: none !important;
+                  box-shadow: $input-box-shadow;
                   &:focus {
-                     color: $chosen-color-focus;
-                     background-color: $chosen-bg-focus;
-                     box-shadow: $chosen-box-shadow-focus;
+                     background-image: none !important;
+                     box-shadow: $input-box-shadow;
+                  }
+               }
+            }
+         }
+      }
+      // multiselect
+      &.chosen-container-multi {
+         & {
+            padding: 0;
+            > .chosen-choices {
+               padding: ($padding-y * .5) 0 0 ($padding-y * .5);
+               border-radius: $border-radius;
+               box-shadow: none !important;
+               // box-shadow: $input-box-shadow;
+               background-image: none !important;
+               > .search-choice {
+                  font-size: ($font-size * .9);
+                  margin: 0 ($padding-y * .5) ($padding-y * .5) 0;
+                  padding: ($padding-y * .5) 1.75rem ($padding-y * .5) $padding-y;
+                  border: none;
+                  border-radius: ($border-radius * .5);
+                  box-shadow: none !important;
+                  background-image: none !important;
+                  line-height: $line-height;
+                  > .search-choice-close {
+                     &:before {
+                        @include entypo('\e84b', $white, $font-size * .75);
+                     }
+                     position: absolute;
+                     margin-top: - ($font-size * .375);
+                     top: 50%;
+                     right: $padding-y;
+                     background-image: none;
+                  }
+               }
+               > .search-field {
+                  margin: 0 ($padding-y * .5) ($padding-y * .5) 0;
+                  padding: ($padding-y * .5);
+               }
+               > .search-field > input[type="text"] {
+                  height:        auto;
+                  margin:        0;
+                  padding-left:  ($padding-y * .5);
+                  padding-right: ($padding-y * .5);
+                  font-family:    $chosen-font-family;
+                  background-image: none;
+                  box-shadow: none !important;
+               }
+            }
+         }
+         &.chosen-container-active {
+            & {
+               > .chosen-choices {
+                  box-shadow: $input-focus-box-shadow;
+               }
+            }
+            &.chosen-with-drop {
+               > .chosen-choices {
+                  border-bottom-left-radius: 0;
+                  border-bottom-right-radius: 0;
+                  border-bottom: none;
+                  > .search-field > input[type="text"] {
+
+                  }
+               }
+            }
+            > .chosen-drop {
+               > .chosen-results {
+                  border-top: none;
+                  > .active-result,
+                  > .result-selected {
+                     margin-bottom: 1px;
+                     font-size: ($font-size * .95);
+                  }
+                  > .result-selected {
+
                   }
                }
             }
@@ -270,27 +272,34 @@ $chosen-border-radius:     $input-border-radius !default;
 
 /* COLOR-VARIANTE
  * --------------------
- * @params: $color, $focus, $bg, $bg-focus
+ * @params: $color, $focus, $bg, $bg-focus, $border, $border-focus
  *
 /*	-----	*/
-@mixin chosen-color-variante( $color: $chosen-color, $focus: $chosen-color-focus, $bg: $chosen-bg, $bg-focus: $chosen-bg-focus) {
+@mixin chosen-color-variante( $color: $input-color, $focus: $input-focus-color, $bg: $input-bg, $bg-focus: $input-focus-bg, $border: $input-border-color, $border-focus: $input-focus-border-color) {
    &.chosen-container {
       & {
+         .chosen-drop {
+
+         }
          .chosen-results {
-            border-color: $focus;
+            border-color: $border-focus;
          }
          .chosen-results > li {
             background-color: rgba($bg-focus, 1);
-
-            &.highlighted {
-               background-color: rgba($focus, .25);
+            &.active-result {
+               color: $color;
+               &.highlighted {
+                  color: $color;
+                  background-color: rgba($border-focus, .35);
+               }
             }
-            &.selected-result {
-               background-color: rgba($focus, 1);
+            &.result-selected {
+               background-color: rgba($border-focus, 1);
             }
-            &.highlighted, &.selected-result {
+            &.result-selected {
                &.active-result {
-                  background-color: rgba($focus, 1);
+                  color: $white !important;
+                  background-color: rgba($border-focus, 1);
                }
             }
          }
@@ -298,30 +307,16 @@ $chosen-border-radius:     $input-border-radius !default;
       &.chosen-container-single {
          .chosen-drop {
             background-color: $bg;
-            border-color: $color;
-            .chosen-results > .active-result {
-               &.result-selected, &.highlighted {
-                  color: $color;
-               }
-               &.highlighted {
-                  background-color: rgba($focus, .25);
-               }
-               &.result-selected {
-                  background-color: rgba($focus, 1);
-               }
-            }
+            border-color: $border-focus;
          }
          & {
             > .chosen-single {
                color: $color;
                background-color: $bg;
-               border-color: $color;
+               border-color: $border;
                > div b {
                   &:before {
-                     border-color: transparent;
-                     border-top-color: $color;
-                     // border-top-color: transparent;
-                     // @include caret-down($caret-width, $color);
+                     color: $color;
                   }
                }
                &:hover,
@@ -329,12 +324,12 @@ $chosen-border-radius:     $input-border-radius !default;
                &.active {
                   color: $focus;
                   background-color: $bg-focus;
-                  border-color: $focus;
+                  border-color: $border-focus;
                   > div b {
+                     background-image: none !important;
+                     background: none !important;
                      &:before {
-                        border-color: transparent;
-                        border-top-color: $focus;
-                        // @include caret-down($caret-width, $focus);
+                        color: $border-focus;
                      }
                   }
                }
@@ -349,32 +344,14 @@ $chosen-border-radius:     $input-border-radius !default;
                &.active {
                   color: $focus;
                   background-color: $bg-focus;
-                  border-color: $focus;
+                  border-color: $border-focus;
                }
             }
          }
          &.chosen-with-drop {
             .chosen-drop {
                background-color: $bg-focus;
-               border-color: $focus;
-               .chosen-results > .active-result {
-                  &.result-selected, &.highlighted {
-                     color: $focus;
-                  }
-                  &.highlighted {
-                     background-color: rgba($focus, .25);
-                  }
-                  &.result-selected {
-                     color: $white;
-                     background-color: rgba($focus, 1);
-                  }
-                  &, &.highlighted, &.result-selected {
-                     &.active {
-                        color: $white;
-                        background-color: rgba($focus, 1);
-                     }
-                  }
-               }
+               border-color: $border-focus;
             }
          }
          // focus & open
@@ -383,29 +360,78 @@ $chosen-border-radius:     $input-border-radius !default;
                > .chosen-single {
                   color: $focus;
                   background-color: $bg-focus;
-                  border-color: $focus;
-                  @include border-bottom-radius(0);
+                  border-color: $border-focus;
                   > div b {
                      &:before {
-                        border-color: transparent;
-                        border-bottom-color: $focus !important;
-                        // @include caret-up($caret-width, $focus);
+                        color: $border-focus;
                      }
                   }
                }
                .chosen-drop {
-                  border-color: $focus;
+                  border-color: $border-focus;
+                  border-top: none;
                }
             }
-
             .chosen-search {
-               background-color: $bg;
-               border-color: $color;
-               > input {
+               > input[type="text"] {
                   color: $color;
+                  background-color: $bg;
                   &:focus {
                      color: $focus;
                      background-color: $bg-focus;
+                     border-color: $border-focus;
+                  }
+               }
+            }
+         }
+      }
+
+      // multiselect
+      &.chosen-container-multi {
+         & {
+            > .chosen-choices {
+               border-color: $border;
+               > .search-choice {
+                  background-color: $border-focus;
+                  border-color: $border-focus;
+                  color: $white;
+                  > .search-choice-close {
+                     &:before {
+                        color: $white;
+                     }
+                  }
+               }
+               > .search-field {
+
+               }
+               > .search-field > input[type="text"] {
+
+               }
+            }
+         }
+         &.chosen-container-active {
+            & {
+               > .chosen-choices {
+                  border-color: $border-focus;
+               }
+            }
+            &.chosen-with-drop {
+               > .chosen-choices {
+                  border-color: $border-focus;
+                  > .search-field > input[type="text"] {
+
+                  }
+               }
+            }
+            > .chosen-drop {
+               border-color: $border-focus;
+               > .chosen-results {
+                  > .active-result,
+                  > .result-selected {
+
+                  }
+                  > .result-selected {
+                     color: $white !important; // override chosen-default which is also !important.
                   }
                }
             }

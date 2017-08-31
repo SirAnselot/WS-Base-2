@@ -49,27 +49,31 @@ $icon-font-svg-id: "wygelstyn";
      // text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 }
 
-@mixin wygel ( $code: '\e800', $color: $brand-primary ) {
+@mixin wygel ( $code: '\e800', $color: $black, $size: 1rem ) {
    font-family: "wygelstyn";
    font-style: normal;
    font-weight: normal;
    speak: none;
    display: inline-block;
    text-decoration: inherit;
-   width: 1em;
    text-align: center;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
-   font-size: 150%;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   content: $code;
-   color: $color;
+	font-size: $size;
+	width: $size;
+	height: $size;
+	margin-right: 0;
+	color: $color;
+	// &:after {
+		content: $code;
+	// }
 }
 
 @mixin wyg-size($size: 1rem) {
-   line-height: ($size * 1.2);
+   line-height: 1;
    & [class^="wyg-"],
    & [class*=" wyg-"],
    &[class^="wyg-"],
@@ -82,6 +86,9 @@ $icon-font-svg-id: "wygelstyn";
          height: $size;
          margin-right: 0;
       }
+   }
+   &.wyg-text {
+      font-size: ($size * .75);
    }
 }
 

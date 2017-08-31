@@ -48,21 +48,23 @@ $icon-font-svg-id: "entypo-plus";
      // text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 }
 
-@mixin entypo ( $code: '\e806', $color: #000 ) {
+@mixin entypo ( $code: '\e806', $color: $black, $size: 1rem ) {
    font-family: "entypo-plus";
    font-style: normal;
    font-weight: normal;
    speak: none;
    display: inline-block;
    text-decoration: inherit;
-   width: 1em;
    text-align: center;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
-   font-size: 120%;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+	font-size: $size;
+	width: $size;
+	height: $size;
+	margin-right: 0;
+	color: $color;
    content: $code;
-   color: $color;
 }
