@@ -35,7 +35,7 @@
             },
             "vendor": {
                "src": "../../vendor",
-               "dest": "public/ws/js/vendor"
+               "dest": "public/js/vendor"
             }
          },
          "scss": {

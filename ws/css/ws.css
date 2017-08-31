@@ -9132,10 +9132,21 @@ small,
   .chosenize.chosen-container .chosen-results > li {
     padding: 0.5rem 0.75rem;
     transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear; }
-    .chosenize.chosen-container .chosen-results > li.highlighted, .chosenize.chosen-container .chosen-results > li.result-selected {
-      background-image: none !important; }
-      .chosenize.chosen-container .chosen-results > li.highlighted.active-result, .chosenize.chosen-container .chosen-results > li.result-selected.active-result {
+    .chosenize.chosen-container .chosen-results > li.active-result, .chosenize.chosen-container .chosen-results > li.result-selected {
+      background-image: none !important;
+      margin-bottom: 1px;
+      font-size: 0.9rem; }
+      .chosenize.chosen-container .chosen-results > li.active-result.active-result, .chosenize.chosen-container .chosen-results > li.result-selected.active-result {
         background-image: none !important; }
+      .chosenize.chosen-container .chosen-results > li.active-result + .group-result, .chosenize.chosen-container .chosen-results > li.result-selected + .group-result {
+        margin-top: 0.5rem; }
+    .chosenize.chosen-container .chosen-results > li.group-result {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 0.8rem;
+      padding-left: 0.125rem;
+      border-bottom: 1px dotted transparent;
+      margin-bottom: 2px; }
   .chosenize.chosen-container.chosen-container-single .chosen-drop {
     border: 1px solid transparent;
     border-top: none; }
@@ -9260,7 +9271,7 @@ small,
       box-shadow: none !important;
       background-image: none !important; }
       .chosenize.chosen-container.chosen-container-multi > .chosen-choices > .search-choice {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 0 0.25rem 0.25rem 0;
         padding: 0.25rem 1.75rem 0.25rem 0.5rem;
         border: none;
@@ -9295,7 +9306,7 @@ small,
             content: ""; }
       .chosenize.chosen-container.chosen-container-multi > .chosen-choices > .search-field {
         margin: 0 0.25rem 0.25rem 0;
-        padding: 0.25rem; }
+        padding: 0.25rem 0; }
       .chosenize.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"] {
         height: auto;
         margin: 0;
@@ -9304,6 +9315,8 @@ small,
         font-family: "Roboto Condensed", sans-serif;
         background-image: none;
         box-shadow: none !important; }
+        .chosenize.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"].default {
+          padding-left: 0.5rem; }
   .chosenize.chosen-container.chosen-container-multi.chosen-container-active > .chosen-choices {
     box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(132, 201, 231, 0.25); }
   .chosenize.chosen-container.chosen-container-multi.chosen-container-active.chosen-with-drop > .chosen-choices {
@@ -9316,6 +9329,15 @@ small,
     .chosenize.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected {
       margin-bottom: 1px;
       font-size: 0.95rem; }
+      .chosenize.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .chosenize.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected + .group-result {
+        margin-top: 0.5rem;
+        margin-bottom: 2px; }
+    .chosenize.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 90%;
+      padding-left: 0.125rem; }
 
 .chosenize.form-control-sm.chosen-container, .input-group-sm > .chosenize.chosen-container.form-control,
 .input-group-sm > .chosenize.chosen-container.input-group-addon,
@@ -9346,18 +9368,35 @@ small,
   .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li {
     padding: 0.25rem 0.5rem;
     transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear; }
-    .chosenize.form-control-sm.chosen-container .chosen-results > li.highlighted, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.highlighted,
-    .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.highlighted,
-    .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.highlighted, .chosenize.form-control-sm.chosen-container .chosen-results > li.result-selected, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.result-selected,
+    .chosenize.form-control-sm.chosen-container .chosen-results > li.active-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.active-result,
+    .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.active-result,
+    .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.active-result, .chosenize.form-control-sm.chosen-container .chosen-results > li.result-selected, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.result-selected,
     .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.result-selected,
     .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.result-selected {
-      background-image: none !important; }
-      .chosenize.form-control-sm.chosen-container .chosen-results > li.highlighted.active-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.highlighted.active-result,
-      .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.highlighted.active-result,
-      .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.highlighted.active-result, .chosenize.form-control-sm.chosen-container .chosen-results > li.result-selected.active-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.result-selected.active-result,
+      background-image: none !important;
+      margin-bottom: 1px;
+      font-size: 0.7875rem; }
+      .chosenize.form-control-sm.chosen-container .chosen-results > li.active-result.active-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.active-result.active-result,
+      .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.active-result.active-result,
+      .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.active-result.active-result, .chosenize.form-control-sm.chosen-container .chosen-results > li.result-selected.active-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.result-selected.active-result,
       .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.result-selected.active-result,
       .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.result-selected.active-result {
         background-image: none !important; }
+      .chosenize.form-control-sm.chosen-container .chosen-results > li.active-result + .group-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.active-result + .group-result,
+      .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.active-result + .group-result,
+      .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.active-result + .group-result, .chosenize.form-control-sm.chosen-container .chosen-results > li.result-selected + .group-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.result-selected + .group-result,
+      .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.result-selected + .group-result,
+      .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.result-selected + .group-result {
+        margin-top: 0.25rem; }
+    .chosenize.form-control-sm.chosen-container .chosen-results > li.group-result, .input-group-sm > .chosenize.chosen-container.form-control .chosen-results > li.group-result,
+    .input-group-sm > .chosenize.chosen-container.input-group-addon .chosen-results > li.group-result,
+    .input-group-sm > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.group-result {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 0.7rem;
+      padding-left: 0.0625rem;
+      border-bottom: 1px dotted transparent;
+      margin-bottom: 2px; }
   .chosenize.form-control-sm.chosen-container.chosen-container-single .chosen-drop, .input-group-sm > .chosenize.chosen-container.chosen-container-single.form-control .chosen-drop,
   .input-group-sm > .chosenize.chosen-container.chosen-container-single.input-group-addon .chosen-drop,
   .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-single.btn .chosen-drop {
@@ -9532,7 +9571,7 @@ small,
       .chosenize.form-control-sm.chosen-container.chosen-container-multi > .chosen-choices > .search-choice, .input-group-sm > .chosenize.chosen-container.chosen-container-multi.form-control > .chosen-choices > .search-choice,
       .input-group-sm > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-choice,
       .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-choice {
-        font-size: 0.7875rem;
+        font-size: 0.875rem;
         margin: 0 0.125rem 0.125rem 0;
         padding: 0.125rem 1.75rem 0.125rem 0.25rem;
         border: none;
@@ -9573,7 +9612,7 @@ small,
       .input-group-sm > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-field,
       .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-field {
         margin: 0 0.125rem 0.125rem 0;
-        padding: 0.125rem; }
+        padding: 0.125rem 0; }
       .chosenize.form-control-sm.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"], .input-group-sm > .chosenize.chosen-container.chosen-container-multi.form-control > .chosen-choices > .search-field > input[type="text"],
       .input-group-sm > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-field > input[type="text"],
       .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-field > input[type="text"] {
@@ -9584,6 +9623,10 @@ small,
         font-family: "Roboto Condensed", sans-serif;
         background-image: none;
         box-shadow: none !important; }
+        .chosenize.form-control-sm.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"].default, .input-group-sm > .chosenize.chosen-container.chosen-container-multi.form-control > .chosen-choices > .search-field > input[type="text"].default,
+        .input-group-sm > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-field > input[type="text"].default,
+        .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-field > input[type="text"].default {
+          padding-left: 0.25rem; }
   .chosenize.form-control-sm.chosen-container.chosen-container-multi.chosen-container-active > .chosen-choices, .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-choices,
   .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-choices,
   .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-choices {
@@ -9606,6 +9649,21 @@ small,
     .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .result-selected {
       margin-bottom: 1px;
       font-size: 0.83125rem; }
+      .chosenize.form-control-sm.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result + .group-result, .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .chosenize.form-control-sm.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected + .group-result, .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-drop > .chosen-results > .result-selected + .group-result,
+      .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-drop > .chosen-results > .result-selected + .group-result,
+      .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .result-selected + .group-result {
+        margin-top: 0.25rem;
+        margin-bottom: 2px; }
+    .chosenize.form-control-sm.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result, .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-drop > .chosen-results > .group-result,
+    .input-group-sm > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-drop > .chosen-results > .group-result,
+    .input-group-sm > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .group-result {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 90%;
+      padding-left: 0.0625rem; }
 
 .chosenize.form-control-lg.chosen-container, .input-group-lg > .chosenize.chosen-container.form-control,
 .input-group-lg > .chosenize.chosen-container.input-group-addon,
@@ -9636,18 +9694,35 @@ small,
   .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li {
     padding: 0.5rem 1rem;
     transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear; }
-    .chosenize.form-control-lg.chosen-container .chosen-results > li.highlighted, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.highlighted,
-    .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.highlighted,
-    .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.highlighted, .chosenize.form-control-lg.chosen-container .chosen-results > li.result-selected, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.result-selected,
+    .chosenize.form-control-lg.chosen-container .chosen-results > li.active-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.active-result,
+    .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.active-result,
+    .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.active-result, .chosenize.form-control-lg.chosen-container .chosen-results > li.result-selected, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.result-selected,
     .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.result-selected,
     .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.result-selected {
-      background-image: none !important; }
-      .chosenize.form-control-lg.chosen-container .chosen-results > li.highlighted.active-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.highlighted.active-result,
-      .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.highlighted.active-result,
-      .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.highlighted.active-result, .chosenize.form-control-lg.chosen-container .chosen-results > li.result-selected.active-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.result-selected.active-result,
+      background-image: none !important;
+      margin-bottom: 1px;
+      font-size: 1.125rem; }
+      .chosenize.form-control-lg.chosen-container .chosen-results > li.active-result.active-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.active-result.active-result,
+      .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.active-result.active-result,
+      .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.active-result.active-result, .chosenize.form-control-lg.chosen-container .chosen-results > li.result-selected.active-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.result-selected.active-result,
       .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.result-selected.active-result,
       .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.result-selected.active-result {
         background-image: none !important; }
+      .chosenize.form-control-lg.chosen-container .chosen-results > li.active-result + .group-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.active-result + .group-result,
+      .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.active-result + .group-result,
+      .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.active-result + .group-result, .chosenize.form-control-lg.chosen-container .chosen-results > li.result-selected + .group-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.result-selected + .group-result,
+      .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.result-selected + .group-result,
+      .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.result-selected + .group-result {
+        margin-top: 0.5rem; }
+    .chosenize.form-control-lg.chosen-container .chosen-results > li.group-result, .input-group-lg > .chosenize.chosen-container.form-control .chosen-results > li.group-result,
+    .input-group-lg > .chosenize.chosen-container.input-group-addon .chosen-results > li.group-result,
+    .input-group-lg > .input-group-btn > .chosenize.chosen-container.btn .chosen-results > li.group-result {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 1rem;
+      padding-left: 0.125rem;
+      border-bottom: 1px dotted transparent;
+      margin-bottom: 2px; }
   .chosenize.form-control-lg.chosen-container.chosen-container-single .chosen-drop, .input-group-lg > .chosenize.chosen-container.chosen-container-single.form-control .chosen-drop,
   .input-group-lg > .chosenize.chosen-container.chosen-container-single.input-group-addon .chosen-drop,
   .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-single.btn .chosen-drop {
@@ -9822,7 +9897,7 @@ small,
       .chosenize.form-control-lg.chosen-container.chosen-container-multi > .chosen-choices > .search-choice, .input-group-lg > .chosenize.chosen-container.chosen-container-multi.form-control > .chosen-choices > .search-choice,
       .input-group-lg > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-choice,
       .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-choice {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         margin: 0 0.25rem 0.25rem 0;
         padding: 0.25rem 1.75rem 0.25rem 0.5rem;
         border: none;
@@ -9863,7 +9938,7 @@ small,
       .input-group-lg > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-field,
       .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-field {
         margin: 0 0.25rem 0.25rem 0;
-        padding: 0.25rem; }
+        padding: 0.25rem 0; }
       .chosenize.form-control-lg.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"], .input-group-lg > .chosenize.chosen-container.chosen-container-multi.form-control > .chosen-choices > .search-field > input[type="text"],
       .input-group-lg > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-field > input[type="text"],
       .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-field > input[type="text"] {
@@ -9874,6 +9949,10 @@ small,
         font-family: "Roboto Condensed", sans-serif;
         background-image: none;
         box-shadow: none !important; }
+        .chosenize.form-control-lg.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"].default, .input-group-lg > .chosenize.chosen-container.chosen-container-multi.form-control > .chosen-choices > .search-field > input[type="text"].default,
+        .input-group-lg > .chosenize.chosen-container.chosen-container-multi.input-group-addon > .chosen-choices > .search-field > input[type="text"].default,
+        .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.btn > .chosen-choices > .search-field > input[type="text"].default {
+          padding-left: 0.5rem; }
   .chosenize.form-control-lg.chosen-container.chosen-container-multi.chosen-container-active > .chosen-choices, .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-choices,
   .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-choices,
   .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-choices {
@@ -9896,6 +9975,21 @@ small,
     .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .result-selected {
       margin-bottom: 1px;
       font-size: 1.1875rem; }
+      .chosenize.form-control-lg.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result + .group-result, .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .active-result + .group-result,
+      .chosenize.form-control-lg.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected + .group-result, .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-drop > .chosen-results > .result-selected + .group-result,
+      .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-drop > .chosen-results > .result-selected + .group-result,
+      .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .result-selected + .group-result {
+        margin-top: 0.5rem;
+        margin-bottom: 2px; }
+    .chosenize.form-control-lg.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result, .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.form-control > .chosen-drop > .chosen-results > .group-result,
+    .input-group-lg > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.input-group-addon > .chosen-drop > .chosen-results > .group-result,
+    .input-group-lg > .input-group-btn > .chosenize.chosen-container.chosen-container-multi.chosen-container-active.btn > .chosen-drop > .chosen-results > .group-result {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 90%;
+      padding-left: 0.125rem; }
 
 /* CHOSEN-COLOR-VARIANTE
  * --------------------
@@ -9917,6 +10011,9 @@ small,
   .chosenize.form-control.chosen-container .chosen-results > li.result-selected.active-result {
     color: #FFF !important;
     background-color: #84c9e7; }
+  .chosenize.form-control.chosen-container .chosen-results > li.group-result {
+    color: #84c9e7;
+    border-color: #84c9e7; }
 
 .chosenize.form-control.chosen-container.chosen-container-single .chosen-drop {
   background-color: #f8f9fa;
@@ -9937,6 +10034,8 @@ small,
       background: none !important; }
       .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
         color: #84c9e7; }
+  .chosenize.form-control.chosen-container.chosen-container-single > .chosen-single.chosen-default {
+    color: #868e96; }
 
 .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .chosenize.form-control.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
   color: #212529;
@@ -9967,24 +10066,39 @@ small,
     border-color: #84c9e7; }
 
 .chosenize.form-control.chosen-container.chosen-container-multi > .chosen-choices {
-  border-color: rgba(0, 0, 0, 0.15); }
+  border-color: rgba(0, 0, 0, 0.15);
+  background-color: #f8f9fa; }
   .chosenize.form-control.chosen-container.chosen-container-multi > .chosen-choices > .search-choice {
-    background-color: #84c9e7;
-    border-color: #84c9e7;
+    background-color: #212529;
+    border-color: #212529;
     color: #FFF; }
     .chosenize.form-control.chosen-container.chosen-container-multi > .chosen-choices > .search-choice > .search-choice-close:before {
       color: #FFF; }
+  .chosenize.form-control.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"].default {
+    color: #868e96; }
 
 .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-choices {
-  border-color: #84c9e7; }
+  border-color: #84c9e7;
+  background-color: #f8f9fa; }
 
 .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active.chosen-with-drop > .chosen-choices {
-  border-color: #84c9e7; }
+  border-color: #84c9e7;
+  background-color: #f8f9fa; }
 
 .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop {
   border-color: #84c9e7; }
+  .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result,
+  .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+    background-color: rgba(132, 201, 231, 0); }
+    .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result.highlighted,
+    .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result.highlighted {
+      background-color: rgba(132, 201, 231, 0.5); }
   .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected {
-    color: #FFF !important; }
+    color: #FFF !important;
+    background-color: #212529; }
+  .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+    color: #84c9e7;
+    border-color: #84c9e7; }
 
 .chosenize.form-control.is-valid.chosen-container .chosen-results {
   border-color: #3c763d; }
@@ -10001,6 +10115,9 @@ small,
   .chosenize.form-control.is-valid.chosen-container .chosen-results > li.result-selected.active-result {
     color: #FFF !important;
     background-color: #3c763d; }
+  .chosenize.form-control.is-valid.chosen-container .chosen-results > li.group-result {
+    color: #3c763d;
+    border-color: #3c763d; }
 
 .chosenize.form-control.is-valid.chosen-container.chosen-container-single .chosen-drop {
   background-color: rgba(92, 184, 92, 0.15);
@@ -10021,6 +10138,8 @@ small,
       background: none !important; }
       .chosenize.form-control.is-valid.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .chosenize.form-control.is-valid.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .chosenize.form-control.is-valid.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
         color: #3c763d; }
+  .chosenize.form-control.is-valid.chosen-container.chosen-container-single > .chosen-single.chosen-default {
+    color: #868e96; }
 
 .chosenize.form-control.is-valid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .chosenize.form-control.is-valid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .chosenize.form-control.is-valid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .chosenize.form-control.is-valid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
   color: #449d44;
@@ -10051,24 +10170,39 @@ small,
     border-color: #3c763d; }
 
 .chosenize.form-control.is-valid.chosen-container.chosen-container-multi > .chosen-choices {
-  border-color: #5cb85c; }
+  border-color: #5cb85c;
+  background-color: rgba(92, 184, 92, 0.15); }
   .chosenize.form-control.is-valid.chosen-container.chosen-container-multi > .chosen-choices > .search-choice {
-    background-color: #3c763d;
-    border-color: #3c763d;
+    background-color: #3d8b3d;
+    border-color: #3d8b3d;
     color: #FFF; }
     .chosenize.form-control.is-valid.chosen-container.chosen-container-multi > .chosen-choices > .search-choice > .search-choice-close:before {
       color: #FFF; }
+  .chosenize.form-control.is-valid.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"].default {
+    color: #868e96; }
 
 .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-choices {
-  border-color: #3c763d; }
+  border-color: #3c763d;
+  background-color: #FFF; }
 
 .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active.chosen-with-drop > .chosen-choices {
-  border-color: #3c763d; }
+  border-color: #3c763d;
+  background-color: #FFF; }
 
 .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop {
   border-color: #3c763d; }
+  .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result,
+  .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+    background-color: rgba(60, 118, 61, 0); }
+    .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result.highlighted,
+    .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result.highlighted {
+      background-color: rgba(60, 118, 61, 0.5); }
   .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected {
-    color: #FFF !important; }
+    color: #FFF !important;
+    background-color: #449d44; }
+  .chosenize.form-control.is-valid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+    color: #3c763d;
+    border-color: #3c763d; }
 
 .chosenize.form-control.is-invalid.chosen-container .chosen-results {
   border-color: #a94442; }
@@ -10085,6 +10219,9 @@ small,
   .chosenize.form-control.is-invalid.chosen-container .chosen-results > li.result-selected.active-result {
     color: #FFF !important;
     background-color: #a94442; }
+  .chosenize.form-control.is-invalid.chosen-container .chosen-results > li.group-result {
+    color: #a94442;
+    border-color: #a94442; }
 
 .chosenize.form-control.is-invalid.chosen-container.chosen-container-single .chosen-drop {
   background-color: rgba(217, 83, 79, 0.15);
@@ -10105,6 +10242,8 @@ small,
       background: none !important; }
       .chosenize.form-control.is-invalid.chosen-container.chosen-container-single > .chosen-single:hover > div b:before, .chosenize.form-control.is-invalid.chosen-container.chosen-container-single > .chosen-single:focus > div b:before, .chosenize.form-control.is-invalid.chosen-container.chosen-container-single > .chosen-single.active > div b:before {
         color: #a94442; }
+  .chosenize.form-control.is-invalid.chosen-container.chosen-container-single > .chosen-single.chosen-default {
+    color: #868e96; }
 
 .chosenize.form-control.is-invalid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single, .chosenize.form-control.is-invalid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:hover, .chosenize.form-control.is-invalid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single:focus, .chosenize.form-control.is-invalid.chosen-container.chosen-container-single.chosen-container-active > .chosen-single.active {
   color: #c9302c;
@@ -10135,24 +10274,39 @@ small,
     border-color: #a94442; }
 
 .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi > .chosen-choices {
-  border-color: #d9534f; }
+  border-color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.15); }
   .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi > .chosen-choices > .search-choice {
-    background-color: #a94442;
-    border-color: #a94442;
+    background-color: #b52b27;
+    border-color: #b52b27;
     color: #FFF; }
     .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi > .chosen-choices > .search-choice > .search-choice-close:before {
       color: #FFF; }
+  .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi > .chosen-choices > .search-field > input[type="text"].default {
+    color: #868e96; }
 
 .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-choices {
-  border-color: #a94442; }
+  border-color: #a94442;
+  background-color: #FFF; }
 
 .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active.chosen-with-drop > .chosen-choices {
-  border-color: #a94442; }
+  border-color: #a94442;
+  background-color: #FFF; }
 
 .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop {
   border-color: #a94442; }
+  .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result,
+  .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+    background-color: rgba(169, 68, 66, 0); }
+    .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .active-result.highlighted,
+    .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result.highlighted {
+      background-color: rgba(169, 68, 66, 0.5); }
   .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected {
-    color: #FFF !important; }
+    color: #FFF !important;
+    background-color: #c9302c; }
+  .chosenize.form-control.is-invalid.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .group-result {
+    color: #a94442;
+    border-color: #a94442; }
 
 .form-group {
   font-family: "Roboto Condensed", sans-serif; }

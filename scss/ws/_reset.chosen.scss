@@ -23,7 +23,14 @@ $chosen-font-family:       $font-family-base !default;
  * @params: $font-size, $height, $padding-x, $padding-y, line-height, border-radius
  *
 /*	-----	*/
-@mixin chosen-size($font-size: $font-size-base, $height: $input-height, $padding-x: $input-btn-padding-x, $padding-y: $input-btn-padding-y, $line-height: $input-btn-line-height, $border-radius: $input-border-radius   ) {
+@mixin chosen-size(
+      $font-size:       $font-size-base,
+      $height:          $input-height,
+      $padding-x:       $input-btn-padding-x,
+      $padding-y:       $input-btn-padding-y,
+      $line-height:     $input-btn-line-height,
+      $border-radius:   $input-border-radius
+   ) {
    &.chosen-container {
       font-family:   $chosen-font-family;
       font-size:     $font-size;
@@ -46,26 +53,25 @@ $chosen-font-family:       $font-family-base !default;
          .chosen-results > li {
             padding: $padding-y $padding-x;
             transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear;
-            &.highlighted,
+            &.active-result,
             &.result-selected {
                background-image: none !important;
+               margin-bottom: 1px;
+               font-size: ($font-size * .9);
                &.active-result {
                   background-image: none !important;
                }
-            }
-            &.active-result {
-
-               &.highlighted {
-
+               + .group-result {
+                  margin-top: $padding-y;
                }
             }
-            &.result-selected {
-
-            }
-            &.result-selected {
-               &.active-result {
-
-               }
+            &.group-result {
+               text-transform: uppercase;
+               font-weight: normal;
+               font-size: ($font-size * .8);
+               padding-left: ($padding-y * .25);
+               border-bottom: 1px dotted transparent;
+               margin-bottom: 2px;
             }
          }
       }
@@ -202,7 +208,7 @@ $chosen-font-family:       $font-family-base !default;
                // box-shadow: $input-box-shadow;
                background-image: none !important;
                > .search-choice {
-                  font-size: ($font-size * .9);
+                  font-size: ($font-size);
                   margin: 0 ($padding-y * .5) ($padding-y * .5) 0;
                   padding: ($padding-y * .5) 1.75rem ($padding-y * .5) $padding-y;
                   border: none;
@@ -223,7 +229,7 @@ $chosen-font-family:       $font-family-base !default;
                }
                > .search-field {
                   margin: 0 ($padding-y * .5) ($padding-y * .5) 0;
-                  padding: ($padding-y * .5);
+                  padding: ($padding-y * .5) 0;
                }
                > .search-field > input[type="text"] {
                   height:        auto;
@@ -233,6 +239,9 @@ $chosen-font-family:       $font-family-base !default;
                   font-family:    $chosen-font-family;
                   background-image: none;
                   box-shadow: none !important;
+                  &.default {
+                     padding-left: $padding-y;
+                  }
                }
             }
          }
@@ -259,9 +268,19 @@ $chosen-font-family:       $font-family-base !default;
                   > .result-selected {
                      margin-bottom: 1px;
                      font-size: ($font-size * .95);
+                     + .group-result {
+                        margin-top: $padding-y;
+                        margin-bottom: 2px;
+                     }
                   }
                   > .result-selected {
 
+                  }
+                  > .group-result {
+                     text-transform: uppercase;
+                     font-weight: normal;
+                     font-size: 90%;
+                     padding-left: ($padding-y * .25);
                   }
                }
             }
@@ -275,7 +294,14 @@ $chosen-font-family:       $font-family-base !default;
  * @params: $color, $focus, $bg, $bg-focus, $border, $border-focus
  *
 /*	-----	*/
-@mixin chosen-color-variante( $color: $input-color, $focus: $input-focus-color, $bg: $input-bg, $bg-focus: $input-focus-bg, $border: $input-border-color, $border-focus: $input-focus-border-color) {
+@mixin chosen-color-variante(
+      $color:           $input-color,
+      $focus:           $input-focus-color,
+      $bg:              $input-bg,
+      $bg-focus:        $input-focus-bg,
+      $border:          $input-border-color,
+      $border-focus:    $input-focus-border-color
+   ) {
    &.chosen-container {
       & {
          .chosen-drop {
@@ -301,6 +327,10 @@ $chosen-font-family:       $font-family-base !default;
                   color: $white !important;
                   background-color: rgba($border-focus, 1);
                }
+            }
+            &.group-result {
+               color: $border-focus;
+               border-color: $border-focus;
             }
          }
       }
@@ -332,6 +362,9 @@ $chosen-font-family:       $font-family-base !default;
                         color: $border-focus;
                      }
                   }
+               }
+               &.chosen-default {
+                  color: $input-placeholder-color;
                }
             }
          }
@@ -391,9 +424,10 @@ $chosen-font-family:       $font-family-base !default;
          & {
             > .chosen-choices {
                border-color: $border;
+               background-color: $bg;
                > .search-choice {
-                  background-color: $border-focus;
-                  border-color: $border-focus;
+                  background-color: $color;
+                  border-color: $color;
                   color: $white;
                   > .search-choice-close {
                      &:before {
@@ -405,7 +439,9 @@ $chosen-font-family:       $font-family-base !default;
 
                }
                > .search-field > input[type="text"] {
-
+                  &.default {
+                     color: $input-placeholder-color;
+                  }
                }
             }
          }
@@ -413,11 +449,13 @@ $chosen-font-family:       $font-family-base !default;
             & {
                > .chosen-choices {
                   border-color: $border-focus;
+                  background-color: $bg-focus;
                }
             }
             &.chosen-with-drop {
                > .chosen-choices {
                   border-color: $border-focus;
+                  background-color: $bg-focus;
                   > .search-field > input[type="text"] {
 
                   }
@@ -427,11 +465,19 @@ $chosen-font-family:       $font-family-base !default;
                border-color: $border-focus;
                > .chosen-results {
                   > .active-result,
-                  > .result-selected {
-
+                  > .group-result {
+                     background-color: rgba($border-focus,0);
+                     &.highlighted {
+                        background-color: rgba($border-focus,.5);
+                     }
                   }
                   > .result-selected {
                      color: $white !important; // override chosen-default which is also !important.
+                     background-color: rgba($focus,1);
+                  }
+                  > .group-result {
+                     color: $border-focus;
+                     border-color: $border-focus;
                   }
                }
             }
