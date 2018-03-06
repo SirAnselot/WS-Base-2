@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>WS.BASE II</title>
  	<!-- CSS -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i|Roboto+Slab:300,400|Roboto:400,400i,700" rel="stylesheet">
-  <link href="css/chosen/chosen.min.css" rel="stylesheet">
-  <link href="css/ws.min.css" rel="stylesheet">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+  	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i|Roboto+Slab:300,400|Roboto:400,400i,700" rel="stylesheet">
+  	<link href="css/chosen/chosen.min.css" rel="stylesheet">
+  	<link href="css/custom.min.css" rel="stylesheet">
+  	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <link rel="SHORTCUT ICON" href="img/favicons/favicon.ico" />
+  	<![endif]-->
+  	<link rel="SHORTCUT ICON" href="img/favicons/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="56x56" href="img/favicons/touch-icon-iphone.png" />
 	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/touch-icon-iphone-retina.png" />
@@ -45,446 +45,334 @@
                <!-- SVG-Sprite & Form-Control -->
    				<div class="row">
                   <div class="col-12">
-                     <div class="card mb-3">
-                        <div class="card-header">
-                           Example Form
-                        </div>
-                        <div class="card-body">
-                           <form>
-										<fieldset class="form-group">
-											<div class="row">
-												<legend class="col-form-legend col-sm-6 text-uppercase h4 mb-3 mx-auto">Input</legend>
-											</div>
-											<!-- TYPE EMAIL -->
-	                              <div class="form-group row">
-	                                 <label for="inputEmail" class="col-sm-3 text-right col-form-label">Email</label>
-	                                 <div class="col-sm-6">
-	                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-	                                 </div>
-	                              </div>
 
-											<!-- TYPE PASSWORD -->
-	                              <div class="form-group row">
-	                                 <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
-	                                 <div class="col-sm-6">
-	                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-	                                 </div>
-	                              </div>
+                     <form id="needs-validation" novalidate>
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-legend col-sm-6 text-uppercase h4 mb-3 mx-auto">Input</legend>
+									</div>
+									<!-- TYPE EMAIL -->
+                           <div class="form-group row">
+                              <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+                              <div class="col-sm-6">
+                                 <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                              </div>
+                           </div>
 
-											<!-- TYPE TEXT -->
-											<div class="form-group row">
-	                                 <label for="inputPhone" class="col-sm-3 col-form-label text-right">Phone</label>
-	                                 <div class="col-sm-6">
-	                                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
-	                                 </div>
-	                              </div>
-										</fieldset>
+									<!-- TYPE PASSWORD -->
+                           <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                              <div class="col-sm-6">
+                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                              </div>
+                           </div>
 
-										<fieldset class="form-group">
-											<div class="row">
-												<legend class="col-form-legend col-sm-6 text-uppercase h4 mb-3 mx-auto">Selectboxen</legend>
-											</div>
-											<!-- TYPE SELECTBOX (SINGLE) -->
-											<div class="form-group row">
-	                                 <label class="col-sm-3 col-form-label text-right">Selectbox (single)</label>
-	                                 <div class="col-sm-6">
-													<select name="termine" class="chosenize form-control" data-placeholder="Please choose ..." >
-														<option value=""></option>
-														<optgroup label="Group 1">
-															<option value="a" >Datenerhebung</option>
-															<option value="b" >Herzliches</option>
-															<option value="c" >Evangelischen</option>
-															<option value="d" >Sagen</option>
-														</optgroup>
-														<optgroup label="Group 2">
-															<option value="e" >Arbeitskreis</option>
-															<option value="f" >Jahrzehnten</option>
-															<option value="g" >Blindtext</option>
-															<option value="h" >Gefährdungsbeurteilung</option>
-														</optgroup>
-														<optgroup label="Group 3">
-															<option value="i" >Allgemeine</option>
-															<option value="j" >Psychischen</option>
-															<option value="k" >Jahrhunderten</option>
-															<option value="l" >Organisationseinheit</option>
-															<option value="m" >Ich</option>
-														</optgroup>
-													</select>
-	                                 </div>
-	                              </div>
+									<!-- TYPE TEXT -->
+									<div class="form-group row">
+                              <label for="inputPhone" class="col-sm-3 col-form-label">Phone</label>
+                              <div class="col-sm-6">
+                                 <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                              </div>
+                           </div>
 
-											<!-- TYPE SELECTBOX (MULTIPLE) -->
-											<div class="form-group row">
-	                                 <label class="col-sm-3 col-form-label text-right">Selectbox (multiple)</label>
-	                                 <div class="col-sm-6">
-													<select multiple name="termine" class="chosenize form-control" data-placeholder="Please choose ..." >
-														<option value=""></option>
-														<optgroup label="Group 1">
-															<option value="a" >Datenerhebung</option>
-															<option value="b" >Herzliches</option>
-															<option value="c" >Evangelischen</option>
-															<option value="d" >Sagen</option>
-														</optgroup>
-														<optgroup label="Group 2">
-															<option value="e" >Arbeitskreis</option>
-															<option value="f" >Jahrzehnten</option>
-															<option value="g" >Blindtext</option>
-															<option value="h" >Gefährdungsbeurteilung</option>
-														</optgroup>
-														<optgroup label="Group 3">
-															<option value="i" >Allgemeine</option>
-															<option value="j" >Psychischen</option>
-															<option value="k" >Jahrhunderten</option>
-															<option value="l" >Organisationseinheit</option>
-															<option value="m" >Ich</option>
-														</optgroup>
-													</select>
-	                                 </div>
-	                              </div>
+									<div class="form-group row">
+    									<label for="msg" class="col-sm-3 col-form-label">Example textarea</label>
+										<div class="col-sm-6" >
+    										<textarea class="form-control" id="msg" rows="3"></textarea>
+										</div>
+  									</div>
+								</fieldset>
 
-											<!-- TYPE SELECTBOX + DROPDOWN -->
-											<div class="form-group row">
-	                                 <label class="col-sm-3 col-form-label text-right">Selectbox (multiple)</label>
-	                                 <div class="col-sm-6">
-													<div class="input-group">
-												      <div class="input-group-btn dropdown">
-												        	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												          	Action
-												        	</button>
-												        	<div class="dropdown-menu">
-												          	<a class="dropdown-item" href="#">Action</a>
-												          	<a class="dropdown-item" href="#">Another action</a>
-												          	<a class="dropdown-item" href="#">Something else here</a>
-												          	<div role="separator" class="dropdown-divider"></div>
-												          	<a class="dropdown-item" href="#">Separated link</a>
-												        	</div>
-												      </div>
-														<select multiple name="termine" class="chosenize form-control" data-placeholder="Please choose ..." >
-															<option value=""></option>
-															<optgroup label="Group 1">
-																<option value="a" >Datenerhebung</option>
-																<option value="b" >Herzliches</option>
-																<option value="c" >Evangelischen</option>
-																<option value="d" >Sagen</option>
-															</optgroup>
-															<optgroup label="Group 2">
-																<option value="e" >Arbeitskreis</option>
-																<option value="f" >Jahrzehnten</option>
-																<option value="g" >Blindtext</option>
-																<option value="h" >Gefährdungsbeurteilung</option>
-															</optgroup>
-															<optgroup label="Group 3">
-																<option value="i" >Allgemeine</option>
-																<option value="j" >Psychischen</option>
-																<option value="k" >Jahrhunderten</option>
-																<option value="l" >Organisationseinheit</option>
-																<option value="m" >Ich</option>
-															</optgroup>
-														</select>
-													</div>
-	                                 </div>
-	                              </div>
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-legend col-sm-6 text-uppercase h4 mb-3 mx-auto">Selectboxen</legend>
+									</div>
+									<!-- TYPE SELECTBOX (SINGLE) -->
+									<div class="form-group row">
+                              <label class="col-sm-3 col-form-label">Single Select</label>
+                              <div class="col-sm-6">
+											<select name="termine" class="chosenize form-control" data-placeholder="Please choose ..." >
+												<option value="-1"></option>
+												<optgroup label="date">
+													<option value="a" >2017-12-08</option>
+													<option value="b" >2017-05-20</option>
+													<option value="c" >2017-03-31</option>
+													<option value="d" >2017-03-25</option>
+													<option value="d" >2017-01-05</option>
+												</optgroup>
+												<optgroup label="artist">
+													<option value="e" >Superaki</option>
+													<option value="f" >The Beatles</option>
+													<option value="g" >Strom</option>
+												</optgroup>
+												<optgroup label="status">
+													<option value="i" >Confirmed</option>
+													<option value="j" >Cancelled</option>
+													<option value="k" >TBC</option>
+													<option value="l" >Day off</option>
+													<option value="m" >Option</option>
+												</optgroup>
+												<optgroup label="venue">
+													<option value="i" >That´s all Funk</option>
+													<option value="j" >The Box</option>
+													<option value="k" >Berghain</option>
+													<option value="l" >Watergate</option>
+													<option value="m" >Flex</option>
+												</optgroup>
+												<optgroup label="city">
+													<option value="i" >Berlin, DE</option>
+													<option value="j" >Saarbrücken, DE</option>
+													<option value="k" >Offenbach, DE</option>
+													<option value="l" >Amsterdam, NL</option>
+													<option value="m" >Lyon, FR</option>
+												</optgroup>
+											</select>
+                              </div>
+                           </div>
 
-										</fieldset>
+									<!-- TYPE SELECTBOX (MULTIPLE) -->
+									<div class="form-group row">
+                              <label class="col-sm-3 col-form-label">Multiple Select</label>
+                              <div class="col-sm-6">
+											<select multiple name="termine" class="chosenize form-control" data-placeholder="Search for ..." required>
+												<option value="-1"></option>
+												<optgroup label="date">
+													<option value="a" >2017-12-08</option>
+													<option value="b" >2017-05-20</option>
+													<option value="c" >2017-03-31</option>
+													<option value="d" >2017-03-25</option>
+													<option value="d" >2017-01-05</option>
+												</optgroup>
+												<optgroup label="artist">
+													<option value="e" >Superaki</option>
+													<option value="f" >The Beatles</option>
+													<option value="g" >Strom</option>
+												</optgroup>
+												<optgroup label="status">
+													<option value="i" >Confirmed</option>
+													<option value="j" >Cancelled</option>
+													<option value="k" >TBC</option>
+													<option value="l" >Day off</option>
+													<option value="m" >Option</option>
+												</optgroup>
+												<optgroup label="venue">
+													<option value="i" >That´s all Funk</option>
+													<option value="j" >The Box</option>
+													<option value="k" >Berghain</option>
+													<option value="l" >Watergate</option>
+													<option value="m" >Flex</option>
+												</optgroup>
+												<optgroup label="city">
+													<option value="i" >Berlin, DE</option>
+													<option value="j" >Saarbrücken, DE</option>
+													<option value="k" >Offenbach, DE</option>
+													<option value="l" >Amsterdam, NL</option>
+													<option value="m" >Lyon, FR</option>
+												</optgroup>
+											</select>
+                              </div>
+                           </div>
 
-										<fieldset class="form-group">
-											<div class="row">
-												<legend class="col-form-legend col-sm-6 text-uppercase h4 mb-3 mx-auto">Checkboxes and radio-buttons</legend>
-											</div>
-
-											<!-- TYPE CHECKBOX -->
-	                              <div class="form-group row">
-	                                 <label class="col-sm-3 text-right">Checkbox</label>
-	                                 <div class="col-sm-6">
-	                                    <div class="form-check">
-	                                       <label class="form-check-label">
-	                                          <input class="form-check-input mr-2" type="checkbox"> Check me out
-	                                       </label>
-	                                    </div>
-	                                 </div>
-	                              </div>
-
-											<!-- RADIO-GROUP -->
-											<fieldset class="form-group">
-										      <div class="row">
-										        	<legend class="col-form-legend col-sm-3 text-right">Radio group</legend>
-										        	<div class="col-sm-6 pt-2">
-										          	<div class="form-check">
-										            	<label class="form-check-label">
-										              		<input class="form-check-input mr-2" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-										              		Option one is this and that&mdash;be sure to include why it's great
-										            	</label>
-										          	</div>
-										          	<div class="form-check">
-										            	<label class="form-check-label">
-										              		<input class="form-check-input mr-2" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-										              		Option two can be something else and selecting it will deselect option one
-										            	</label>
-										          	</div>
-										          	<div class="form-check disabled">
-										            	<label class="form-check-label">
-										              		<input class="form-check-input mr-2" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-										              		Option three is disabled
-										            	</label>
-										          	</div>
+									<!-- TYPE SELECTBOX (SINGLE) w/ DROPDOWN -->
+									<div class="form-group row">
+                              <label for="filterSingle" class="col-sm-3 col-form-label">Single Select w/ dropdown</label>
+                              <div class="col-sm-6">
+											<div class="input-group">
+										      <div class="input-group-btn js-select-optgroup" data-value="-1" data-target="#filterSingle">
+													<button type="button" class="btn btn-light dropdown-toggle" title="Choose ..." data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<span class="icn icon-back-in-time"></span>
+										        	</button>
+													<div class="dropdown-menu">
+														<h5 class="dropdown-header pl-2 py-3">Recent searches</h5>
+														<button type="button" class="dropdown-item" data-value="2017-05-20"><span class="icn icon-calendar"></span> 2017-05-20</button>
+										          	<button type="button" class="dropdown-item" data-value="Superaki"><span class="icn icon-user"></span> Superaki</button>
+														<button type="button" class="dropdown-item" data-value="The Beatles"><span class="icn icon-user"></span> The Beatles</button>
+										          	<button type="button" class="dropdown-item" data-value="Confirmed"><span class="icn icon-check"></span> Confirmed</button>
+														<button type="button" class="dropdown-item" data-value="Berghain"><span class="icn icon-drink"></span> Berghain</button>
+														<button type="button" class="dropdown-item js-reset default active pl-2 mt-2 pt-2" data-value="reset">Clear recent searches</button>
 										        	</div>
 										      </div>
-										   </fieldset>
+												<select id="filterSingle" name="filterSingle" class="chosenize form-control" data-placeholder="Search or filter related bookings" >
+													<option value="-1"></option>
+													<optgroup label="date">
+														<option value="a" >2017-12-08</option>
+														<option value="b" >2017-05-20</option>
+														<option value="c" >2017-03-31</option>
+														<option value="d" >2017-03-25</option>
+														<option value="d" >2017-01-05</option>
+													</optgroup>
+													<optgroup label="artist">
+														<option value="e" >Superaki</option>
+														<option value="f" >The Beatles</option>
+														<option value="g" >Strom</option>
+													</optgroup>
+													<optgroup label="status">
+														<option value="i" >Confirmed</option>
+														<option value="j" >Cancelled</option>
+														<option value="k" >TBC</option>
+														<option value="l" >Day off</option>
+														<option value="m" >Option</option>
+													</optgroup>
+													<optgroup label="venue">
+														<option value="i" >That´s all Funk</option>
+														<option value="j" >The Box</option>
+														<option value="k" >Berghain</option>
+														<option value="l" >Watergate</option>
+														<option value="m" >Flex</option>
+													</optgroup>
+													<optgroup label="city">
+														<option value="i" >Berlin, DE</option>
+														<option value="j" >Saarbrücken, DE</option>
+														<option value="k" >Offenbach, DE</option>
+														<option value="l" >Amsterdam, NL</option>
+														<option value="m" >Lyon, FR</option>
+													</optgroup>
+												</select>
+											</div>
+                              </div>
+                           </div>
 
-											<!-- CHECKBOX-GROUP -->
-											<fieldset class="form-group">
-										      <div class="row">
-										        	<legend class="col-form-legend col-sm-3 text-right">Checkbox group</legend>
-										        	<div class="col-sm-6 pt-2">
-										          	<div class="form-check">
-										            	<label class="form-check-label">
-										              		<input class="form-check-input mr-2" type="checkbox" name="gridCheckboxes" id="gridCheckboxes1" value="option1" checked>
-										              		Option one is this and that&mdash;be sure to include why it's great
-										            	</label>
-										          	</div>
-										          	<div class="form-check">
-										            	<label class="form-check-label">
-										              		<input class="form-check-input mr-2" type="checkbox" name="gridCheckboxes" id="gridCheckboxes2" value="option2" >
-										              		Option two can be something else and selecting it will deselect option one
-										            	</label>
-										          	</div>
-										          	<div class="form-check disabled">
-										            	<label class="form-check-label">
-										              		<input class="form-check-input mr-2" type="checkbox" name="gridCheckboxes" id="gridCheckboxes3" value="option3" disabled>
-										              		Option three is disabled
-										            	</label>
-										          	</div>
+									<!-- TYPE SELECTBOX (MULTIPLE) w/ DROPDOWN -->
+									<div class="form-group row">
+                              <label for="filterMultiple" class="col-sm-3 col-form-label">Multiple Select w/ dropdown</label>
+                              <div class="col-sm-6">
+											<div class="input-group">
+										      <div class="input-group-btn js-select-optgroup" data-value="-1" data-target="#filterMultiple">
+													<button type="button" class="btn btn-light dropdown-toggle" title="Choose ..." id="filterMultipleButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<span class="icn icon-funnel"></span>
+										        	</button>
+													<div class="dropdown-menu" aria-labelledby="filterMultipleButton">
+														<h5 class="dropdown-header pl-2 py-3">Search-category</h5>
+														<!-- <div class="dropdown-divider"></div> -->
+														<button type="button" class="dropdown-item" data-value="date"><span class="icn icon-calendar"></span> Date</button>
+										          	<button type="button" class="dropdown-item" data-value="artist"><span class="icn icon-user"></span> Artist</button>
+										          	<button type="button" class="dropdown-item" data-value="status"><span class="icn icon-check"></span> Status</button>
+														<button type="button" class="dropdown-item" data-value="venue"><span class="icn icon-drink"></span> Venue</button>
+														<button type="button" class="dropdown-item" data-value="city"><span class="icn icon-address"></span> City</button>
+														<button type="button" class="dropdown-item" data-value="progress"><span class="icn icon-progress-two"></span> Progress</button>
+														<button type="button" class="dropdown-item js-reset default active pl-2 mt-2 pt-2" data-value="reset">Clear search-category</button>
 										        	</div>
 										      </div>
-										   </fieldset>
-										</fieldset>
-                              <div class="form-group row">
-                                 <div class="col-sm-6 mx-auto">
-                                    <button type="submit" class="btn btn-primary text-uppercase col-4">Sign in</button>
-												<button type="reset" class="btn btn-secondary text-uppercase col-4">cancel</button>
-                                 </div>
+												<select multiple id="filterMultiple" name="filterMultiple" class="chosenize form-control" data-placeholder="Search or filter related bookings" >
+													<option value="-1"></option>
+													<optgroup label="date" title="Date">
+														<option value="a" >2017-12-08</option>
+														<option value="b" >2017-05-20</option>
+														<option value="c" >2017-03-31</option>
+														<option value="d" >2017-03-25</option>
+														<option value="d" >2017-01-05</option>
+													</optgroup>
+													<optgroup label="artist" title="Artist">
+														<option value="e" >Superaki</option>
+														<option value="f" >The Beatles</option>
+														<option value="g" >Strom</option>
+													</optgroup>
+													<optgroup label="status" title="Status">
+														<option value="i" >Confirmed</option>
+														<option value="j" >Cancelled</option>
+														<option value="k" >TBC</option>
+														<option value="l" >Day off</option>
+														<option value="m" >Option</option>
+													</optgroup>
+													<optgroup label="venue" title="Venue">
+														<option value="i" >That´s all Funk</option>
+														<option value="j" >The Box</option>
+														<option value="k" >Berghain</option>
+														<option value="l" >Watergate</option>
+														<option value="m" >Flex</option>
+													</optgroup>
+													<optgroup label="city" title="City">
+														<option value="i" >Berlin, DE</option>
+														<option value="j" >Saarbrücken, DE</option>
+														<option value="k" >Offenbach, DE</option>
+														<option value="l" >Amsterdam, NL</option>
+														<option value="m" >Lyon, FR</option>
+													</optgroup>
+												</select>
+											</div>
                               </div>
-                           </form>
+                           </div>
+
+								</fieldset>
+
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-legend col-sm-6 text-uppercase h4 mb-3 mx-auto">Checkboxes and radio-buttons</legend>
+									</div>
+
+									<!-- TYPE CHECKBOX -->
+                           <div class="form-group">
+										<div class="row">
+								        	<label class="col-form-label col-sm-3">Checkbox indeterminated</label>
+	                              <div class="col-sm-6">
+	                                 <label class="custom-control custom-checkbox">
+	                                    <input class="custom-control-input js-checkbox-indeterminated" type="checkbox">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Check this custom checkbox</span>
+	                                 </label>
+	                              </div>
+	                           </div>
+									</div>
+
+									<!-- CHECKBOX-GROUP -->
+									<fieldset class="form-group">
+								      <div class="row">
+								        	<label class="col-form-label col-sm-3">Checkbox group</label>
+								        	<div class="col-sm-6 pt-2">
+								          	<div class="custom-controls-stacked">
+								            	<label class="custom-control custom-checkbox">
+								              		<input class="custom-control-input" type="checkbox" name="gridCheckboxes" id="gridCheckboxes1" value="option1" checked>
+														<span class="custom-control-indicator"></span>
+															<span class="custom-control-description">Toggle this custom checkbox</span>
+								            	</label>
+								            	<label class="custom-control custom-checkbox">
+								              		<input class="custom-control-input" type="checkbox" name="gridCheckboxes" id="gridCheckboxes2" value="option2">
+														<span class="custom-control-indicator"></span>
+															<span class="custom-control-description">Or oggle this other custom checkbox</span>
+								            	</label>
+								            	<label class="custom-control custom-checkbox">
+								              		<input class="custom-control-input" type="checkbox" name="gridCheckboxes" id="gridCheckboxes3" value="option3">
+														<span class="custom-control-indicator"></span>
+															<span class="custom-control-description">Or oggle this custom checkbox</span>
+								            	</label>
+								          	</div>
+								        	</div>
+								      </div>
+								   </fieldset>
+
+									<!-- RADIO-GROUP -->
+									<fieldset class="form-group">
+								      <div class="row">
+								        	<label class="col-form-label col-sm-3">Radio group</label>
+								        	<div class="col-sm-6 pt-2">
+												<div class="custom-controls-stacked">
+											  		<label class="custom-control custom-radio">
+											    		<input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
+											    		<span class="custom-control-indicator"></span>
+											    		<span class="custom-control-description">Toggle this custom radio</span>
+											  		</label>
+											  		<label class="custom-control custom-radio">
+											    		<input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
+											    		<span class="custom-control-indicator"></span>
+											    		<span class="custom-control-description">Or toggle this other custom radio</span>
+											  		</label>
+												</div>
+								        	</div>
+								      </div>
+								   </fieldset>
+								</fieldset>
+                        <div class="form-group row">
+                           <div class="col-sm-6 mx-auto">
+                              <button type="submit" class="btn btn-primary text-uppercase col-4">Sign in</button>
+										<button type="reset" class="btn btn-light text-uppercase col-4">cancel</button>
+                           </div>
                         </div>
-                     </div>
-                  </div>
+                     </form>
 
-   					<div class="col-md-6">
-
-                     <!-- START :: CHOSEN -->
-                     <div class="card mb-3">
-                        <div class="card-header">
-                           Chosen Jquery Selectbox (w/ resetter)
-                        </div>
-                        <div class="card-body">
-                           <form>
-                              <div class="row">
-                                 <div class="col-12">
-                                    <div class="form-group">
-                                       <label for="termine" class="sr-only">.chosenize.form-control-sm</label>
-                                       <select 	name="termine" class="chosenize form-control-sm form-control" data-placeholder="Please choose ..." >
-                        	            	<option>Please choose ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                                          <option value="e" selected >Arbeitskreis</option>
-                        						<option value="f" >Jahrzehnten</option>
-                                          <option value="g" >Blindtext</option>
-                        						<option value="h" >Gefährdungsbeurteilung</option>
-                                          <option value="i" >Allgemeine</option>
-                        						<option value="j" >Psychischen</option>
-                                          <option value="k" >Jahrhunderten</option>
-                        						<option value="l" >Organisationseinheit</option>
-                                          <option value="m" >Ich</option>
-                        					</select>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-12">
-                                    <div class="form-group">
-                                       <label for="termine" class="sr-only">.chosenize.form-control</label>
-                                       <select 	name="termine" class="chosenize form-control" data-placeholder="Please choose ..." >
-                        	            	<option>Please choose ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                                          <option value="e" >Arbeitskreis</option>
-                        						<option value="f" >Jahrzehnten</option>
-                                          <option value="g" >Blindtext</option>
-                        						<option value="h" >Gefährdungsbeurteilung</option>
-                                          <option value="i" >Allgemeine</option>
-                        						<option value="j" >Psychischen</option>
-                                          <option value="k" >Jahrhunderten</option>
-                        						<option value="l" >Organisationseinheit</option>
-                                          <option value="m" >Ich</option>
-                        					</select>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-12">
-                                    <div class="form-group">
-                                       <label for="termine" class="sr-only">.chosenize.form-control-lg</label>
-                                       <select multiple name="termine" class="chosenize form-control-lg form-control" data-placeholder="Please choose ..." >
-                        	            	<option>Please choose ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                                          <option value="e" >Arbeitskreis</option>
-                        						<option value="f" >Jahrzehnten</option>
-                                          <option value="g" >Blindtext</option>
-                        						<option value="h" >Gefährdungsbeurteilung</option>
-                                          <option value="i" >Allgemeine</option>
-                        						<option value="j" >Psychischen</option>
-                                          <option value="k" >Jahrhunderten</option>
-                        						<option value="l" >Organisationseinheit</option>
-                                          <option value="m" >Ich</option>
-                        					</select>
-                                    </div>
-                                 </div>
-                              </div>
-
-                              <div class="row">
-                                 <div class="col-12">
-                                    <div class="form-group">
-                                       <label for="name" class="form-control-label sr-only">Validation</label>
-                                       <select multiple	name="termine" class="chosenize form-control" data-placeholder="Validation ..." >
-                        	            	<option>Validation ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                        					</select>
-                                    </div>
-                                 </div>
-
-                                 <div class="col-12">
-                                    <div class="form-group">
-                                       <label for="name" class="form-control-label sr-only">Success</label>
-                                       <select 	name="termine" class="chosenize form-control is-valid" data-placeholder="Validation ..." >
-                        	            	<option>Success ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                        					</select>
-                                    </div>
-                                 </div>
-
-                                 <div class="col-12">
-                                    <div class="form-group">
-                                       <label for="name" class="form-control-label sr-only">Danger</label>
-                                       <select 	name="termine" class="chosenize form-control is-invalid" data-placeholder="Aktuelle Termine" >
-                        	            	<option>Danger ...</option>
-                                          <option value="a" >Datenerhebung</option>
-                        						<option value="b" >Herzliches</option>
-                                          <option value="c" >Evangelischen</option>
-                        						<option value="d" >Sagen</option>
-                        					</select>
-                                       <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
-                                    </div>
-                                 </div>
-
-                              </div>
-                              <div class="form-group row pt-3">
-                                 <div class="col-6 col-sm-4 col-md-3">
-                                    <button type="submit" name="button" class="btn btn-primary btn-block text-uppercase">Send</button>
-                                 </div>
-                                 <div class="col-6 col-sm-4 col-md-3">
-                                    <button type="reset" name="button" class="btn btn-secondary btn-block text-uppercase">Cancel</button>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <!-- END :: Form -->
-
-   					</div>
-                  <div class="col-md-6">
-                     <div class="card mb-3">
-                        <div class="card-header">
-                           Text Input Fields
-                        </div>
-                        <div class="card-body">
-                           <form id="needs-validation" novalidate>
-                              <div class="row">
-                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <label for="email" class="form-control-label text-sm sr-only">Email address</label>
-                                       <input type="email" class="form-control form-control-sm" id="email" placeholder="Ihre E-Mailadresse" required/>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <label for="phone" class="form-control-label sr-only">Ihre Telefonnummer</label>
-                                       <input type="number" class="form-control" id="phone" placeholder="Ihre Telefonnummer" required/>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <label for="firstname" class="form-control-label text-lg sr-only">Vorname</label>
-                                       <input type="text" class="form-control form-control-lg" id="firstname" placeholder="Vorname" required/>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <label for="name" class="form-control-label sr-only">Validation</label>
-                                       <input type="text" class="form-control" id="name" placeholder="Validation" required/>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <label for="name" class="form-control-label sr-only">Success</label>
-                                       <input type="text" class="form-control is-valid" id="name" placeholder="Success" required/>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <label for="name" class="form-control-label sr-only">Danger</label>
-                                       <input type="text" class="form-control is-invalid" id="name" placeholder="Danger" required/>
-                                       <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="form-group row pt-3">
-                                 <div class="col-6 col-sm-4 col-md-3">
-                                    <button type="submit" name="button" class="btn btn-primary btn-block text-uppercase">Send</button>
-                                 </div>
-                                 <div class="col-6 col-sm-4 col-md-3">
-                                    <button type="reset" name="button" class="btn btn-secondary btn-block text-uppercase">Cancel</button>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                     <!-- END :: Form -->
                   </div>
    				</div><!-- /.row -->
             </div>
          </section>
-
-			<script>
-			// Example starter JavaScript for disabling form submissions if there are invalid fields
-			(function() {
-			  	"use strict";
-			  	window.addEventListener("load", function() {
-			   	var form = document.getElementById("needs-validation");
-			    	form.addEventListener("submit", function(event) {
-			      	if (form.checkValidity() == false) {
-			        		event.preventDefault();
-			        		event.stopPropagation();
-			      	}
-			      	form.classList.add("was-validated");
-			    	}, false);
-				}, false);
-			}());
-			</script>
 		</main>
 
       <!-- FOOTER -->
@@ -501,5 +389,41 @@
 	<script src="js/vendor/vendor.min.js"></script>
    <script src="js/app/ws/pointerManager.js"></script>
 	<script src="js/app/app.js"></script>
+
+	<script>
+
+	$(window).on('APP-INIT', function(e, app)
+	{
+		console.log(app);
+		/*
+		var form = $('#needs-validation');
+		form.on('submit', function(event) {
+			if (form.checkValidity() == false) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			form.addClass('was-validated');
+		}, false);
+		*/
+		/*
+		$('.dropdown-item')
+			.each(function(i,el) {
+
+				var _parent = $(el).closest('.js-select-optgroup'),
+					 _val = $(el).data('value');
+
+				$(el).on('click', function(){
+					_parent.find('.dropdown-item.active').removeClass('active');
+					$(this).addClass('active');
+					console.log(_parent.attr('for'));
+				});
+		});
+		*/
+
+
+
+	}); // END :: APPINIT
+
+	</script>
 </body>
 </html>

@@ -24,12 +24,12 @@ $chosen-font-family:       $font-family-base !default;
  *
 /*	-----	*/
 @mixin chosen-size(
-      $font-size:       $font-size-base,
-      $height:          $input-height,
-      $padding-x:       $input-btn-padding-x,
-      $padding-y:       $input-btn-padding-y,
-      $line-height:     $input-btn-line-height,
-      $border-radius:   $input-border-radius
+      $font-size:       $chosen-font-size,
+      $height:          $chosen-height,
+      $padding-x:       $chosen-padding-x,
+      $padding-y:       $chosen-padding-y,
+      $line-height:     $chosen-line-height,
+      $border-radius:   $chosen-border-radius
    ) {
    &.chosen-container {
       font-family:   $chosen-font-family;
@@ -39,7 +39,6 @@ $chosen-font-family:       $font-family-base !default;
          .chosen-drop {
             border-image: none !important;
             box-shadow: none !important;
-            border: $border-width solid transparent;
             @include border-bottom-radius($border-radius);
             font-size: ($font-size * .95);
             text-align: left;
@@ -87,9 +86,9 @@ $chosen-font-family:       $font-family-base !default;
                border-radius: $border-radius;
                margin: 0;
                height: auto;
+               width: 100%;
                line-height: $line-height;
                padding: $padding-y $padding-x;
-               border: $border-width solid transparent;
                transition: background-color 0.1s linear, border 0.1s linear, color 0.1s linear;
                > div b {
                   background-image: none !important;
@@ -103,6 +102,17 @@ $chosen-font-family:       $font-family-base !default;
                      right: ($padding-x * 1.5);
                   }
                }
+               &.chosen-single-with-deselect > .search-choice-close {
+                  &:before {
+                     @include entypo('\e86f', $input-color, $font-size);
+                  }
+                  position: absolute;
+                  z-index: 1;
+                  margin-top: - ($font-size * .5);
+                  top: 50%;
+                  right: 2.5rem;
+                  background-image: none;
+               }
                @media
                   only screen and (min-resolution: 192dpi),
                   only screen and (min-resolution: 2dppx)
@@ -113,7 +123,6 @@ $chosen-font-family:       $font-family-base !default;
                   }
                }
                &:hover,
-               &:focus,
                &.active {
                   > div b {
                      background-image: none !important;
@@ -132,23 +141,6 @@ $chosen-font-family:       $font-family-base !default;
                      }
                   }
                }
-            }
-         }
-         // focus / tab-focus
-         &.chosen-container-active {
-            > .chosen-single {
-               &,
-               &:hover,
-               &:focus,
-               &.active {
-
-               }
-            }
-         }
-         &.chosen-with-drop {
-            // stuff only visible when dropdown open
-            .chosen-drop {
-
             }
          }
          // focus & open
@@ -174,15 +166,19 @@ $chosen-font-family:       $font-family-base !default;
                      }
                   }
                }
-               .chosen-drop {
-
-               }
             }
             .chosen-search {
                margin: $padding-y;
                padding: 2px 1px;
                background-image: none !important;
                box-shadow: none !important;
+               &:after {
+                  @include entypo('\e8cd', rgba($input-color,.5), $font-size);    // magnifying-glas
+                  position: absolute;
+                  margin-top: - ($font-size * .5);
+                  top: 50%;
+                  right: $padding-y;
+               }
                > input[type="text"] {
                   font-family: $chosen-font-family;
                   padding: ($padding-y * .5) $padding-y;
@@ -204,9 +200,16 @@ $chosen-font-family:       $font-family-base !default;
             > .chosen-choices {
                padding: ($padding-y * .5) 0 0 ($padding-y * .5);
                border-radius: $border-radius;
-               box-shadow: none !important;
-               // box-shadow: $input-box-shadow;
+               box-shadow: $input-box-shadow !important;
                background-image: none !important;
+               &:after {
+                  @include entypo('\e8cd', rgba($input-color,.5), $font-size);    // magnifying-glas
+               // @include entypo('\e89e', $input-color, $font-size);    // funnel
+                  position: absolute;
+                  margin-top: - ($font-size * .5);
+                  top: 50%;
+                  right: $padding-y;
+               }
                > .search-choice {
                   font-size: ($font-size);
                   margin: 0 ($padding-y * .5) ($padding-y * .5) 0;
@@ -218,7 +221,7 @@ $chosen-font-family:       $font-family-base !default;
                   line-height: $line-height;
                   > .search-choice-close {
                      &:before {
-                        @include entypo('\e84b', $white, $font-size * .75);
+                        @include entypo('\e86f', $white, $font-size * .75);
                      }
                      position: absolute;
                      margin-top: - ($font-size * .375);
@@ -255,13 +258,10 @@ $chosen-font-family:       $font-family-base !default;
                > .chosen-choices {
                   border-bottom-left-radius: 0;
                   border-bottom-right-radius: 0;
-                  border-bottom: none;
-                  > .search-field > input[type="text"] {
-
-                  }
                }
             }
             > .chosen-drop {
+               border-top: none;
                > .chosen-results {
                   border-top: none;
                   > .active-result,
@@ -272,9 +272,6 @@ $chosen-font-family:       $font-family-base !default;
                         margin-top: $padding-y;
                         margin-bottom: 2px;
                      }
-                  }
-                  > .result-selected {
-
                   }
                   > .group-result {
                      text-transform: uppercase;
@@ -291,93 +288,175 @@ $chosen-font-family:       $font-family-base !default;
 
 /* COLOR-VARIANTE
  * --------------------
- * @params: $color, $focus, $bg, $bg-focus, $border, $border-focus
+ * @params: $bg, $border, $bg-focus, $border-focus
  *
 /*	-----	*/
 @mixin chosen-color-variante(
-      $color:           $input-color,
-      $focus:           $input-focus-color,
+      /*
+      $bg:              theme-color('primary'),
+      $border:          theme-color('primary'),
+      $bg-focus:        darken($bg, 10%),
+      $border-focus:    darken($bg, 10%)
+      */
       $bg:              $input-bg,
-      $bg-focus:        $input-focus-bg,
       $border:          $input-border-color,
+      $bg-focus:        $input-focus-bg,
       $border-focus:    $input-focus-border-color
    ) {
    &.chosen-container {
-      & {
-         .chosen-drop {
 
-         }
+      & {
          .chosen-results {
             border-color: $border-focus;
          }
          .chosen-results > li {
-            background-color: rgba($bg-focus, 1);
+            background-color: $bg-focus;
             &.active-result {
-               color: $color;
+               // color: $color;
+               color: color-yiq($bg-focus);
                &.highlighted {
-                  color: $color;
-                  background-color: rgba($border-focus, .35);
+                  // color: $bg-focus;
+                  color: color-yiq(rgba($border-focus, .5));
+                  background-color: rgba($border-focus, .5);
                }
             }
             &.result-selected {
-               background-color: rgba($border-focus, 1);
+               background-color: $border-focus;
             }
             &.result-selected {
                &.active-result {
-                  color: $white !important;
-                  background-color: rgba($border-focus, 1);
+                  // color: $bg-focus !important;
+                  border-color: color-yiq($border-focus);
+                  background-color: $border-focus;
                }
             }
             &.group-result {
-               color: $border-focus;
-               border-color: $border-focus;
+               color: rgba($border-focus, .5);
+               border-color: rgba($border-focus, .5);
             }
          }
       }
       &.chosen-container-single {
          .chosen-drop {
-            background-color: $bg;
-            border-color: $border-focus;
+            background-color: $bg-focus;
+            border-color: $border;
          }
+         // SINGLE SELECT
          & {
             > .chosen-single {
-               color: $color;
-               background-color: $bg;
-               border-color: $border;
-               > div b {
-                  &:before {
-                     color: $color;
-                  }
-               }
-               &:hover,
-               &:focus,
-               &.active {
-                  color: $focus;
-                  background-color: $bg-focus;
+               // w/ selection
+               & {
+                  // color: $color;
+                  color: color-yiq($border-focus);
+                  background-color: $border-focus;
                   border-color: $border-focus;
                   > div b {
-                     background-image: none !important;
-                     background: none !important;
                      &:before {
-                        color: $border-focus;
+                        color: color-yiq($border-focus);
+                     }
+                  }
+                  &:hover,
+                  &:focus,
+                  &.active {
+                     // color: $color;
+                     color: color-yiq($border-focus);
+                     background-color: darken($border-focus,7.5%);
+                     border-color: darken($border-focus,10%);
+                     > div b {
+                        background-image: none !important;
+                        background: none !important;
+                        &:before {
+                           // color: $color;
+                           color: color-yiq($border-focus);
+                        }
+                     }
+                  }
+               }
+
+               // nothing selected
+               &.chosen-default {
+                  color: color-yiq($border);
+                  background-color: $border;
+                  border-color: $border;
+                  font-style: italic;
+                  > div b {
+                     &:before {
+                        color: color-yiq($border);
+                     }
+                  }
+                  &:hover,
+                  &:focus,
+                  &.active {
+                     // color: $color;
+                     color: color-yiq($border);
+                     background-color: darken($border,7.5%);
+                     border-color: darken($border,10%);
+                     > div b {
+                        &:before {
+                           // color: $color;
+                           color: color-yiq($border);
+                        }
+                     }
+                  }
+               }
+               &.chosen-single-with-deselect {
+                  > .search-choice-close {
+                     &:before {
+                        transition: opacity .2s linear;
+                        opacity: .5;
+                        // color: $color;
+                        color: color-yiq($border-focus);
+                     }
+                     &:hover,
+                     &:focus {
+                        &:before {
+                           opacity: 1;
+                           // color: $color;
+                           color: color-yiq($border-focus);
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         // focus || tab-focus
+         &.chosen-container-active {
+            > .chosen-single {
+               &,
+               &:focus,
+               &:hover,
+               &.active {
+                  // color: $color;
+                  color: color-yiq($border-focus);
+                  background-color: darken($border-focus,7.5%);
+                  border-color: darken($border-focus,10%);
+                  > div b {
+                     &:before {
+                        color: color-yiq($border-focus);
                      }
                   }
                }
                &.chosen-default {
-                  color: $input-placeholder-color;
-               }
-            }
-         }
-         // focus / tab-focus
-         &.chosen-container-active {
-            > .chosen-single {
-               &,
-               &:hover,
-               &:focus,
-               &.active {
-                  color: $focus;
-                  background-color: $bg-focus;
-                  border-color: $border-focus;
+                  // color: $color;
+                  color: color-yiq($border);
+                  background-color: darken($border,7.5%);
+                  border-color: darken($border,10%);
+                  font-style: italic;
+                  > div b {
+                     &:before {
+                        // color: $color;
+                        color: color-yiq($border);
+                     }
+                  }
+                  &:hover,
+                  &:focus,
+                  &.active {
+                     // color: $color;
+                     color: color-yiq($border);
+                     background-color: darken($border,7.5%);
+                     border-color: darken($border,10%);
+                  }
                }
             }
          }
@@ -387,17 +466,27 @@ $chosen-font-family:       $font-family-base !default;
                border-color: $border-focus;
             }
          }
-         // focus & open
+
+         // focus && open
          &.chosen-container-active {
             &.chosen-with-drop {
                > .chosen-single {
-                  color: $focus;
-                  background-color: $bg-focus;
-                  border-color: $border-focus;
-                  > div b {
-                     &:before {
-                        color: $border-focus;
+                  &,
+                  &:focus,
+                  &:hover,
+                  &.active {
+                     // color: $color;
+                     color: color-yiq($bg-focus);
+                     background-color: $bg-focus;
+                     border-color: $border-focus;
+                     > div b {
+                        &:before {
+                           color: color-yiq($bg-focus);
+                        }
                      }
+                  }
+                  &.chosen-default {
+                     color: color-yiq($bg-focus);
                   }
                }
                .chosen-drop {
@@ -407,12 +496,13 @@ $chosen-font-family:       $font-family-base !default;
             }
             .chosen-search {
                > input[type="text"] {
-                  color: $color;
-                  background-color: $bg;
+                  color: $input-color;
+                  background-color: $input-bg;
                   &:focus {
-                     color: $focus;
-                     background-color: $bg-focus;
+                     color: $input-focus-color;
+                     background-color: $input-focus-bg;
                      border-color: $border-focus;
+                     box-shadow: $input-focus-box-shadow !important;
                   }
                }
             }
@@ -424,38 +514,58 @@ $chosen-font-family:       $font-family-base !default;
          & {
             > .chosen-choices {
                border-color: $border;
-               background-color: $bg;
+               background-color: $input-bg;
                > .search-choice {
-                  background-color: $color;
-                  border-color: $color;
-                  color: $white;
+                  transition: color .2s linear, background-color .2s linear;
+                  color: color-yiq($border-focus);
+                  background-color: $border-focus;
+                  border-color: $border-focus;
+                  &:hover,
+                  &:focus,
+                  &.active {
+                     color: color-yiq($border-focus);
+                     background-color: darken($border-focus,7.5%);
+                     border-color: darken($border-focus,10%);
+                  }
                   > .search-choice-close {
                      &:before {
-                        color: $white;
+                        transition: opacity .2s linear;
+                        opacity: .25;
+                        color: color-yiq($border-focus);
+                     }
+                     &:hover,
+                     &:focus {
+                        &:before {
+                           opacity: 1;
+                           color: color-yiq($border-focus);
+                        }
                      }
                   }
-               }
-               > .search-field {
-
                }
                > .search-field > input[type="text"] {
                   &.default {
                      color: $input-placeholder-color;
                   }
                }
+               &.chosen-default {
+                  color: $input-placeholder-color;
+               }
             }
+
          }
          &.chosen-container-active {
             & {
+               z-index: $zindex-dropdown;
                > .chosen-choices {
                   border-color: $border-focus;
-                  background-color: $bg-focus;
+                  background-color: $input-focus-bg;
+                  box-shadow: $input-focus-box-shadow !important;
                }
             }
             &.chosen-with-drop {
                > .chosen-choices {
                   border-color: $border-focus;
-                  background-color: $bg-focus;
+                  background-color: $input-focus-bg;
                   > .search-field > input[type="text"] {
 
                   }
@@ -463,25 +573,77 @@ $chosen-font-family:       $font-family-base !default;
             }
             > .chosen-drop {
                border-color: $border-focus;
-               > .chosen-results {
-                  > .active-result,
-                  > .group-result {
-                     background-color: rgba($border-focus,0);
-                     &.highlighted {
-                        background-color: rgba($border-focus,.5);
-                     }
-                  }
-                  > .result-selected {
-                     color: $white !important; // override chosen-default which is also !important.
-                     background-color: rgba($focus,1);
-                  }
-                  > .group-result {
-                     color: $border-focus;
-                     border-color: $border-focus;
-                  }
+               background-color: $bg-focus;
+               > .chosen-results > .result-selected {
+                  color: rgba($border-focus,.35) !important; // override chosen-default which is also !important.
+                  background-color: $bg-focus;
                }
             }
          }
+      }
+   }
+}
+
+.chosenize {
+   &.form-control {
+      /* CHOSEN-SIZE
+       * --------------------
+       * @params: $font-size, $height, $padding-x, $padding-y, line-height, border-radius
+       *
+      /*	-----	*/
+      @include chosen-size();
+
+      &.form-control-sm {
+         @include chosen-size(
+            $font-size-sm,
+            $input-height-sm,
+            $input-btn-padding-x-sm,
+            $input-btn-padding-y-sm,
+            $input-btn-line-height-sm,
+            $input-border-radius-sm
+         );
+      }
+      &.form-control-lg {
+         @include chosen-size(
+            $font-size-lg,
+            $input-height-lg,
+            $input-btn-padding-x-lg,
+            $input-btn-padding-y-lg,
+            $input-btn-line-height-lg,
+            $input-border-radius-lg
+         );
+      }
+
+      /* CHOSEN-COLOR-VARIANTE
+       * --------------------
+       * @params: $bg, $border, $bg-focus, $border-focus
+       *
+      /*	-----	*/
+      @include chosen-color-variante();
+      &.form-control-primary {
+         @include chosen-color-variante(
+            lighten(theme-color('primary'),25%),   // bg
+            theme-color('primary'),             // border
+            $white,   // bg-focus
+            darken(theme-color('primary'),10%)  // border-focus
+         );
+      }
+
+      &.is-valid {
+         @include chosen-color-variante(
+            lighten(theme-color('success'),25%),   // bg
+            theme-color('success'),             // border
+            $white,   // bg-focus
+            darken(theme-color('success'),10%)  // border-focus
+         );
+      }
+      &.is-invalid {
+         @include chosen-color-variante(
+         lighten(theme-color('danger'),25),   // bg
+         theme-color('danger'),             // border
+         $white,   // bg-focus
+         darken(theme-color('danger'),10%)  // border-focus
+         );
       }
    }
 }

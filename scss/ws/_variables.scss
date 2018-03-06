@@ -48,35 +48,25 @@
 // Color system
 //
 
-$brand-primary:             #84c9e7;
-$brand-secondary:           #594f4f;
-$brand-success:             #5cb85c;
-$brand-info:                $brand-primary;
-$brand-warning:             #f0ad4e;
-$brand-danger:              #d9534f;
-$brand-inverse:             $brand-secondary;
+$white:    #fff;
+$gray-100: #ececec;
+$gray-200: #d9d9d9;
+$gray-300: #c6c6c5;
+$gray-400: #b1b1b1;
+$gray-500: #9c9b9b;
+$gray-600: #868686;
+$gray-700: #6f6f6e;
+$gray-800: #575756;
+$gray-900: #3c3c3b;
+$black:    #1d1d1b;
 
-$white:  #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #868e96;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
-$black:  #000;
-
-$black:                     #000;
-$gray-darkest:              #111;
-$gray-darker:               #222;
-$gray-dark:                 #2D2D2D;
-$gray:                      #4A4A4A;
-$gray-light:                #878787;
-$gray-lighter:              #D9D9D9;
-$gray-lightest:             #f2f2f2;
-$white:                     #FFF;
+$gray-darkest:              $gray-900;
+$gray-darker:               $gray-700;
+$gray-dark:                 $gray-600;
+$gray:                      $gray-500;
+$gray-light:                $gray-400;
+$gray-lighter:              $gray-300;
+$gray-lightest:             $gray-100;
 
 $grays: (
   100: $gray-100,
@@ -99,7 +89,7 @@ $orange:  #fd7e14;
 $yellow:  #ffc107;
 $green:   #28a745;
 $teal:    #20c997;
-$cyan:    #17a2b8;
+$cyan:    #91d2eb;
 
 $colors: (
   blue: $blue,
@@ -117,40 +107,30 @@ $colors: (
   gray-dark: $gray-800
 );
 
+$brand-primary:             #a7a37e;
+$brand-secondary:           #046380;
+$brand-success:             #5cb85c;
+$brand-info:                #046380;
+$brand-warning:             #f0ad4e;
+$brand-danger:              #d9534f;
+$brand-inverse:             #002f2f;
+
 $theme-colors: (
   primary: $brand-primary,
+  primary-light: #e6e2af,
+  primary-lighter: #efecca,
   secondary: $brand-secondary,
+  secondary-dark: $brand-inverse,
   success: $brand-success,
   info: $brand-info,
   warning: $brand-warning,
   danger: $brand-danger,
-  light: $gray-100,
-  dark: $gray-800
+  light: $gray-200,
+  dark: $black
 );
 
 // OLD STUFF
 // ===================
-
-// Form states and alerts
-//
-// Define colors for form feedback states and, by default, alerts.
-//
-$state-success-text:             #3c763d;
-$state-success-bg:               #dff0d8;
-$state-success-border:           darken($state-success-bg, 5%);
-//
-$state-info-text:                #31708f;
-$state-info-bg:                  #d9edf7;
-$state-info-border:              darken($state-info-bg, 7%);
-//
-$state-warning-text:             #8a6d3b;
-$state-warning-bg:               #fcf8e3;
-$mark-bg:                        $state-warning-bg;
-$state-warning-border:           darken($state-warning-bg, 5%);
-//
-$state-danger-text:              #a94442;
-$state-danger-bg:                #f2dede;
-$state-danger-border:            darken($state-danger-bg, 5%);
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8%;
@@ -172,29 +152,12 @@ $grid-gutter-widths: (
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:         "Roboto", sans-serif;
+// $font-family-sans-serif:         "Roboto", sans-serif;
 $font-family-condensed:          "Roboto Condensed", sans-serif;
 $font-family-serif:              "Roboto Slab", serif;
 $font-family-monospace:          Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base:               $font-family-sans-serif;
 
 $font-size-xs:                   .75rem;
-
-
-$input-padding-x:                .75rem;
-$input-padding-y:                .5rem;
-$input-line-height:              1.25;
-
-$input-padding-x-sm:             .5rem;
-$input-padding-y-sm:             .25rem;
-
-$input-padding-x-lg:             1.5rem;
-$input-padding-y-lg:             .75rem;
-
-$input-bg-focus:                 $white;
-$input-border-focus:             $brand-primary;
-$input-box-shadow-focus:         $input-box-shadow, rgba($input-border-focus, .6);
-$input-color-focus:              $input-color;
 
 // ===================
 // END :: OLD STUFF
@@ -204,10 +167,10 @@ $input-color-focus:              $input-color;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded:                 true;
-$enable-shadows:                 false;
-$enable-gradients:               false;
+$enable-shadows:                 true;
+$enable-gradients:               true;
 $enable-transitions:             true;
-$enable-hover-media-query:       false;
+$enable-hover-media-query:       true;
 $enable-grid-classes:            true;
 $enable-print-styles:            true;
 
@@ -308,9 +271,9 @@ $line-height-sm:         1.5;
 
 $border-width: 1px;
 
-$border-radius:          .25rem;
-$border-radius-lg:       .3rem;
-$border-radius-sm:       .2rem;
+$border-radius:          0;
+$border-radius-lg:       0;
+$border-radius-sm:       0;
 
 $component-active-color: $white;
 $component-active-bg:    theme-color("primary");
@@ -330,7 +293,7 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:       $font-family-sans-serif;
 
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem;   // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem;
 $font-size-sm:   .875rem;
 
@@ -418,55 +381,57 @@ $table-inverse-color:           $body-bg;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$input-btn-padding-y:       .5rem;
-$input-btn-padding-x:       .75rem;
-$input-btn-line-height:     1.25;
+$input-btn-padding-y:         .5rem;
+$input-btn-padding-x:         .75rem;
+$input-btn-line-height:       1.25;
 
-$input-btn-padding-y-sm:    .25rem;
-$input-btn-padding-x-sm:    .5rem;
-$input-btn-line-height-sm:  1.5;
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      .5rem;
+$input-btn-line-height-sm:    1.5;
 
-$input-btn-padding-y-lg:    .5rem;
-$input-btn-padding-x-lg:    1rem;
-$input-btn-line-height-lg:  1.5;
+$input-btn-padding-y-lg:      .5rem;
+$input-btn-padding-x-lg:      1rem;
+$input-btn-line-height-lg:    1.5;
 
 $btn-font-weight:                $font-weight-normal;
-$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 1px 1px 3px rgba($black,.075);
+// $btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 1px 1px 3px rgba($black,.075);
+$btn-box-shadow:                 none;
 $btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25);
-$btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125);
+// $btn-focus-box-shadow:           none;
+// $btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125);
+$btn-active-box-shadow:          none;
 
 $btn-link-disabled-color:        $gray-600;
 
 $btn-block-spacing-y:            .5rem;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:              $border-radius;
-$btn-border-radius-lg:           $border-radius-lg;
-$btn-border-radius-sm:           $border-radius-sm;
+$btn-border-radius:              0;
+$btn-border-radius-lg:           0;
+$btn-border-radius-sm:           0;
 
 $btn-transition:                 all .15s ease-in-out;
 
 
 // Forms
+$input-bg:                       lighten($gray-100,7.5%);
+$input-disabled-bg:              $gray-100;
 
-$input-bg:                       $gray-100;
-$input-disabled-bg:              $gray-200;
-
-$input-color:                    $gray-900;
-$input-border-color:             rgba($black,.15);
+$input-color:                    $gray-800;
+$input-border-color:             theme-color("light");
 $input-btn-border-width:         $border-width; // For form controls and buttons
-$input-box-shadow:               inset 1px 1px 3px rgba($black,.075);
+$input-box-shadow:               inset 0px 0px 6px rgba($black,.125);
 
 $input-border-radius:            0;
 $input-border-radius-lg:         0;
 $input-border-radius-sm:         0;
 
-$input-focus-bg:                 $input-bg;
+$input-focus-bg:                 $white;
 $input-focus-border-color:       theme-color("primary");
 $input-focus-box-shadow:         $input-box-shadow, $btn-focus-box-shadow;
-$input-focus-color:              $input-color;
+$input-focus-color:              $gray-900;
 
-$input-placeholder-color:        $gray-600;
+$input-placeholder-color:        $gray-300;
 
 $input-height-border:           $input-btn-border-width * 2;
 
@@ -479,7 +444,7 @@ $input-height-sm:               calc(#{$input-height-inner-sm} + #{$input-height
 $input-height-inner-lg:         ($font-size-sm * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2);
 $input-height-lg:               calc(#{$input-height-inner-lg} + #{$input-height-border});
 
-$input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+$input-transition:              border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
 $form-text-margin-top:          .25rem;
 $form-check-margin-bottom:       .5rem;
@@ -504,14 +469,14 @@ $custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba($black,.1);
 $custom-control-indicator-disabled-bg:       $gray-200;
 $custom-control-description-disabled-color:  $gray-600;
 
-$custom-control-indicator-checked-color:      $white;
+$custom-control-indicator-checked-color:      $black;
 $custom-control-indicator-checked-bg:         theme-color("primary");
 $custom-control-indicator-checked-box-shadow: none;
 
 $custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px theme-color("primary");
 
-$custom-control-indicator-active-color:      $white;
-$custom-control-indicator-active-bg:         lighten(theme-color("primary"), 35%);
+$custom-control-indicator-active-color:      $black;
+$custom-control-indicator-active-bg:         theme-color("primary");
 $custom-control-indicator-active-box-shadow: none;
 
 $custom-checkbox-indicator-border-radius: $border-radius;
@@ -541,7 +506,7 @@ $custom-select-border-width:  $input-btn-border-width;
 $custom-select-border-color:  $input-border-color;
 $custom-select-border-radius: $border-radius;
 
-$custom-select-focus-border-color: lighten(theme-color("primary"), 25%);
+$custom-select-focus-border-color: theme-color("primary");
 $custom-select-focus-box-shadow:   inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5);
 
 $custom-select-font-size-sm:  75%;
@@ -582,25 +547,25 @@ $form-feedback-invalid-color: theme-color("danger");
 // Dropdown menu container and contents.
 
 $dropdown-min-width:             10rem;
-$dropdown-padding-y:             .5rem;
+$dropdown-padding-y:             .25rem;
 $dropdown-spacer:                .125rem;
-$dropdown-bg:                    $white;
-$dropdown-border-color:          rgba($black,.15);
+$dropdown-bg:                    $input-focus-bg;
+$dropdown-border-color:          $input-focus-border-color;
 $dropdown-border-width:          $border-width;
-$dropdown-divider-bg:            $gray-200;
-$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175);
+$dropdown-divider-bg:            theme-color("light");
+$dropdown-box-shadow:            none;
 
-$dropdown-link-color:            $gray-900;
-$dropdown-link-hover-color:      darken($gray-900, 5%);
-$dropdown-link-hover-bg:         $gray-100;
+$dropdown-link-color:            $input-color;
+$dropdown-link-hover-color:      $input-focus-color;
+$dropdown-link-hover-bg:         rgba($input-focus-border-color,.35);
 
-$dropdown-link-active-color:     $component-active-color;
-$dropdown-link-active-bg:        $component-active-bg;
+$dropdown-link-active-color:     $input-focus-color;
+$dropdown-link-active-bg:        $input-focus-border-color;
 
-$dropdown-link-disabled-color:   $gray-600;
+$dropdown-link-disabled-color:   $gray-400;
 
 $dropdown-item-padding-y:        .25rem;
-$dropdown-item-padding-x:        1.5rem;
+$dropdown-item-padding-x:        1rem;
 
 $dropdown-header-color:          $gray-600;
 

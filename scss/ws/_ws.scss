@@ -1,57 +1,143 @@
 /*!
-* Customize on basis of Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+* Customize on basis of Bootstrap v4.0.0 (http://getbootstrap.com)
 * Copyright 2011-2015 Twitter, Inc.
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 */
-$bootstrap-sass-asset-helper: false;
 
 // Mixins
-@import "../bootstrap/mixins";
-
 @import "mixins";
 @import "utilities";
+@import "item.grid";
 
-// Reset and dependencies
-@import "../bootstrap/normalize";
-@import "../bootstrap/print";
+.wyg-xs {
+   @include wyg-size();
+}
+.wyg-sm {
+   @include wyg-size(1.5rem);
+}
+.wyg-md {
+   @include wyg-size(2rem);
+}
+.wyg-lg {
+   @include wyg-size(3rem);
+}
+.wyg-xl {
+   @include wyg-size(6rem);
+}
 
-// Core CSS
-@import "../bootstrap/reboot";
-@import "../bootstrap/type";
-@import "../bootstrap/images";
-@import "../bootstrap/code";
-@import "../bootstrap/grid";
-@import "../bootstrap/tables";
-@import "../bootstrap/forms";
-@import "../bootstrap/buttons";
+.the-icons {
+   text-align: center;
+   background-color: rgba($white,.5);
+   margin: .2rem .1rem;
+   padding-bottom: .5rem;
+   .demo-icon,
+   .demo-social {
+      text-align: center;
+      padding: 0 1rem 1rem 1rem;
+      margin: .5rem;
+      vertical-align: super;
+      width: auto;
+      border: none;
+      color: $black;
+      font-size: $font-size-lg;
+      @include media-breakpoint-only(md) {
+         font-size: $font-size-base;
+      }
+      @include media-breakpoint-only(sm) {
+         padding: 0 2rem .5rem 2rem;
+      }
+      border-bottom: 1px solid $border-color;
+      &:before {
+         content:'';
+      }
+   }
+   .i-name {
+      font-size: $font-size-xs;
+      color: $brand-primary;
+      // @include text-truncate();
+      display: none;
+   }
+   .i-code {
+      font-size: $font-size-xs;
+      color: $brand-primary;
+   }
+}
 
-@import "../bootstrap/transitions";
-@import "../bootstrap/dropdown";
-@import "../bootstrap/button-group";
-@import "../bootstrap/input-group";
-@import "../bootstrap/custom-forms";
-@import "../bootstrap/nav";
-@import "../bootstrap/navbar";
-@import "../bootstrap/card";
-@import "../bootstrap/breadcrumb";
-@import "../bootstrap/pagination";
-@import "../bootstrap/badge";
-@import "../bootstrap/jumbotron";
-@import "../bootstrap/alert";
-@import "../bootstrap/progress";
-@import "../bootstrap/media";
-@import "../bootstrap/list-group";
-@import "../bootstrap/responsive-embed";
-@import "../bootstrap/close";
+/* SVG-ICONS
+ *	--------------
+ * @see     /public/img/svg/src/
+ *
+ * @html    <span class="svg-[name]"></span>
+ * @mixin:  @include icon($name, $width, $height);
+/*	-----	*/
+@import "svgicons";
 
-// Components w/ JavaScript
-@import "../bootstrap/modal";
-@import "../bootstrap/tooltip";
-@import "../bootstrap/popover";
-@import "../bootstrap/carousel";
+@import "typo";
 
-// Utility classes
-@import "../bootstrap/utilities";
+/* RESET JQUERY.CHOSEN
+ *	--------------
+ * @descr:  Reset jquery.chosen default css with custom variables
+ * @params: s.u.
+ *
+ * Defaults to twbs form settings ($input-[...]-[...]) defined in @_variables.scss
+ *
+/*	-----	*/
+//
+// chosen:
+//
+$chosen-font-family:       $font-family-condensed;
+$chosen-font-size:         $font-size-base;
+//
+$chosen-height:            $input-height;
+$chosen-padding-x:         $input-btn-padding-x;
+$chosen-padding-y:         $input-btn-padding-y;
+//
+$chosen-line-height:       $input-btn-line-height;
+//
+$chosen-border-width:      $input-btn-border-width;
+$chosen-border-radius:     0;
+
+@import "reset.chosen";
+
+/* SIZE
+ * --------------------
+ * @params: $font-size, $height, $padding-x, $padding-y
+ *
+/*	-----	*/
+.form-group {
+   font-family: $font-family-condensed;
+   .form-control {
+      font-family: $font-family-condensed;
+   }
+   .form-control-feedback {
+      font-size: 90%;
+   }
+}
+
+.chosenize.form-control {
+   @include chosen-size();
+   &.form-control-sm {
+      @include chosen-size($font-size-sm, $input-height-sm, $input-padding-x-sm, $input-padding-y-sm );
+   }
+   &.form-control-lg {
+      @include chosen-size($font-size-lg, $input-height-lg, $input-padding-y-lg, $input-padding-y-lg );
+   }
+}
+
+/* CHOSEN-COLOR-VARIANTE
+ * --------------------
+ * @params: $bg, $border, $bg-focus, $border-focus
+ *
+/*	-----	*/
+.has-success .chosenize.form-control {
+   @include chosen-color-variante($brand-success, $brand-success, $white, $white);
+}
+.has-warning .chosenize.form-control {
+   @include chosen-color-variante($brand-warning, $brand-warning, $white, $white);
+}
+.has-danger .chosenize.form-control {
+   @include chosen-color-variante($brand-danger, $brand-danger, $white, $white);
+}
 
 .inner {
 
