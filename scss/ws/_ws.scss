@@ -63,15 +63,6 @@
    }
 }
 
-/* SVG-ICONS
- *	--------------
- * @see     /public/img/svg/src/
- *
- * @html    <span class="svg-[name]"></span>
- * @mixin:  @include icon($name, $width, $height);
-/*	-----	*/
-@import "svgicons";
-
 @import "typo";
 
 /* RESET JQUERY.CHOSEN

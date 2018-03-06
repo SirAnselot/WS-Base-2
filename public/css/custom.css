@@ -8598,121 +8598,6 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 0.75rem;
     color: #a7a37e; }
 
-/* SVG-ICONS
- *	--------------
- * @see     /public/img/svg/src/
- *
- * @html    <span class="svg-[name]"></span>
- * @mixin:  @include icon($name, $width, $height);
-/*	-----	*/
-.svg-fast-food {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 93.9597315436% 14.6276595745%;
-  background-size: 1240px 800px;
-  width: 48px;
-  height: 48px; }
-
-.svg-fb {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 89.6551724138% 15.2777777778%;
-  background-size: 744px 480px;
-  width: 48px;
-  height: 48px; }
-
-.svg-fb-ball {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 68.9655172414% 15.2777777778%;
-  background-size: 744px 480px;
-  width: 48px;
-  height: 48px; }
-
-.svg-google {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 75.8620689655% 15.2777777778%;
-  background-size: 744px 480px;
-  width: 48px;
-  height: 48px; }
-
-.svg-google-ball {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 82.7586206897% 15.2777777778%;
-  background-size: 744px 480px;
-  width: 48px;
-  height: 48px; }
-
-.svg-hamburger-black {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 70% 25%;
-  background-size: 1488px 960px;
-  width: 48px;
-  height: 48px; }
-
-.svg-hamburger-gray {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 97.9865771812% 14.6276595745%;
-  background-size: 1240px 800px;
-  width: 48px;
-  height: 48px; }
-
-.svg-hamburger-white {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 66.6666666667% 25%;
-  background-size: 1488px 960px;
-  width: 48px;
-  height: 48px; }
-
-.svg-houzz {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 99.6721311475% 14.1025641026%;
-  background-size: 2976px 1920px;
-  width: 48px;
-  height: 48px; }
-
-.svg-instagram-ball {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 99.6068111236% 16.6495890977%;
-  background-size: 3100.00807294px 2000.00520835px;
-  width: 48px;
-  height: 48px; }
-
-.svg-ws-icon {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: 74.4px 48px;
-  width: 48px;
-  height: 48px; }
-
-.svg-ws-logo-wortbild {
-  display: inline-block;
-  background-image: url(../../public/img/svg/build/icons.svg);
-  background-repeat: no-repeat;
-  background-position: 100% 0%;
-  background-size: 135.272727273px 87.2727272727px;
-  width: 48px;
-  height: 12px; }
-
 /**
  * TYPO
  * Text-fonts, -colors, -styles, -sizes, etc. (to be made available in html-editor)
@@ -12519,6 +12404,132 @@ small,
   .has-danger .chosenize.form-control.chosen-container.chosen-container-multi.chosen-container-active > .chosen-drop > .chosen-results > .result-selected {
     color: rgba(255, 255, 255, 0.35) !important;
     background-color: #fff; }
+
+/* SVG-ICONS
+ *	--------------
+ * @import "{config.namespace}/svgicons"
+ *
+ * @see     /public/img/svg/src/
+ *
+ * @html    <span class="svg-[name]"></span>
+ * @mixin:  @include icon($name, $width, $height);
+/*	-----	*/
+.svg-eyedropper {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 67.1140939597% 25.2659574468%;
+  background-size: 1240px 800px;
+  width: 48px;
+  height: 48px; }
+
+.svg-fast-food {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 93.9597315436% 14.6276595745%;
+  background-size: 1240px 800px;
+  width: 48px;
+  height: 48px; }
+
+.svg-fb {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 68.9655172414% 15.2777777778%;
+  background-size: 744px 480px;
+  width: 48px;
+  height: 48px; }
+
+.svg-fb-ball {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 75.8620689655% 15.2777777778%;
+  background-size: 744px 480px;
+  width: 48px;
+  height: 48px; }
+
+.svg-google {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 82.7586206897% 15.2777777778%;
+  background-size: 744px 480px;
+  width: 48px;
+  height: 48px; }
+
+.svg-google-ball {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 89.6551724138% 15.2777777778%;
+  background-size: 744px 480px;
+  width: 48px;
+  height: 48px; }
+
+.svg-hamburger-black {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 74% 25%;
+  background-size: 1488px 960px;
+  width: 48px;
+  height: 48px; }
+
+.svg-hamburger-gray {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 97.9865771812% 14.6276595745%;
+  background-size: 1240px 800px;
+  width: 48px;
+  height: 48px; }
+
+.svg-hamburger-white {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 70.6666666667% 25%;
+  background-size: 1488px 960px;
+  width: 48px;
+  height: 48px; }
+
+.svg-houzz {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 99.6721311475% 14.1025641026%;
+  background-size: 2976px 1920px;
+  width: 48px;
+  height: 48px; }
+
+.svg-instagram-ball {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 99.6068152031% 16.6495901639%;
+  background-size: 3100px 2000px;
+  width: 48px;
+  height: 48px; }
+
+.svg-ws-icon {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 74.4px 48px;
+  width: 48px;
+  height: 48px; }
+
+.svg-ws-logo-wortbild {
+  display: inline-block;
+  background-image: url(../../public/img/svg/build/icons.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  background-size: 135.272727273px 87.2727272727px;
+  width: 48px;
+  height: 12px; }
 
 html {
   font-size: 12px; }

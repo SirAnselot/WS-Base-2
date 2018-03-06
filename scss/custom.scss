@@ -122,6 +122,18 @@ $enable-print-styles:       true;
 // variables and mixins "ws-framework"
 @import "ws/ws";
 
+/* SVG-ICONS
+ *	--------------
+ * @import "{config.namespace}/svgicons"
+ *
+ * @see     /public/img/svg/src/
+ *
+ * @html    <span class="svg-[name]"></span>
+ * @mixin:  @include icon($name, $width, $height);
+/*	-----	*/
+
+@import "custom/svgicons";
+
 html {
   font-size: 12px;
 }

@@ -1,0 +1,147 @@
+$icons: (
+	"eyedropper": (
+		x: 67.11409395973155%,
+		y: 25.26595744680851%,
+		width: 48,
+		height: 48
+	),
+	"fast-food": (
+		x: 93.95973154362416%,
+		y: 14.627659574468085%,
+		width: 48,
+		height: 48
+	),
+	"fb": (
+		x: 68.96551724137932%,
+		y: 15.277777777777779%,
+		width: 80,
+		height: 80
+	),
+	"fb-ball": (
+		x: 75.86206896551724%,
+		y: 15.277777777777779%,
+		width: 80,
+		height: 80
+	),
+	"google": (
+		x: 82.75862068965517%,
+		y: 15.277777777777779%,
+		width: 80,
+		height: 80
+	),
+	"google-ball": (
+		x: 89.65517241379311%,
+		y: 15.277777777777779%,
+		width: 80,
+		height: 80
+	),
+	"hamburger-black": (
+		x: 74%,
+		y: 25%,
+		width: 40,
+		height: 40
+	),
+	"hamburger-gray": (
+		x: 97.98657718120805%,
+		y: 14.627659574468085%,
+		width: 48,
+		height: 48
+	),
+	"hamburger-white": (
+		x: 70.66666666666667%,
+		y: 25%,
+		width: 40,
+		height: 40
+	),
+	"houzz": (
+		x: 99.67213114754098%,
+		y: 14.102564102564102%,
+		width: 20,
+		height: 20
+	),
+	"instagram-ball": (
+		x: 99.60681520314549%,
+		y: 16.649590163934427%,
+		width: 19.2,
+		height: 19.2
+	),
+	"ws-icon": (
+		x: 0%,
+		y: 0%,
+		width: 800,
+		height: 800
+	),
+	"ws-logo-wortbild": (
+		x: 100%,
+		y: 0%,
+		width: 440,
+		height: 110
+	)
+);
+
+@mixin svg($name, $width: 48, $height: auto){
+	$icon: map-get($icons, $name);
+	$sizeFactor: 1;
+	@if $width != auto {
+		$sizeFactor: (1 / map-get($icon, width) * $width);
+	}
+	@else if $height != auto {
+		$sizeFactor: (1 / map-get($icon, height) * $height);
+	}
+	@if $width == auto {
+		$width: (map-get($icon, width) * $sizeFactor);
+	}
+	@if $height == auto {
+		$height: (map-get($icon, height) * $sizeFactor);
+	}
+	$targetWidth: 1240 * $sizeFactor;
+	$targetHeight: 800 * $sizeFactor;
+
+	display: inline-block;
+	background-image: url(../../public/img/svg/build/icons.svg);
+   background-repeat: no-repeat;
+	background-position: map-get($icon, x) map-get($icon, y);
+	background-size: #{$targetWidth}px #{$targetHeight}px;
+	width: #{$width}px;
+	height: #{$height}px;
+}
+
+.svg-eyedropper {
+	@include svg("eyedropper");
+}
+.svg-fast-food {
+	@include svg("fast-food");
+}
+.svg-fb {
+	@include svg("fb");
+}
+.svg-fb-ball {
+	@include svg("fb-ball");
+}
+.svg-google {
+	@include svg("google");
+}
+.svg-google-ball {
+	@include svg("google-ball");
+}
+.svg-hamburger-black {
+	@include svg("hamburger-black");
+}
+.svg-hamburger-gray {
+	@include svg("hamburger-gray");
+}
+.svg-hamburger-white {
+	@include svg("hamburger-white");
+}
+.svg-houzz {
+	@include svg("houzz");
+}
+.svg-instagram-ball {
+	@include svg("instagram-ball");
+}
+.svg-ws-icon {
+	@include svg("ws-icon");
+}
+.svg-ws-logo-wortbild {
+	@include svg("ws-logo-wortbild");
+}
